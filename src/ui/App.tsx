@@ -247,7 +247,7 @@ interface OpenDocument {
  *  (`assets/stage/canvasBg.png`, 16x16 white/#cccccc) — measured, see docs/UX-DESIGN.md. */
 const STAGE_BACKGROUNDS = [
   // official stage grid: black/white checker, one cell = 100 px at 100% zoom
-  { id: 'checker', name: '棋盘（官方同款，100px 格）', css: 'repeating-conic-gradient(#ffffff 0% 25%, #cccccc 0% 50%) 50% / 100px 100px' },
+  { id: 'checker', name: '棋盘（100px 格）', css: 'repeating-conic-gradient(#ffffff 0% 25%, #cccccc 0% 50%) 50% / 100px 100px' },
   { id: 'checkerDark', name: '深色棋盘', css: 'repeating-conic-gradient(#3f3f3f 0% 25%, #2e2e2e 0% 50%) 50% / 100px 100px' },
   { id: 'dark', name: '深灰', css: '#2b2b2b' },
   { id: 'mid', name: '中灰', css: '#808080' },

@@ -10,9 +10,7 @@
 
 ## 界面
 
-![编辑器主界面](docs/screenshot-editor-scene-tree.png)
-
-![绘制顺序](docs/screenshot-editor-draw-order.png)
+![BoneStudio 编辑器 —— 动画制作模式：时间轴 / 曲线编辑器 / 场景树 / 关键帧](docs/screenshot-editor.png)
 
 ## 特性
 
