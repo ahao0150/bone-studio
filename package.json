@@ -1,0 +1,60 @@
+{
+  "name": "bone-studio",
+  "version": "0.1.0",
+  "description": "BoneStudio - DragonBones-compatible skeletal animation editor (clean-room reimplementation)",
+  "license": "MIT",
+  "author": "ahao0150",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahao0150/bone-studio.git"
+  },
+  "homepage": "https://github.com/ahao0150/bone-studio#readme",
+  "keywords": [
+    "dragonbones",
+    "spine",
+    "skeletal-animation",
+    "editor",
+    "pixi",
+    "react"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "pretest": "node tools/build-mcp.mjs --if-stale",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "cli": "vite-node src/cli.ts",
+    "build:mcp": "node tools/build-mcp.mjs",
+    "mcp": "node dist-mcp/server.js",
+    "verify:dist": "node tools/verify-dist.mjs",
+    "verify:closure": "vite-node tools/closure-oracle.ts all",
+    "verify:budget": "node tools/verify-bundle-budget.mjs",
+    "desktop": "electron tools/desktop/main.cjs",
+    "package:desktop": "node tools/package-desktop.mjs",
+    "report:acceptance": "node tools/report-acceptance.mjs",
+    "verify": "node tools/verify-all.mjs",
+    "mcp:demo": "node tools/mcp-demo-lubu.mjs",
+    "install:ai": "node scripts/install-ai.mjs",
+    "predev": "node tools/build-mcp.mjs --if-stale"
+  },
+  "dependencies": {
+    "pixi.js": "^8.6.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@esotericsoftware/spine-core": "~4.2.0",
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "electron": "^44.7.0",
+    "puppeteer-core": "^25.13.0",
+    "spine-core-41": "npm:@esotericsoftware/spine-core@~4.1.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7",
+    "vitest": "^2.1.8"
+  }
+}

@@ -1,0 +1,54 @@
+node_modules/
+dist/
+release/
+*.tsbuildinfo
+
+# Vite 生成的时间戳临时配置（每次 dev 都变，不入库）
+vite.config.ts.timestamp-*
+
+# 分析期临时脚本（目标模式下的取证/调试片段）
+tmp-*.mts
+projects/
+.mcp.json
+.cursor/
+
+# 本地验证/构建临时目录（AI 工程验证工作区、esbuild 临时目录）
+.verify-projects/
+.build-tmp/
+
+# 分析期日志（npm 命令输出重定向）
+tmp/
+
+# MCP server 构建产物（npm run dev / build:mcp / install:ai 会自动构建，不再入库，避免拉到过期版本）
+dist-mcp/
+
+# ── 开源排除：内部取证数据 ─────────────────────────────────────
+# docs/evidence/ 是开发期从目标程序提取的原始取证与逐帧对拍产物，其中包含
+# 官方示例的骨骼数据（official-*-probe、*-oracle、closure-oracle 等）。
+# 这些是内部验证材料，不随本项目源码公开发布。
+# 规格结论已整理进 docs/DBPRO-SPEC.md（清洁室规格文档，不含任何官方原始数据）。
+docs/evidence/
+
+# 开源排除：内部格式分析与验收文档（记录了对目标程序的取证过程，不随源码发布）
+AGENTS.md
+docs/ACCEPTANCE.md
+docs/DBPRO-SPEC.md
+docs/GOAL-DBPARITY.md
+docs/REVERSE-ENGINEERING.md
+
+# added by gitee-cli
+*.env
+.env
+.env.*
+*.pem
+*.key
+secrets/
+node_modules
+build/
+.cache/
+*.log
+.DS_Store
+.next/
+coverage/
+.parcel-cache/
+.vite/
