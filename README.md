@@ -12,6 +12,12 @@
 
 ![BoneStudio 编辑器 —— 动画制作模式：时间轴 / 曲线编辑器 / 场景树 / 关键帧](docs/screenshot-editor.png)
 
+### MCP 骨骼动画制作实录预览
+
+[![通过 BoneStudio MCP 从零制作「鹈鹕骑自行车」骨骼动画（点击查看高清 MP4 录像）](docs/demo-mcp-pelican.gif)](docs/demo-mcp-pelican.mp4)
+
+> 上方动图展示了 AI Agent 通过 `bone-studio` MCP 工具（配合 [`docs/SKILL-bone-studio-mcp.md`](docs/SKILL-bone-studio-mcp.md) 技能）从零生成 SVG/PNG 分层部件、绑定 26 根骨骼与网格权重、编写分析式 IK 骑行/冲刺/待机三套动作并在编辑器中实时播放的效果。高清原片见 [`docs/demo-mcp-pelican.mp4`](docs/demo-mcp-pelican.mp4)。
+
 ## 特性
 
 **解析与播放**
