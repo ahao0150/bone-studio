@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="148" viewBox="325 260 150 148">
+        <g>
+          <circle cx="400" cy="334" r="44" fill="#2dd4bf" fill-opacity="0.38"/>
+          <circle cx="400" cy="334" r="30" fill="#fef08a" fill-opacity="0.55"/>
+          <!-- Orbiting magic rune ring -->
+          <ellipse cx="400" cy="334" rx="38" ry="13" transform="rotate(-16 400 334)"
+                   fill="none" stroke="#fef08a" stroke-width="2.2" stroke-dasharray="8 5"/>
+          <ellipse cx="400" cy="334" rx="38" ry="13" transform="rotate(24 400 334)"
+                   fill="none" stroke="#f472b6" stroke-width="1.8" stroke-dasharray="6 6"/>
+        </g>
+        </svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="227" height="110" viewBox="290 246 227 110">
+        <g>
+          <!-- Large left-top curved glass window highlight -->
+          <path d="M 312,306
+                   C 324,276 356,258 388,256
+                   C 394,256 396,265 388,267
+                   C 360,271 334,286 322,312
+                   C 318,318 309,314 312,306 Z"
+                fill="#ffffff" fill-opacity="0.88"/>
+          <!-- Secondary oval specular dot -->
+          <ellipse cx="306" cy="326" rx="5.5" ry="9.0" transform="rotate(18 306 326)" fill="#ffffff" fill-opacity="0.82"/>
+          <!-- Right rim counter-highlight -->
+          <path d="M 468,274
+                   C 488,290 502,314 506,340
+                   C 507,346 500,348 498,342
+                   C 493,318 480,296 463,281
+                   C 459,277 464,271 468,274 Z"
+                fill="#e0f2fe" fill-opacity="0.72"/>
+        </g>
+        </svg>

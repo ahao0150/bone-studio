@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="77" height="71" viewBox="213 144 77 71">
+        <g>
+          <!-- Back cranium hair mass -->
+          <path d="M 222,188 C 216,160 240,146 266,154 C 276,158 280,170 276,180 L 232,196 Z"
+                fill="#1e293b" stroke="#020617" stroke-width="2.2" stroke-linejoin="round"/>
+          <!-- Sculpted 3/4 right-facing anime samurai face & crisp jawline -->
+          <path d="M 235,172 C 235,158 270,158 273,176 L 276,188 C 277,191 274,193 273,196 L 270,204 C 268,208 260,208 252,205 L 238,195 Z"
+                fill="#fde4cf" stroke="#5c2814" stroke-width="1.9" stroke-linejoin="round"/>
+          <!-- Soft anime cel-shadow along left temple, ear-side cheek & under lower lip -->
+          <path d="M 235,172 L 248,172 C 245,184 247,196 258,204 L 252,205 L 238,195 Z"
+                fill="#f3c3a2"/>
+          <!-- Nose bridge highlight & nostril accent -->
+          <path d="M 271,180 L 275,189 L 271,191" fill="none" stroke="#fff7ed" stroke-width="1.6" stroke-linecap="round"/>
+          <!-- Focused samurai eye (crisp dark upper lash, crimson-gold iris, bright catchlight) -->
+          <path d="M 255,178 L 271,175" stroke="#020617" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M 256,182 L 269,181 L 267,186.5 L 257,186.5 Z" fill="#ffffff" stroke="#020617" stroke-width="1.4"/>
+          <circle cx="264" cy="183.8" r="2.4" fill="#b91c1c"/>
+          <circle cx="264" cy="183.8" r="1.2" fill="#020617"/>
+          <circle cx="265" cy="183.0" r="0.9" fill="#ffffff"/>
+          <!-- Calm, resolute mouth line -->
+          <path d="M 263,198 Q 267,197.5 271,198.5" fill="none" stroke="#5c2814" stroke-width="1.6" stroke-linecap="round"/>
+          <!-- Sculpted ear with inner helix detail -->
+          <path d="M 240,181 C 232,179 231,192 240,194" fill="#fde4cf" stroke="#5c2814" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M 237,184 C 234,185 234,190 238,191" fill="none" stroke="#c27856" stroke-width="1.3" stroke-linecap="round"/>
+          <!-- Crimson & gold samurai headband (hachimaki) with metallic fore-crest (harikake) -->
+          <path d="M 223,177 Q 251,167 276,174 L 275,166 Q 249,159 222,169 Z"
+                fill="#dc2626" stroke="#450a0a" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M 225,172 Q 251,163 274,169" fill="none" stroke="#f87171" stroke-width="1.4"/>
+          <!-- Golden crescent forehead crest (maedate) -->
+          <path d="M 267,164 L 282,153 L 275,169 L 281,173 L 268,172 Z"
+                fill="#eab308" stroke="#451a03" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M 269,165 L 279,157 L 274,168 Z" fill="#fef08a"/>
+          <!-- Layered anime front hair bangs framing the temple & cheek -->
+          <path d="M 254,154 C 241,165 239,182 244,196 C 246,183 251,169 260,160 Z"
+                fill="#0f172a" stroke="#020617" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M 248,158 C 236,166 232,178 234,188 C 237,178 242,168 252,160 Z"
+                fill="#1e293b" stroke="#020617" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M 263,154 C 272,160 279,169 283,178 C 274,171 268,167 259,162 Z"
+                fill="#1e293b" stroke="#020617" stroke-width="1.6" stroke-linejoin="round"/>
+          <!-- Hair crown highlight -->
+          <path d="M 234,160 Q 250,152 265,157" fill="none" stroke="#475569" stroke-width="2.2" stroke-linecap="round"/>
+        </g>
+        </svg>

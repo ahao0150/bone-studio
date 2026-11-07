@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="83" height="128" viewBox="200 210 83 128">
+
+        <g>
+          <!-- Ranger armored tunic skirt with front slit covering down to y=329 (overlaps thigh_l top!) -->
+          <path d="M 216,286 L 263,286 Q 268,308 270,329 L 252,329 L 247,312 L 242,329 L 214,329 Q 215,308 216,286 Z"
+                fill="#064E3B" stroke="#FBBF24" stroke-width="2.0" stroke-linejoin="round"/>
+          <!-- 3/4 Right-Profile Chest Cuirass -->
+          <path d="M 216,288 L 262,288 C 266,272 272,256 270,238 C 269,228 263,220 256,218 L 224,218 C 216,222 214,238 216,258 Z"
+                fill="#059669" stroke="#10B981" stroke-width="2.2" stroke-linejoin="round"/>
+          <!-- Side-back panel on left half -->
+          <path d="M 216,288 L 244,288 L 246,220 L 222,220 C 215,228 214,255 216,288 Z"
+                fill="#047857"/>
+          <!-- Circular emerald-and-gold shoulder joint rosette centered at (231, 232) (NO black hole!) -->
+          <circle cx="231" cy="232" r="11.5" fill="#065F46" stroke="#FBBF24" stroke-width="2.0"/>
+          <!-- 3/4 Right-facing V-collar & front center line at x=255 -->
+          <path d="M 242,218 L 255,236 L 263,218" fill="#065F46" stroke="#FBBF24" stroke-width="2.2" stroke-linejoin="round"/>
+          <line x1="255" y1="236" x2="255" y2="288" stroke="#FBBF24" stroke-width="2.4"/>
+          <path d="M 246,240 C 263,240 267,260 255,268" fill="none" stroke="#6EE7B7" stroke-width="2.2" stroke-linecap="round"/>
+          <line x1="220" y1="223" x2="262" y2="286" stroke="#78350F" stroke-width="6.5" stroke-linecap="round"/>
+          <circle cx="252" cy="256" r="5.5" fill="#FBBF24" stroke="#78350F" stroke-width="1.8"/>
+          <!-- Waist belt with buckle shifted to right-front (x=254) -->
+          <rect x="216" y="284" width="48" height="9" rx="3"
+                fill="#78350F" stroke="#FBBF24" stroke-width="1.8"/>
+          <rect x="249" y="282.5" width="11" height="12" rx="2"
+                fill="none" stroke="#FDE047" stroke-width="2.5"/>
+        </g>
+        
+</svg>

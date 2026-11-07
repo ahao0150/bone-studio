@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="62" viewBox="196 170 88 62">
+
+        <g>
+          <!-- Neck -->
+          <rect x="234" y="205" width="15" height="15" rx="3" fill="#FDE68A"/>
+          <!-- Elven face -->
+          <path d="M 226.5,205 C 226.5,181 264,181 264,205 C 264,217 256.5,223 244.5,223 L 229.5,223 Z"
+                fill="#FEF3C7" stroke="#D97706" stroke-width="1.8" stroke-linejoin="round"/>
+          <!-- Sharp emerald eye -->
+          <path d="M 249,208 L 261,209.5 L 258,215.5 L 249,214 Z" fill="#10B981"/>
+          <circle cx="256.5" cy="211" r="2.2" fill="#022C22"/>
+          <!-- Iconic long pointed elven ear -->
+          <path d="M 235.5,209.5 L 205.5,199 L 229.5,218.5 Z"
+                fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.8" stroke-linejoin="round"/>
+          <!-- Elven ranger hood -->
+          <path d="M 214.5,208 C 214.5,172 268.5,172 274.5,199 C 259.5,190 232.5,193 220.5,211 Z"
+                fill="#047857" stroke="#34D399" stroke-width="2.2" stroke-linejoin="round"/>
+        </g>
+        
+</svg>

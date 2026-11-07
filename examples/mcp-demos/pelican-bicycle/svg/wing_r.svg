@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="103" height="112" viewBox="328 248 103 112">
+
+    <g transform="translate(362.00,282.00) rotate(50.47)">
+      <path d="M 0,-24.00 C 26.40,-25.20 46.20,-17.00 66.00,-17.00
+               A 17.00,17.00 0 0 1 66.00,17.00
+               C 46.20,17.00 26.40,25.20 0,24.00
+               A 24.00,24.00 0 0 1 0,-24.00 Z"
+            fill="#FFFFFF" stroke="#334155" stroke-width="3.8" stroke-linejoin="round"/>
+    </g>
+    <path d="M 356.0,284.0 Q 344.7,342.9 400.0,336.9" fill="none" stroke="#CBD5E1" stroke-width="3.5" stroke-linecap="round"/>
+</svg>

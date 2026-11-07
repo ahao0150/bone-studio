@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="233" height="140" viewBox="202 211 233 140">
+        <g>
+          <!-- Tsuka (diamond-wrapped katana handle from (216, 336) through grip (246, 322) to tsuba (262, 314)) -->
+          <path d="M 212,335 L 260,312 L 264,320 L 216,343 Z"
+                fill="#0f172a" stroke="#020617" stroke-width="2.0" stroke-linejoin="round"/>
+          <!-- Crimson tsuka-ito diamond cord markings -->
+          <line x1="222" y1="331" x2="226" y2="338" stroke="#ef4444" stroke-width="2.4"/>
+          <line x1="232" y1="326" x2="236" y2="333" stroke="#ef4444" stroke-width="2.4"/>
+          <line x1="242" y1="321" x2="246" y2="328" stroke="#ef4444" stroke-width="2.4"/>
+          <line x1="252" y1="316" x2="256" y2="323" stroke="#ef4444" stroke-width="2.4"/>
+          <!-- Kashira (golden pommel cap) -->
+          <circle cx="214" cy="339" r="4.5" fill="#eab308" stroke="#451a03" stroke-width="1.5"/>
+          <!-- Tsuba (ornate golden circular handguard at (262, 315)) -->
+          <ellipse cx="262" cy="315" rx="4.5" ry="12.5" transform="rotate(-25 262 315)"
+                   fill="#eab308" stroke="#451a03" stroke-width="2.0"/>
+          <!-- Habaki (golden blade collar) -->
+          <path d="M 264,310 L 275,305 L 278,312 L 267,318 Z"
+                fill="#eab308" stroke="#451a03" stroke-width="1.5"/>
+          <!-- Nagasa (curved gleaming steel katana blade extending from (275, 308) to tip (425, 224)) -->
+          <path d="M 274,305 Q 350,268 428,218 Q 422,231 412,237 Q 345,279 277,312 Z"
+                fill="#e2e8f0" stroke="#0f172a" stroke-width="1.8" stroke-linejoin="round"/>
+          <!-- Hamon (wavy tempered blade edge gleam) -->
+          <path d="M 278,309 Q 350,272 424,221"
+                fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M 282,306 Q 352,268 426,219"
+                fill="none" stroke="#38bdf8" stroke-width="1.2" stroke-linecap="round" stroke-opacity="0.8"/>
+        </g>
+        </svg>

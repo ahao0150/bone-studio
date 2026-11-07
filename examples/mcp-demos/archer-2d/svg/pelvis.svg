@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="70" viewBox="334 386 96 70">
+
+        <g>
+          <path d="M 352,400 L 410,400 L 420,446 L 344,446 Z"
+                fill="#226B3D" stroke="#1E1B18" stroke-width="3.2" stroke-linejoin="round"/>
+          <!-- Gold trim at bottom of tunic -->
+          <line x1="347" y1="441" x2="417" y2="441" stroke="#FACC15" stroke-width="3.2" stroke-linecap="round"/>
+          <!-- Leather belt & gold buckle -->
+          <rect x="350" y="398" width="62" height="14" rx="4"
+                fill="#4A2F18" stroke="#1E1B18" stroke-width="2.8"/>
+          <rect x="382" y="396" width="16" height="18" rx="3"
+                fill="#FACC15" stroke="#1E1B18" stroke-width="2.5"/>
+        </g>
+        
+</svg>

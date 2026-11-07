@@ -303,3 +303,42 @@ try {
     1. **先画精美的同源 SVG 底座**：底座部件必须具备真实的解剖长宽比、独立 `neck` 插槽、闭口躯干与下摆遮挡，切勿用简陋几何图形做底座。
     2. **拼装 16:9 同源拆件模板图（Template Sheet）**：左侧放置完整拼装好的待机角色作为全身风格、光影与比例锚点，右侧在固定像素框 `(x, y, width, height)` 内排列各独立部件，并在关节连接点画上醒目的**红十字靶心（Red Crosshair Joint Fiducials）**。
     3. **等比缩放 + 关节锚点对齐裁切**：将生图结果按部件框提取后，采用等比缩放（Uniform Scale）对齐关节圆心，并用原始 SVG 膨胀剪影掩码（Dilated Silhouette Mask）与距离场色彩外推（Distance-Transform RGB Extrapolation）消除白边，最后通过 `skin_clone` + `region_swap` 挂载到骨架上。
+
+---
+
+## 非人形软体与半透明角色（如史莱姆 `slime-2d`）SVG 绘制与软体蒙皮 4 大法则
+
+1. **PyMuPDF `get_pixmap(alpha=True)` 反预乘 Alpha（Unpremultiplied RGBA）修正**：
+   - `pymupdf` 在光栅化含 `fill-opacity < 1.0` 的半透明 SVG 部件时，输出的 `pix.samples` 是**预乘 Alpha（Premultiplied RGB = RGB × A / 255）**。若直接转成 PIL `RGBA` 保存，半透明果冻腔体、白色高光与粉红腮红会被二次乘算导致严重发灰发暗。
+   - **标准做法**：光栅化后立即执行反预乘还原直通色值：
+     ```python
+     raw = np.frombuffer(pix.samples, dtype=np.uint8).reshape(pix.height, pix.width, 4).astype(np.float32)
+     alpha = raw[..., 3:4]
+     raw[..., :3] = np.where(alpha > 0, np.clip(raw[..., :3] * 255.0 / np.maximum(alpha, 1.0), 0.0, 255.0), 0.0)
+     ```
+2. **Fresnel 半透明折射 + 内部悬浮部件多层视差拆件**：
+   - 半透明生物切忌画成单张死板贴图，应按纵深拆分为：**后壁折射层（`slime_back_rim`）** → **后景气泡（`bubbles_back`）** → **悬浮魔力晶核（`crystal_core` + `crystal_core_glow`）** → **主果冻腔体（`slime_body`，中心 Fresnel 透明度 `0.28`、边缘 `0.98`）** → **底部焦散反光（`slime_belly_caustic`）** → **前景气泡与曲面玻璃高光（`bubbles_front` + `slime_specular`）**。
+   - 跳跃与受击时，让内部 `core` 与 `bubbles_*` 相对外部腔体产生 `2–3` 帧的惯性滞后与旋转，即可呈现真实的半透明果冻流体质感。
+3. **全骨骼 `0°` 水平绑定方向 + 接地锚点（Bottom-Contact Pivot）体积守恒挤压拉伸**：
+   - 将非人形软体角色的全部骨骼统一设为 **`0°` 水平绑定方向**（`to = [from[0] + len, from[1]]`），此时 `bone_keys` 中的 `x, y, scaleX, scaleY` 与画布水平位移（`+X` 右）、垂直位移（`+Y` 下）、水平宽窄缩放、垂直高矮缩放完全 `1:1` 对齐。
+   - 将主体根骨骼 `body_base` 精确放置在角色**底面与地面的接触点**（如 `(400, 406)`）。起跳蓄力（`scaleX: 1.30, scaleY: 0.70`）、落地砸地（`scaleX: 1.34, scaleY: 0.68`）或死亡化为一滩液体（`scaleX: 1.64, scaleY: 0.28`）时，底面始终严丝合缝贴合地面，绝不悬空或穿地。
+4. **`6×6` 多骨骼软体权重网格 + 死亡融化时刚性子部件的反向缩放补偿**：
+   - 将 `slime_body` 与 `slime_back_rim` 转为 `6×6` 网格（`mesh_create`），并绑定至 `['body_base', 'body_mid', 'body_top', 'cheek_l', 'cheek_r']` 五根软体控制骨骼（`weights_auto`），受击或落地时通过推拉左右脸颊骨骼 `cheek_l` / `cheek_r` 实现非对称果冻波纹。
+   - 当死亡动画（`die`）将父骨骼 `body_base` 垂直压扁为液滩（`scaleY: 0.28, scaleX: 1.64`）时，挂在其子层级下的刚性物体（如 `core` 晶核、`crest_drop` 皇冠、`face` 眩晕 `X X` 眼）若不补偿也会被压扁成细线；只需在关键帧中对这些刚性子骨骼施加**反向缩放补偿**（如 `scaleX: 0.62, scaleY: 3.15`）并配合向下位移 `y` 与弹跳曲线，即可表现果冻融化塌陷的同时皇冠与晶核保持立体比例掉落弹跳的戏剧效果。
+
+---
+
+## 内置完整参考工程与 SVG/MCP 工作区脚本（供 AI 直接学习与复用）
+
+仓库与本 Skill 内置了 **4 套不同类型（机械联动 IK、远程弓箭手、近战刀剑武士、非人形半透明软体生物）** 的完整演示工程及全套 SVG 生成 + MCP 骨骼动画脚本，可直接读取学习或作为模板改写：
+
+| 工程名 (`projects/<name>`) | 角色类型与核心技术点 | SVG 部件生成脚本 (`generate_*.py`) | MCP 骨骼与动画构建脚本 (`build_*_mcp.mjs`) | 包含动作 (`24fps`, `playTimes: 0`) |
+| :--- | :--- | :--- | :--- | :--- |
+| **`pelican-bicycle`** | 复杂机械联动 + 双腿圆周踏板分析式余弦定理 IK | `examples/mcp-demos/pelican-bicycle/generate_svg_parts.py`（25 个分层部件） | `examples/mcp-demos/pelican-bicycle/build_pelican_mcp.mjs`（26 根骨骼 + 软披风网格） | `ride`（匀速骑行）、`sprint`（站立冲刺）、`idle_coast`（滑行待机） |
+| **`archer-2d`** | 2D 远程精灵游侠 + 弓臂弯曲与弓弦回弹 + 抛物线箭矢插靶 | `examples/mcp-demos/archer-2d/generate_archer_svg.py`（28 个分层部件） | `examples/mcp-demos/archer-2d/build_archer_mcp.mjs`（32 根骨骼 + `4×3` 披风网格） | `idle`、`walk`、`run`、`aim_shoot`（蓄力平射）、`jump_multishot`（跃起散射）、`hit` |
+| **`samurai-2d`** | 2D 近战武士 + 5 大防穿帮解剖法则 + 双阶段纯 Alpha 辉光剑气斩竹靶 | `examples/mcp-demos/samurai-2d/generate_samurai_svg.py`（22 个多层赛璐璐部件） | `examples/mcp-demos/samurai-2d/build_samurai_mcp.mjs`（26 根骨骼 + `5×4` 阵羽织网格） | `idle`、`walk`、`run`、`slash`（上段蓄力 → 弓步挥斩 → 月牙剑气破空斩断青竹靶） |
+| **`slime-2d`** | 2D 非人形半透明果冻史莱姆 + Fresnel/SSS 着色 + `6×6` 软体网格 + 死亡融化 | `examples/mcp-demos/slime-2d/generate_slime_svg.py`（18 个半透明折射与多表情部件） | `examples/mcp-demos/slime-2d/build_slime_mcp.mjs`（15 根 `0°` 水平软体骨骼） | `idle`、`hop_walk`（跳跃行走）、`hop_run`（跳跃奔跑）、`hit`（受击震荡）、`die`（膨胀融化液滩） |
+
+> **文件位置说明**：
+> - **BoneStudio 仓库内**：编译好的可直接打开工程位于 `projects/<name>/`（已登记在 `projects/manifest.json`）；对应的 SVG 生成脚本、坐标清单 `layers_manifest.json`、`svg/*.svg`、`png/*.png` 与 MCP 构建脚本位于 `examples/mcp-demos/<name>/`。
+> - **Skill 目录内**：同一套脚本与 SVG/PNG 工作区也已同步在 Skill 目录下的 `examples/<name>/` 中，AI Agent 无需离开 Skill 目录即可直接读取参考。

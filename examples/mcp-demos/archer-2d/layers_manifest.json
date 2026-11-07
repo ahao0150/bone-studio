@@ -1,0 +1,429 @@
+{
+  "canvasWidth": 880,
+  "canvasHeight": 560,
+  "groundY": 460.0,
+  "joints": {
+    "root": [
+      440.0,
+      560.0
+    ],
+    "shadow": [
+      240.0,
+      460.0
+    ],
+    "target_stand": [
+      740.0,
+      460.0
+    ],
+    "target_pivot": [
+      740.0,
+      332.0
+    ],
+    "hip": [
+      240.0,
+      310.0
+    ],
+    "torso": [
+      240.0,
+      310.0
+    ],
+    "head": [
+      241.5,
+      214.0
+    ],
+    "hair_braid": [
+      226.0,
+      206.0
+    ],
+    "hood_feather": [
+      231.0,
+      187.0
+    ],
+    "quiver": [
+      219.0,
+      238.0
+    ],
+    "cape_root": [
+      231.0,
+      217.0
+    ],
+    "cape_mid": [
+      172.0,
+      262.0
+    ],
+    "cape_tip": [
+      105.0,
+      332.0
+    ],
+    "thigh_r": [
+      247.5,
+      310.0
+    ],
+    "shin_r": [
+      247.5,
+      379.0
+    ],
+    "foot_r": [
+      247.5,
+      448.0
+    ],
+    "thigh_l": [
+      234.0,
+      313.0
+    ],
+    "shin_l": [
+      234.0,
+      382.0
+    ],
+    "foot_l": [
+      234.0,
+      451.0
+    ],
+    "arm_upper_l": [
+      249.0,
+      229.0
+    ],
+    "arm_lower_l": [
+      249.0,
+      277.0
+    ],
+    "hand_l": [
+      249.0,
+      325.0
+    ],
+    "bow_tip_top": [
+      237.0,
+      223.0
+    ],
+    "bow_tip_bot": [
+      237.0,
+      427.0
+    ],
+    "bow_nock": [
+      237.0,
+      325.0
+    ],
+    "arm_upper_r": [
+      231.0,
+      232.0
+    ],
+    "arm_lower_r": [
+      231.0,
+      283.0
+    ],
+    "hand_r": [
+      231.0,
+      331.0
+    ]
+  },
+  "layers": [
+    {
+      "name": "ground_shadow",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/ground_shadow.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/ground_shadow.svg",
+      "bone": "shadow",
+      "zIndex": 0,
+      "left": 168,
+      "top": 440,
+      "width": 144,
+      "height": 40
+    },
+    {
+      "name": "target_stand",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/target_stand.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/target_stand.svg",
+      "bone": "target_stand",
+      "zIndex": 1,
+      "left": 656,
+      "top": 313,
+      "width": 168,
+      "height": 168
+    },
+    {
+      "name": "target_board",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/target_board.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/target_board.svg",
+      "bone": "target_pivot",
+      "zIndex": 2,
+      "left": 694,
+      "top": 138,
+      "width": 96,
+      "height": 316
+    },
+    {
+      "name": "cape_back",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/cape_back.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/cape_back.svg",
+      "bone": "cape_root",
+      "zIndex": 3,
+      "left": 87,
+      "top": 207,
+      "width": 154,
+      "height": 137
+    },
+    {
+      "name": "thigh_r",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/thigh_r.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/thigh_r.svg",
+      "bone": "thigh_r",
+      "zIndex": 4,
+      "left": 226,
+      "top": 300,
+      "width": 43,
+      "height": 92
+    },
+    {
+      "name": "shin_r",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/shin_r.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/shin_r.svg",
+      "bone": "shin_r",
+      "zIndex": 5,
+      "left": 229,
+      "top": 369,
+      "width": 37,
+      "height": 89
+    },
+    {
+      "name": "foot_r",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/foot_r.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/foot_r.svg",
+      "bone": "foot_r",
+      "zIndex": 6,
+      "left": 226,
+      "top": 434,
+      "width": 60,
+      "height": 35
+    },
+    {
+      "name": "arm_upper_l",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/arm_upper_l.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/arm_upper_l.svg",
+      "bone": "arm_upper_l",
+      "zIndex": 7,
+      "left": 232,
+      "top": 219,
+      "width": 34,
+      "height": 71
+    },
+    {
+      "name": "arm_lower_l",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/arm_lower_l.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/arm_lower_l.svg",
+      "bone": "arm_lower_l",
+      "zIndex": 8,
+      "left": 232,
+      "top": 267,
+      "width": 34,
+      "height": 68
+    },
+    {
+      "name": "bow_string_upper",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/bow_string_upper.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/bow_string_upper.svg",
+      "bone": "string_upper",
+      "zIndex": 9,
+      "left": 227,
+      "top": 213,
+      "width": 20,
+      "height": 122
+    },
+    {
+      "name": "bow_string_lower",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/bow_string_lower.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/bow_string_lower.svg",
+      "bone": "string_lower",
+      "zIndex": 10,
+      "left": 227,
+      "top": 315,
+      "width": 20,
+      "height": 122
+    },
+    {
+      "name": "bow_limb_upper",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/bow_limb_upper.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/bow_limb_upper.svg",
+      "bone": "bow_limb_u",
+      "zIndex": 11,
+      "left": 223,
+      "top": 209,
+      "width": 50,
+      "height": 129
+    },
+    {
+      "name": "bow_limb_lower",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/bow_limb_lower.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/bow_limb_lower.svg",
+      "bone": "bow_limb_d",
+      "zIndex": 12,
+      "left": 223,
+      "top": 312,
+      "width": 50,
+      "height": 129
+    },
+    {
+      "name": "hand_l_bow_grip",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/hand_l_bow_grip.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/hand_l_bow_grip.svg",
+      "bone": "hand_l",
+      "zIndex": 13,
+      "left": 235,
+      "top": 302,
+      "width": 34,
+      "height": 46
+    },
+    {
+      "name": "quiver_back",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/quiver_back.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/quiver_back.svg",
+      "bone": "quiver",
+      "zIndex": 14,
+      "left": 177,
+      "top": 174,
+      "width": 75,
+      "height": 110
+    },
+    {
+      "name": "torso_armor",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/torso_armor.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/torso_armor.svg",
+      "bone": "torso",
+      "zIndex": 18,
+      "left": 200,
+      "top": 210,
+      "width": 83,
+      "height": 128
+    },
+    {
+      "name": "hair_braid",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/hair_braid.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/hair_braid.svg",
+      "bone": "hair_braid",
+      "zIndex": 19,
+      "left": 175,
+      "top": 196,
+      "width": 64,
+      "height": 60
+    },
+    {
+      "name": "head_elf",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/head_elf.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/head_elf.svg",
+      "bone": "head",
+      "zIndex": 20,
+      "left": 196,
+      "top": 170,
+      "width": 88,
+      "height": 62
+    },
+    {
+      "name": "hood_feather",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/hood_feather.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/hood_feather.svg",
+      "bone": "hood_feather",
+      "zIndex": 21,
+      "left": 169,
+      "top": 162,
+      "width": 73,
+      "height": 40
+    },
+    {
+      "name": "thigh_l",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/thigh_l.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/thigh_l.svg",
+      "bone": "thigh_l",
+      "zIndex": 15,
+      "left": 209,
+      "top": 300,
+      "width": 48,
+      "height": 95
+    },
+    {
+      "name": "shin_l",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/shin_l.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/shin_l.svg",
+      "bone": "shin_l",
+      "zIndex": 16,
+      "left": 214,
+      "top": 365,
+      "width": 41,
+      "height": 96
+    },
+    {
+      "name": "foot_l",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/foot_l.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/foot_l.svg",
+      "bone": "foot_l",
+      "zIndex": 17,
+      "left": 211,
+      "top": 437,
+      "width": 66,
+      "height": 36
+    },
+    {
+      "name": "arrow_nocked",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/arrow_nocked.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/arrow_nocked.svg",
+      "bone": "bow_nock",
+      "zIndex": 22,
+      "left": 125,
+      "top": 305,
+      "width": 163,
+      "height": 40
+    },
+    {
+      "name": "arrow_main",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/arrow_main.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/arrow_main.svg",
+      "bone": "arrow_main",
+      "zIndex": 23,
+      "left": 125,
+      "top": 305,
+      "width": 163,
+      "height": 40
+    },
+    {
+      "name": "arrow_spread_up",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/arrow_spread_up.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/arrow_spread_up.svg",
+      "bone": "arrow_up",
+      "zIndex": 24,
+      "left": 125,
+      "top": 305,
+      "width": 163,
+      "height": 40
+    },
+    {
+      "name": "arrow_spread_down",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/arrow_spread_down.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/arrow_spread_down.svg",
+      "bone": "arrow_down",
+      "zIndex": 25,
+      "left": 125,
+      "top": 305,
+      "width": 163,
+      "height": 40
+    },
+    {
+      "name": "arm_upper_r",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/arm_upper_r.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/arm_upper_r.svg",
+      "bone": "arm_upper_r",
+      "zIndex": 26,
+      "left": 203,
+      "top": 199,
+      "width": 56,
+      "height": 97
+    },
+    {
+      "name": "arm_lower_r",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/png/arm_lower_r.png",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/archer-2d/svg/arm_lower_r.svg",
+      "bone": "arm_lower_r",
+      "zIndex": 27,
+      "left": 213,
+      "top": 273,
+      "width": 36,
+      "height": 75
+    }
+  ]
+}

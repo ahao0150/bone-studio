@@ -1,0 +1,206 @@
+{
+ "imagePath": "slime-2d_tex.png",
+ "SubTexture": [
+  {
+   "frameWidth": 248,
+   "y": 200,
+   "frameHeight": 56,
+   "frameX": 0,
+   "height": 56,
+   "frameY": 0,
+   "width": 248,
+   "name": "ground_shadow",
+   "x": 0
+  },
+  {
+   "frameWidth": 252,
+   "y": 0,
+   "frameHeight": 182,
+   "frameX": 0,
+   "height": 182,
+   "frameY": 0,
+   "width": 252,
+   "name": "slime_back_rim",
+   "x": 716
+  },
+  {
+   "frameWidth": 77,
+   "y": 0,
+   "frameHeight": 114,
+   "frameX": 0,
+   "height": 114,
+   "frameY": 0,
+   "width": 77,
+   "name": "bubbles_back",
+   "x": 1341
+  },
+  {
+   "frameWidth": 150,
+   "y": 0,
+   "frameHeight": 148,
+   "frameX": 0,
+   "height": 148,
+   "frameY": 0,
+   "width": 150,
+   "name": "crystal_core_glow",
+   "x": 970
+  },
+  {
+   "frameWidth": 137,
+   "y": 0,
+   "frameHeight": 131,
+   "frameX": 0,
+   "height": 131,
+   "frameY": 0,
+   "width": 137,
+   "name": "crystal_core",
+   "x": 1122
+  },
+  {
+   "frameWidth": 274,
+   "y": 0,
+   "frameHeight": 190,
+   "frameX": 0,
+   "height": 190,
+   "frameY": 0,
+   "width": 274,
+   "name": "slime_body",
+   "x": 440
+  },
+  {
+   "frameWidth": 176,
+   "y": 200,
+   "frameHeight": 44,
+   "frameX": 0,
+   "height": 44,
+   "frameY": 0,
+   "width": 176,
+   "name": "slime_belly_caustic",
+   "x": 432
+  },
+  {
+   "frameWidth": 78,
+   "y": 0,
+   "frameHeight": 115,
+   "frameX": 0,
+   "height": 115,
+   "frameY": 0,
+   "width": 78,
+   "name": "bubbles_front",
+   "x": 1261
+  },
+  {
+   "frameWidth": 164,
+   "y": 200,
+   "frameHeight": 38,
+   "frameX": 0,
+   "height": 38,
+   "frameY": 0,
+   "width": 164,
+   "name": "blush_cheeks",
+   "x": 610
+  },
+  {
+   "frameWidth": 122,
+   "y": 0,
+   "frameHeight": 56,
+   "frameX": 0,
+   "height": 56,
+   "frameY": 0,
+   "width": 122,
+   "name": "eyes_normal",
+   "x": 1894
+  },
+  {
+   "frameWidth": 124,
+   "y": 200,
+   "frameHeight": 32,
+   "frameX": 0,
+   "height": 32,
+   "frameY": 0,
+   "width": 124,
+   "name": "eyes_blink",
+   "x": 776
+  },
+  {
+   "frameWidth": 140,
+   "y": 0,
+   "frameHeight": 56,
+   "frameX": 0,
+   "height": 56,
+   "frameY": 0,
+   "width": 140,
+   "name": "eyes_hurt",
+   "x": 1752
+  },
+  {
+   "frameWidth": 122,
+   "y": 200,
+   "frameHeight": 50,
+   "frameX": 0,
+   "height": 50,
+   "frameY": 0,
+   "width": 122,
+   "name": "eyes_dizzy",
+   "x": 250
+  },
+  {
+   "frameWidth": 56,
+   "y": 200,
+   "frameHeight": 29,
+   "frameX": 0,
+   "height": 29,
+   "frameY": 0,
+   "width": 56,
+   "name": "mouth_smile",
+   "x": 902
+  },
+  {
+   "frameWidth": 56,
+   "y": 200,
+   "frameHeight": 46,
+   "frameX": 0,
+   "height": 46,
+   "frameY": 0,
+   "width": 56,
+   "name": "mouth_wail",
+   "x": 374
+  },
+  {
+   "frameWidth": 227,
+   "y": 0,
+   "frameHeight": 110,
+   "frameX": 0,
+   "height": 110,
+   "frameY": 0,
+   "width": 227,
+   "name": "slime_specular",
+   "x": 1420
+  },
+  {
+   "frameWidth": 101,
+   "y": 0,
+   "frameHeight": 82,
+   "frameX": 0,
+   "height": 82,
+   "frameY": 0,
+   "width": 101,
+   "name": "crest_antenna",
+   "x": 1649
+  },
+  {
+   "frameWidth": 438,
+   "y": 0,
+   "frameHeight": 198,
+   "frameX": 0,
+   "height": 198,
+   "frameY": 0,
+   "width": 438,
+   "name": "splash_droplets_fx",
+   "x": 0
+  }
+ ],
+ "width": 2016,
+ "name": "slime-2d",
+ "height": 256
+}

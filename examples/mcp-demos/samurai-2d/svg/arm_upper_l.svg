@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="84" viewBox="237 207 44 84">
+        <g>
+          <path d="M 245,226 A 11,11 0 0 1 267,226 L 273,274 A 9,9 0 0 1 255,274 Z"
+                fill="#0f172a" stroke="#090d16" stroke-width="2.2"/>
+          <!-- Far shoulder guard (sode) -->
+          <circle cx="256" cy="226" r="11.5" fill="#991b1b" stroke="#eab308" stroke-width="2"/>
+          <path d="M 246,229 Q 256,235 266,229" fill="none" stroke="#eab308" stroke-width="1.8"/>
+        </g>
+        </svg>

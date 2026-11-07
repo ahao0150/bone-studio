@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="136" viewBox="84 204 160 136">
+        <g>
+          <!-- Outer crimson battle cloak with tattered heroic hem & gold trim -->
+          <path d="M 236,212 Q 168,232 92,306 L 114,316 L 104,332 Q 174,328 232,276 Z"
+                fill="#991b1b" stroke="#450a0a" stroke-width="2.4" stroke-linejoin="round"/>
+          <!-- Inner dynamic fold highlight -->
+          <path d="M 228,220 Q 170,244 112,304 Q 158,308 220,268 Z"
+                fill="#ef4444" fill-opacity="0.45"/>
+          <!-- Deep shadow fold -->
+          <path d="M 230,234 Q 175,266 122,322 L 145,323 Q 188,285 228,256 Z"
+                fill="#450a0a" fill-opacity="0.55"/>
+          <!-- Golden cloud/wave border pattern along bottom edge -->
+          <path d="M 106,330 Q 172,324 229,274"
+                fill="none" stroke="#eab308" stroke-width="3.2" stroke-linecap="round"/>
+        </g>
+        </svg>

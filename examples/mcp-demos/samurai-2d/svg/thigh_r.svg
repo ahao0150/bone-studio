@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="52" height="94" viewBox="232 296 52 94">
+        <g>
+          <!-- Wide pleated samurai hakama thigh tapering to knee -->
+          <path d="M 240,314 A 15,10 0 0 1 270,314 L 276,376 C 276,384 250,384 250,376 Z"
+                fill="#0f172a" stroke="#020617" stroke-width="2.2" stroke-linejoin="round"/>
+          <!-- Hakama vertical pleat lines -->
+          <line x1="254" y1="320" x2="261" y2="375" stroke="#334155" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="262" y1="320" x2="269" y2="374" stroke="#475569" stroke-width="1.6" stroke-linecap="round"/>
+        </g>
+        </svg>

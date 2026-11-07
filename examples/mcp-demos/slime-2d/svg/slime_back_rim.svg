@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="252" height="182" viewBox="274 238 252 182">
+        <g>
+          <!-- Deep ocean-sapphire back gel silhouette -->
+          <path d="M 400,250
+                   C 462,250 508,295 514,352
+                   C 518,390 494,408 400,408
+                   C 306,408 282,390 286,352
+                   C 292,295 338,250 400,250 Z"
+                fill="#0369a1" fill-opacity="0.78" stroke="#082f49" stroke-width="3.0"/>
+          <!-- Inner refraction dome glow -->
+          <path d="M 400,264
+                   C 452,264 492,302 496,352
+                   C 499,384 476,398 400,398
+                   C 324,398 301,384 304,352
+                   C 308,302 348,264 400,264 Z"
+                fill="#0ea5e9" fill-opacity="0.65"/>
+        </g>
+        </svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="64" viewBox="306 203 130 64">
+
+        <g>
+          <!-- Cap crown -->
+          <path d="M 356,256 C 354,226 382,210 416,224 C 406,236 398,244 356,256 Z"
+                fill="#297A46" stroke="#1E1B18" stroke-width="3.2" stroke-linejoin="round"/>
+          <!-- Cap brim -->
+          <path d="M 352,256 C 378,242 406,240 426,248 C 410,256 382,260 352,256 Z"
+                fill="#7C471E" stroke="#1E1B18" stroke-width="2.8" stroke-linejoin="round"/>
+          <!-- White hawk feather on hat -->
+          <path d="M 378,234 C 358,214 334,208 316,216 C 336,226 356,236 376,240 Z"
+                fill="#F8FAFC" stroke="#1E1B18" stroke-width="2.6" stroke-linejoin="round"/>
+          <circle cx="378" cy="238" r="5" fill="#FACC15" stroke="#1E1B18" stroke-width="2.2"/>
+        </g>
+        
+</svg>

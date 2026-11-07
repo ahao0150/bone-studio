@@ -1,0 +1,388 @@
+{
+  "canvasWidth": 880,
+  "canvasHeight": 560,
+  "joints": {
+    "root": [
+      245.0,
+      462.0
+    ],
+    "hip": [
+      245.0,
+      310.0
+    ],
+    "torso": [
+      245.0,
+      292.0
+    ],
+    "neck": [
+      248.0,
+      212.0
+    ],
+    "head": [
+      250.0,
+      198.0
+    ],
+    "hair_ponytail": [
+      226.0,
+      174.0
+    ],
+    "headband_tail": [
+      224.0,
+      182.0
+    ],
+    "cape_root": [
+      232.0,
+      218.0
+    ],
+    "cape_mid": [
+      176.0,
+      258.0
+    ],
+    "cape_tip": [
+      112.0,
+      308.0
+    ],
+    "saya": [
+      235.0,
+      306.0
+    ],
+    "arm_upper_l": [
+      256.0,
+      226.0
+    ],
+    "arm_lower_l": [
+      264.0,
+      274.0
+    ],
+    "hand_l": [
+      278.0,
+      314.0
+    ],
+    "arm_upper_r": [
+      236.0,
+      228.0
+    ],
+    "arm_lower_r": [
+      232.0,
+      280.0
+    ],
+    "hand_r": [
+      246.0,
+      322.0
+    ],
+    "katana": [
+      246.0,
+      322.0
+    ],
+    "thigh_r": [
+      255.0,
+      314.0
+    ],
+    "shin_r": [
+      263.0,
+      382.0
+    ],
+    "foot_r": [
+      267.0,
+      448.0
+    ],
+    "thigh_l": [
+      236.0,
+      316.0
+    ],
+    "shin_l": [
+      232.0,
+      384.0
+    ],
+    "foot_l": [
+      228.0,
+      450.0
+    ],
+    "slash_arc": [
+      255.0,
+      275.0
+    ],
+    "slash_wave": [
+      335.0,
+      275.0
+    ],
+    "target_stand": [
+      700.0,
+      462.0
+    ],
+    "target_base": [
+      700.0,
+      340.0
+    ],
+    "target_top": [
+      700.0,
+      265.0
+    ]
+  },
+  "layers": [
+    {
+      "name": "ground_shadow",
+      "bone": "root",
+      "zIndex": 0,
+      "left": 182,
+      "top": 444,
+      "width": 128,
+      "height": 36,
+      "centerX": 246.0,
+      "centerY": 462.0,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\samurai-2d\\png\\ground_shadow.png"
+    },
+    {
+      "name": "target_stand_base",
+      "bone": "target_base",
+      "zIndex": 1,
+      "left": 642,
+      "top": 251,
+      "width": 116,
+      "height": 228,
+      "centerX": 700.0,
+      "centerY": 365.0,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\samurai-2d\\png\\target_stand_base.png"
+    },
+    {
+      "name": "target_top_half",
+      "bone": "target_top",
+      "zIndex": 2,
+      "left": 668,
+      "top": 170,
+      "width": 64,
+      "height": 111,
+      "centerX": 700.0,
+      "centerY": 225.5,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\samurai-2d\\png\\target_top_half.png"
+    },
+    {
+      "name": "haori_cape",
+      "bone": "cape_root",
+      "zIndex": 3,
+      "left": 84,
+      "top": 204,
+      "width": 160,
+      "height": 136,
+      "centerX": 164.0,
+      "centerY": 272.0,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\samurai-2d\\png\\haori_cape.png"
+    },
+    {
+      "name": "arm_upper_l",
+      "bone": "arm_upper_l",
+      "zIndex": 4,
+      "left": 237,
+      "top": 207,
+      "width": 44,
+      "height": 84,
+      "centerX": 259.0,
+      "centerY": 249.0,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\samurai-2d\\png\\arm_upper_l.png"
+    },
+    {
+      "name": "arm_lower_l",
+      "bone": "arm_lower_l",
+      "zIndex": 5,
+      "left": 248,
+      "top": 258,
+      "width": 44,
+      "height": 70,
+      "centerX": 270.0,
+      "centerY": 293.0,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\samurai-2d\\png\\arm_lower_l.png"
+    },
+    {
+      "name": "thigh_r",
+      "bone": "thigh_r",
+      "zIndex": 6,
+      "left": 232,
+      "top": 296,
+      "width": 52,
+      "height": 94,
+      "centerX": 258.0,
+      "centerY": 343.0,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\samurai-2d\\png\\thigh_r.png"
+    },
+    {
+      "name": "shin_r",
+      "bone": "shin_r",
+      "zIndex": 7,
+      "left": 245,
+      "top": 365,
+      "width": 38,
+      "height": 95,
+      "centerX": 264.0,
+      "centerY": 412.5,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\samurai-2d\\png\\shin_r.png"
+    },
+    {
+      "name": "foot_r",
+      "bone": "foot_r",
+      "zIndex": 8,
+      "left": 248,
+      "top": 431,
+      "width": 57,
+      "height": 37,
+      "centerX": 276.5,
+      "centerY": 449.5,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\samurai-2d\\png\\foot_r.png"
+    },
+    {
+      "name": "thigh_l",
+      "bone": "thigh_l",
+      "zIndex": 9,
+      "left": 208,
+      "top": 297,
+      "width": 53,
+      "height": 95,
+      "centerX": 234.5,
+      "centerY": 344.5,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\samurai-2d\\png\\thigh_l.png"
+    },
+    {
+      "name": "shin_l",
+      "bone": "shin_l",
+      "zIndex": 10,
+      "left": 210,
+      "top": 364,
+      "width": 44,
+      "height": 98,
+      "centerX": 232.0,
+      "centerY": 413.0,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\samurai-2d\\png\\shin_l.png"
+    },
+    {
+      "name": "foot_l",
+      "bone": "foot_l",
+      "zIndex": 11,
+      "left": 208,
+      "top": 433,
+      "width": 63,
+      "height": 39,
+      "centerX": 239.5,
+      "centerY": 452.5,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\samurai-2d\\png\\foot_l.png"
+    },
+    {
+      "name": "neck",
+      "bone": "neck",
+      "zIndex": 12,
+      "left": 229,
+      "top": 185,
+      "width": 36,
+      "height": 50,
+      "centerX": 247.0,
+      "centerY": 210.0,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\samurai-2d\\png\\neck.png"
+    },
+    {
+      "name": "torso_armor",
+      "bone": "torso",
+      "zIndex": 13,
+      "left": 204,
+      "top": 205,
+      "width": 80,
+      "height": 138,
+      "centerX": 244.0,
+      "centerY": 274.0,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\samurai-2d\\png\\torso_armor.png"
+    },
+    {
+      "name": "saya_sheath",
+      "bone": "saya",
+      "zIndex": 14,
+      "left": 125,
+      "top": 291,
+      "width": 137,
+      "height": 76,
+      "centerX": 193.5,
+      "centerY": 329.0,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\samurai-2d\\png\\saya_sheath.png"
+    },
+    {
+      "name": "hair_ponytail",
+      "bone": "hair_ponytail",
+      "zIndex": 15,
+      "left": 119,
+      "top": 147,
+      "width": 119,
+      "height": 90,
+      "centerX": 178.5,
+      "centerY": 192.0,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\samurai-2d\\png\\hair_ponytail.png"
+    },
+    {
+      "name": "head_samurai",
+      "bone": "head",
+      "zIndex": 16,
+      "left": 213,
+      "top": 144,
+      "width": 77,
+      "height": 71,
+      "centerX": 251.5,
+      "centerY": 179.5,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\samurai-2d\\png\\head_samurai.png"
+    },
+    {
+      "name": "katana_sword",
+      "bone": "katana",
+      "zIndex": 17,
+      "left": 202,
+      "top": 211,
+      "width": 233,
+      "height": 140,
+      "centerX": 318.5,
+      "centerY": 281.0,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\samurai-2d\\png\\katana_sword.png"
+    },
+    {
+      "name": "arm_upper_r",
+      "bone": "arm_upper_r",
+      "zIndex": 18,
+      "left": 213,
+      "top": 206,
+      "width": 45,
+      "height": 93,
+      "centerX": 235.5,
+      "centerY": 252.5,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\samurai-2d\\png\\arm_upper_r.png"
+    },
+    {
+      "name": "arm_lower_r",
+      "bone": "arm_lower_r",
+      "zIndex": 19,
+      "left": 214,
+      "top": 262,
+      "width": 50,
+      "height": 75,
+      "centerX": 239.0,
+      "centerY": 299.5,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\samurai-2d\\png\\arm_lower_r.png"
+    },
+    {
+      "name": "slash_arc_fx",
+      "bone": "slash_arc",
+      "zIndex": 20,
+      "left": 167,
+      "top": 83,
+      "width": 326,
+      "height": 414,
+      "centerX": 330.0,
+      "centerY": 290.0,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\samurai-2d\\png\\slash_arc_fx.png"
+    },
+    {
+      "name": "slash_wave_fx",
+      "bone": "slash_wave",
+      "zIndex": 21,
+      "left": 253,
+      "top": 107,
+      "width": 235,
+      "height": 382,
+      "centerX": 370.5,
+      "centerY": 298.0,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\samurai-2d\\png\\slash_wave_fx.png"
+    }
+  ]
+}

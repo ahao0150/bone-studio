@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="326" height="414" viewBox="167 83 326 414">
+        <g>
+          <!-- Outer soft cyan glow halo -->
+          <path d="M 180,108 C 350,98 475,202 465,348 C 456,422 390,472 288,474 C 372,446 418,390 422,325 C 428,222 328,140 180,108 Z"
+                fill="#0284c7" fill-opacity="0.38"/>
+          <!-- Mid-layer vibrant azure crescent slash arc -->
+          <path d="M 192,115 C 348,106 466,206 456,345 C 448,415 385,465 295,468 C 376,440 420,386 424,325 C 430,224 334,144 192,115 Z"
+                fill="#38bdf8" fill-opacity="0.82"/>
+          <!-- Crimson-gold inner fire ribbon -->
+          <path d="M 218,130 C 352,126 446,216 438,338 C 432,395 382,442 315,452 C 378,425 410,378 412,322 C 416,228 335,152 218,130 Z"
+                fill="#fb7185" fill-opacity="0.78"/>
+          <!-- Razor-sharp white-hot leading edge of the katana cleave -->
+          <path d="M 208,120 C 356,112 462,210 452,345 C 446,408 392,455 310,464 C 388,436 432,382 436,322 C 442,218 345,136 208,120 Z"
+                fill="#f0f9ff" fill-opacity="0.96"/>
+          <!-- Pure white outer razor arc -->
+          <path d="M 225,118 C 368,118 464,216 452,348 C 446,404 398,448 326,460"
+                fill="none" stroke="#ffffff" stroke-width="4.0" stroke-linecap="round"/>
+          <!-- Dynamic speed lines / energy sparks -->
+          <path d="M 260,122 Q 395,165 446,285" fill="none" stroke="#fef08a" stroke-width="3.0" stroke-linecap="round"/>
+          <path d="M 355,155 L 392,138 L 370,170 Z" fill="#fef08a"/>
+          <path d="M 432,245 L 472,238 L 444,264 Z" fill="#ffffff"/>
+          <path d="M 418,365 L 454,380 L 412,388 Z" fill="#fef08a"/>
+        </g>
+        </svg>

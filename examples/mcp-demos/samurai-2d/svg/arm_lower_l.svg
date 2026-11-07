@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="70" viewBox="248 258 44 70">
+        <g>
+          <path d="M 255,274 A 9,9 0 0 1 273,274 L 284,312 A 7,7 0 0 1 270,315 Z"
+                fill="#1e293b" stroke="#090d16" stroke-width="2"/>
+          <!-- Crimson & gold kote forearm plate -->
+          <path d="M 258,280 L 273,278 L 282,308 L 269,310 Z"
+                fill="#991b1b" stroke="#eab308" stroke-width="1.8"/>
+          <line x1="260" y1="290" x2="276" y2="288" stroke="#eab308" stroke-width="1.8"/>
+          <line x1="264" y1="300" x2="279" y2="298" stroke="#eab308" stroke-width="1.8"/>
+          <!-- Far hand gripping -->
+          <circle cx="278" cy="314" r="6.5" fill="#fde4cf" stroke="#7c2d12" stroke-width="1.6"/>
+        </g>
+        </svg>

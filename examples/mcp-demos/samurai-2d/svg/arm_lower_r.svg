@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="75" viewBox="214 262 50 75">
+        <g>
+          <!-- Forearm base from elbow (232, 280) to wrist (246, 322) -->
+          <path d="M 222,280 A 10,10 0 0 1 242,280 L 253,318 A 8,8 0 0 1 237,322 Z"
+                fill="#1e293b" stroke="#020617" stroke-width="2.2" stroke-linejoin="round"/>
+          <!-- Ornate crimson & gold Kote gauntlet plate -->
+          <path d="M 225,284 L 242,281 L 252,314 L 237,318 Z"
+                fill="#dc2626" stroke="#eab308" stroke-width="2.0" stroke-linejoin="round"/>
+          <!-- Elbow rondel guard centered on (232, 280) -->
+          <circle cx="232" cy="280" r="6.5" fill="#1e293b" stroke="#eab308" stroke-width="1.8"/>
+          <line x1="227" y1="295" x2="245" y2="292" stroke="#eab308" stroke-width="2.0"/>
+          <line x1="231" y1="306" x2="249" y2="303" stroke="#eab308" stroke-width="2.0"/>
+          <!-- Articulated right hand & 4 fingers wrapping around the katana hilt at (246, 322) -->
+          <path d="M 239,315 L 253,312 C 257,316 258,325 252,329 L 241,330 C 237,327 237,320 239,315 Z"
+                fill="#fde4cf" stroke="#7c2d12" stroke-width="1.8" stroke-linejoin="round"/>
+          <!-- Tekko (gold-trimmed crimson back-of-hand armor plate) -->
+          <path d="M 239,314 L 250,312 L 252,321 L 241,323 Z"
+                fill="#991b1b" stroke="#eab308" stroke-width="1.4"/>
+          <!-- Articulated fingers curled around tsuka -->
+          <rect x="246" y="320" width="8.5" height="3.2" rx="1.5" transform="rotate(-22 250 321)" fill="#fde4cf" stroke="#7c2d12" stroke-width="1.1"/>
+          <rect x="244" y="323" width="8.5" height="3.2" rx="1.5" transform="rotate(-22 248 324)" fill="#fde4cf" stroke="#7c2d12" stroke-width="1.1"/>
+          <rect x="242" y="326" width="8.0" height="3.2" rx="1.5" transform="rotate(-22 246 327)" fill="#fde4cf" stroke="#7c2d12" stroke-width="1.1"/>
+        </g>
+        </svg>

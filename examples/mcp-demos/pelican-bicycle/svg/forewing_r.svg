@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="116" height="53" viewBox="378 306 116 53">
+
+    <g transform="translate(404.01,332.91) rotate(-0.76)">
+      <path d="M 0,-16.00 C 27.20,-16.80 47.60,-12.00 68.00,-12.00
+               A 12.00,12.00 0 0 1 68.00,12.00
+               C 47.60,12.00 27.20,16.80 0,16.00
+               A 16.00,16.00 0 0 1 0,-16.00 Z"
+            fill="#FFFFFF" stroke="#334155" stroke-width="3.8" stroke-linejoin="round"/>
+    </g>
+    <circle cx="472.0" cy="332.0" r="11" fill="#FFFFFF" stroke="#334155" stroke-width="3.5"/>
+</svg>

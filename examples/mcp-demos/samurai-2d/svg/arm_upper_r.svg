@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="93" viewBox="213 206 45 93">
+        <g>
+          <!-- Upper arm armored sleeve from shoulder (236, 228) to elbow (232, 280) -->
+          <path d="M 224,228 A 12,12 0 0 1 248,228 L 243,280 A 11,11 0 0 1 221,280 Z"
+                fill="#0f172a" stroke="#020617" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M 235,232 L 246,232 L 242,278 L 233,278 Z" fill="#334155" fill-opacity="0.5"/>
+          <!-- Concentric circular Samurai Sode Shoulder Armor centered right on pivot (236, 228) (r=14.5px) -->
+          <!-- Because it is a concentric circle around (236, 228), rotating -130 deg in slash has ZERO step! -->
+          <circle cx="236" cy="228" r="14.5"
+                  fill="#dc2626" stroke="#eab308" stroke-width="2.4"/>
+          <path d="M 223,225 Q 236,232 249,225" fill="none" stroke="#eab308" stroke-width="2.0" stroke-linecap="round"/>
+          <path d="M 223,232 Q 236,239 249,232" fill="none" stroke="#090d16" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="236" cy="222" r="3.5" fill="#eab308" stroke="#451a03" stroke-width="1.2"/>
+        </g>
+        </svg>

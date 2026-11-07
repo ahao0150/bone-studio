@@ -1,0 +1,250 @@
+{
+ "imagePath": "samurai-2d_tex.png",
+ "SubTexture": [
+  {
+   "frameWidth": 128,
+   "y": 416,
+   "frameHeight": 36,
+   "frameX": 0,
+   "height": 36,
+   "frameY": 0,
+   "width": 128,
+   "name": "ground_shadow",
+   "x": 124
+  },
+  {
+   "frameWidth": 116,
+   "y": 0,
+   "frameHeight": 228,
+   "frameX": 0,
+   "height": 228,
+   "frameY": 0,
+   "width": 116,
+   "name": "target_stand_base",
+   "x": 565
+  },
+  {
+   "frameWidth": 64,
+   "y": 0,
+   "frameHeight": 111,
+   "frameX": 0,
+   "height": 111,
+   "frameY": 0,
+   "width": 64,
+   "name": "target_top_half",
+   "x": 1162
+  },
+  {
+   "frameWidth": 160,
+   "y": 0,
+   "frameHeight": 136,
+   "frameX": 0,
+   "height": 136,
+   "frameY": 0,
+   "width": 160,
+   "name": "haori_cape",
+   "x": 1000
+  },
+  {
+   "frameWidth": 44,
+   "y": 0,
+   "frameHeight": 84,
+   "frameX": 0,
+   "height": 84,
+   "frameY": 0,
+   "width": 44,
+   "name": "arm_upper_l",
+   "x": 1591
+  },
+  {
+   "frameWidth": 44,
+   "y": 0,
+   "frameHeight": 70,
+   "frameX": 0,
+   "height": 70,
+   "frameY": 0,
+   "width": 44,
+   "name": "arm_lower_l",
+   "x": 1907
+  },
+  {
+   "frameWidth": 52,
+   "y": 0,
+   "frameHeight": 94,
+   "frameX": 0,
+   "height": 94,
+   "frameY": 0,
+   "width": 52,
+   "name": "thigh_r",
+   "x": 1369
+  },
+  {
+   "frameWidth": 38,
+   "y": 0,
+   "frameHeight": 95,
+   "frameX": 0,
+   "height": 95,
+   "frameY": 0,
+   "width": 38,
+   "name": "shin_r",
+   "x": 1274
+  },
+  {
+   "frameWidth": 57,
+   "y": 416,
+   "frameHeight": 37,
+   "frameX": 0,
+   "height": 37,
+   "frameY": 0,
+   "width": 57,
+   "name": "foot_r",
+   "x": 65
+  },
+  {
+   "frameWidth": 53,
+   "y": 0,
+   "frameHeight": 95,
+   "frameX": 0,
+   "height": 95,
+   "frameY": 0,
+   "width": 53,
+   "name": "thigh_l",
+   "x": 1314
+  },
+  {
+   "frameWidth": 44,
+   "y": 0,
+   "frameHeight": 98,
+   "frameX": 0,
+   "height": 98,
+   "frameY": 0,
+   "width": 44,
+   "name": "shin_l",
+   "x": 1228
+  },
+  {
+   "frameWidth": 63,
+   "y": 416,
+   "frameHeight": 39,
+   "frameX": 0,
+   "height": 39,
+   "frameY": 0,
+   "width": 63,
+   "name": "foot_l",
+   "x": 0
+  },
+  {
+   "frameWidth": 36,
+   "y": 0,
+   "frameHeight": 50,
+   "frameX": 0,
+   "height": 50,
+   "frameY": 0,
+   "width": 36,
+   "name": "neck",
+   "x": 1953
+  },
+  {
+   "frameWidth": 80,
+   "y": 0,
+   "frameHeight": 138,
+   "frameX": 0,
+   "height": 138,
+   "frameY": 0,
+   "width": 80,
+   "name": "torso_armor",
+   "x": 918
+  },
+  {
+   "frameWidth": 137,
+   "y": 0,
+   "frameHeight": 76,
+   "frameX": 0,
+   "height": 76,
+   "frameY": 0,
+   "width": 137,
+   "name": "saya_sheath",
+   "x": 1637
+  },
+  {
+   "frameWidth": 119,
+   "y": 0,
+   "frameHeight": 90,
+   "frameX": 0,
+   "height": 90,
+   "frameY": 0,
+   "width": 119,
+   "name": "hair_ponytail",
+   "x": 1470
+  },
+  {
+   "frameWidth": 77,
+   "y": 0,
+   "frameHeight": 71,
+   "frameX": 0,
+   "height": 71,
+   "frameY": 0,
+   "width": 77,
+   "name": "head_samurai",
+   "x": 1828
+  },
+  {
+   "frameWidth": 233,
+   "y": 0,
+   "frameHeight": 140,
+   "frameX": 0,
+   "height": 140,
+   "frameY": 0,
+   "width": 233,
+   "name": "katana_sword",
+   "x": 683
+  },
+  {
+   "frameWidth": 45,
+   "y": 0,
+   "frameHeight": 93,
+   "frameX": 0,
+   "height": 93,
+   "frameY": 0,
+   "width": 45,
+   "name": "arm_upper_r",
+   "x": 1423
+  },
+  {
+   "frameWidth": 50,
+   "y": 0,
+   "frameHeight": 75,
+   "frameX": 0,
+   "height": 75,
+   "frameY": 0,
+   "width": 50,
+   "name": "arm_lower_r",
+   "x": 1776
+  },
+  {
+   "frameWidth": 326,
+   "y": 0,
+   "frameHeight": 414,
+   "frameX": 0,
+   "height": 414,
+   "frameY": 0,
+   "width": 326,
+   "name": "slash_arc_fx",
+   "x": 0
+  },
+  {
+   "frameWidth": 235,
+   "y": 0,
+   "frameHeight": 382,
+   "frameX": 0,
+   "height": 382,
+   "frameY": 0,
+   "width": 235,
+   "name": "slash_wave_fx",
+   "x": 328
+  }
+ ],
+ "width": 1992,
+ "name": "samurai-2d",
+ "height": 456
+}

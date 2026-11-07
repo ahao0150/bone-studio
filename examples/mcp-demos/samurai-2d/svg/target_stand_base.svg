@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="116" height="228" viewBox="642 251 116 228">
+        <g>
+          <!-- Ground shadow under target -->
+          <ellipse cx="700" cy="462" rx="52" ry="11" fill="#090d16" fill-opacity="0.55"/>
+          <!-- Tripod wooden legs -->
+          <path d="M 695,355 L 664,460 L 676,460 L 702,365 Z" fill="#78350f" stroke="#1c0a00" stroke-width="2"/>
+          <path d="M 705,355 L 736,460 L 724,460 L 698,365 Z" fill="#78350f" stroke="#1c0a00" stroke-width="2"/>
+          <rect x="693" y="340" width="14" height="118" rx="3" fill="#78350f" stroke="#1c0a00" stroke-width="2"/>
+          <!-- Horizontal cross-beam -->
+          <rect x="672" y="366" width="56" height="12" rx="3" fill="#78350f" stroke="#1c0a00" stroke-width="2"/>
+          <rect x="691" y="364" width="18" height="16" rx="2" fill="#eab308" stroke="#451a03" stroke-width="1.5"/>
+          <!-- Lower half of woven tatami/bamboo cylinder (from y=268 down to y=356, diagonal cut at y=268!) -->
+          <path d="M 678,274 L 722,260 L 722,354 C 722,360 678,360 678,354 Z"
+                fill="#65a30d" stroke="#1a2e05" stroke-width="2.2" stroke-linejoin="round"/>
+          <!-- Bamboo vertical ribs & straw rope bindings -->
+          <line x1="689" y1="271" x2="689" y2="356" stroke="#365314" stroke-width="1.6"/>
+          <line x1="700" y1="267" x2="700" y2="357" stroke="#365314" stroke-width="1.6"/>
+          <line x1="711" y1="264" x2="711" y2="356" stroke="#365314" stroke-width="1.6"/>
+          <path d="M 677,305 Q 700,311 723,305" fill="none" stroke="#eab308" stroke-width="4.5" stroke-linecap="round"/>
+          <path d="M 677,338 Q 700,344 723,338" fill="none" stroke="#eab308" stroke-width="4.5" stroke-linecap="round"/>
+          <!-- Diagonal cut cross-section highlight -->
+          <path d="M 678,274 L 722,260 Q 702,272 678,274 Z" fill="#ecfccb" stroke="#65a30d" stroke-width="1.2"/>
+        </g>
+        </svg>

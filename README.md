@@ -26,11 +26,11 @@
 
 > 上方动图展示了 AI Agent 结合 [`docs/SKILL-bone-studio-mcp.md`](docs/SKILL-bone-studio-mcp.md) 中的「精美 2D 角色 SVG 程序化绘制与关节防穿帮 5 大法则」（独立脖颈骨骼与插槽、同心圆大袖肩甲、草摺护胯甲裙遮挡大腿根部、阵羽织 `5×4` 自动权重蒙皮网格、纯 Alpha 辉光双阶段月牙剑气与可斩断试斩青竹靶），从零构建 `samurai-2d` 四套动作并在编辑器中实时播放的完整过程。高清录像原片见 [`docs/demo-mcp-samurai.mp4`](docs/demo-mcp-samurai.mp4)。
 
-#### 3. 2D 精灵游侠弓箭手 6 套动作与多皮肤换装（`archer-2d`）
+#### 3. 2D 精灵游侠弓箭手 6 套动作与抛物线箭矢插靶（`archer-2d`）
 
 [![通过 BoneStudio MCP 制作 2D 精灵弓箭手（待机/行走/奔跑/蓄力平射/跃起散射/受击）编辑器实录（点击查看高清 MP4 录像）](docs/demo-mcp-archer.gif)](docs/demo-mcp-archer.mp4)
 
-> 上方动图展示了 `archer-2d` 精灵弓箭手的弓臂动态弯曲、弓弦拉满回弹震颤、抛物线箭矢飞行插靶摇晃以及多皮肤一键切换效果。高清录像原片见 [`docs/demo-mcp-archer.mp4`](docs/demo-mcp-archer.mp4)。
+> 上方动图展示了 `archer-2d` 精灵弓箭手的弓臂动态弯曲、弓弦拉满回弹震颤、抛物线箭矢飞行插靶摇晃以及跃起三连散射效果。高清录像原片见 [`docs/demo-mcp-archer.mp4`](docs/demo-mcp-archer.mp4)。
 
 #### 4. 复杂机械联动与分析式 IK（「鹈鹕骑自行车」`pelican-bicycle`）
 

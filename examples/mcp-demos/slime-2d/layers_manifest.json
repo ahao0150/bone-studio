@@ -1,0 +1,302 @@
+{
+  "canvasWidth": 800,
+  "canvasHeight": 520,
+  "joints": {
+    "root": [
+      400.0,
+      412.0
+    ],
+    "shadow": [
+      400.0,
+      412.0
+    ],
+    "body_base": [
+      400.0,
+      406.0
+    ],
+    "body_mid": [
+      400.0,
+      336.0
+    ],
+    "body_top": [
+      400.0,
+      264.0
+    ],
+    "cheek_l": [
+      318.0,
+      356.0
+    ],
+    "cheek_r": [
+      482.0,
+      356.0
+    ],
+    "core": [
+      400.0,
+      334.0
+    ],
+    "bubbles_back": [
+      352.0,
+      342.0
+    ],
+    "bubbles_front": [
+      448.0,
+      318.0
+    ],
+    "face": [
+      400.0,
+      342.0
+    ],
+    "eyes": [
+      400.0,
+      334.0
+    ],
+    "mouth": [
+      400.0,
+      358.0
+    ],
+    "crest_drop": [
+      400.0,
+      248.0
+    ],
+    "fx_splash": [
+      400.0,
+      340.0
+    ]
+  },
+  "layers": [
+    {
+      "name": "ground_shadow",
+      "bone": "shadow",
+      "zIndex": 0,
+      "left": 276,
+      "top": 382,
+      "width": 248,
+      "height": 56,
+      "centerX": 400.0,
+      "centerY": 410.0,
+      "defaultHidden": false,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\slime-2d\\png\\ground_shadow.png"
+    },
+    {
+      "name": "slime_back_rim",
+      "bone": "body_mid",
+      "zIndex": 1,
+      "left": 274,
+      "top": 238,
+      "width": 252,
+      "height": 182,
+      "centerX": 400.0,
+      "centerY": 329.0,
+      "defaultHidden": false,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\slime-2d\\png\\slime_back_rim.png"
+    },
+    {
+      "name": "bubbles_back",
+      "bone": "bubbles_back",
+      "zIndex": 2,
+      "left": 303,
+      "top": 278,
+      "width": 77,
+      "height": 114,
+      "centerX": 341.5,
+      "centerY": 335.0,
+      "defaultHidden": false,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\slime-2d\\png\\bubbles_back.png"
+    },
+    {
+      "name": "crystal_core_glow",
+      "bone": "core",
+      "zIndex": 3,
+      "left": 325,
+      "top": 260,
+      "width": 150,
+      "height": 148,
+      "centerX": 400.0,
+      "centerY": 334.0,
+      "defaultHidden": false,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\slime-2d\\png\\crystal_core_glow.png"
+    },
+    {
+      "name": "crystal_core",
+      "bone": "core",
+      "zIndex": 4,
+      "left": 332,
+      "top": 268,
+      "width": 137,
+      "height": 131,
+      "centerX": 400.5,
+      "centerY": 333.5,
+      "defaultHidden": false,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\slime-2d\\png\\crystal_core.png"
+    },
+    {
+      "name": "slime_body",
+      "bone": "body_base",
+      "zIndex": 5,
+      "left": 263,
+      "top": 232,
+      "width": 274,
+      "height": 190,
+      "centerX": 400.0,
+      "centerY": 327.0,
+      "defaultHidden": false,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\slime-2d\\png\\slime_body.png"
+    },
+    {
+      "name": "slime_belly_caustic",
+      "bone": "body_base",
+      "zIndex": 6,
+      "left": 312,
+      "top": 368,
+      "width": 176,
+      "height": 44,
+      "centerX": 400.0,
+      "centerY": 390.0,
+      "defaultHidden": false,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\slime-2d\\png\\slime_belly_caustic.png"
+    },
+    {
+      "name": "bubbles_front",
+      "bone": "bubbles_front",
+      "zIndex": 7,
+      "left": 417,
+      "top": 274,
+      "width": 78,
+      "height": 115,
+      "centerX": 456.0,
+      "centerY": 331.5,
+      "defaultHidden": false,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\slime-2d\\png\\bubbles_front.png"
+    },
+    {
+      "name": "blush_cheeks",
+      "bone": "face",
+      "zIndex": 8,
+      "left": 318,
+      "top": 329,
+      "width": 164,
+      "height": 38,
+      "centerX": 400.0,
+      "centerY": 348.0,
+      "defaultHidden": false,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\slime-2d\\png\\blush_cheeks.png"
+    },
+    {
+      "name": "eyes_normal",
+      "bone": "eyes",
+      "zIndex": 9,
+      "left": 339,
+      "top": 304,
+      "width": 122,
+      "height": 56,
+      "centerX": 400.0,
+      "centerY": 332.0,
+      "defaultHidden": false,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\slime-2d\\png\\eyes_normal.png"
+    },
+    {
+      "name": "eyes_blink",
+      "bone": "eyes",
+      "zIndex": 10,
+      "left": 338,
+      "top": 314,
+      "width": 124,
+      "height": 32,
+      "centerX": 400.0,
+      "centerY": 330.0,
+      "defaultHidden": true,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\slime-2d\\png\\eyes_blink.png"
+    },
+    {
+      "name": "eyes_hurt",
+      "bone": "eyes",
+      "zIndex": 11,
+      "left": 330,
+      "top": 309,
+      "width": 140,
+      "height": 56,
+      "centerX": 400.0,
+      "centerY": 337.0,
+      "defaultHidden": true,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\slime-2d\\png\\eyes_hurt.png"
+    },
+    {
+      "name": "eyes_dizzy",
+      "bone": "eyes",
+      "zIndex": 12,
+      "left": 339,
+      "top": 308,
+      "width": 122,
+      "height": 50,
+      "centerX": 400.0,
+      "centerY": 333.0,
+      "defaultHidden": true,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\slime-2d\\png\\eyes_dizzy.png"
+    },
+    {
+      "name": "mouth_smile",
+      "bone": "mouth",
+      "zIndex": 13,
+      "left": 372,
+      "top": 342,
+      "width": 56,
+      "height": 29,
+      "centerX": 400.0,
+      "centerY": 356.5,
+      "defaultHidden": false,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\slime-2d\\png\\mouth_smile.png"
+    },
+    {
+      "name": "mouth_wail",
+      "bone": "mouth",
+      "zIndex": 14,
+      "left": 372,
+      "top": 334,
+      "width": 56,
+      "height": 46,
+      "centerX": 400.0,
+      "centerY": 357.0,
+      "defaultHidden": true,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\slime-2d\\png\\mouth_wail.png"
+    },
+    {
+      "name": "slime_specular",
+      "bone": "body_top",
+      "zIndex": 15,
+      "left": 290,
+      "top": 246,
+      "width": 227,
+      "height": 110,
+      "centerX": 403.5,
+      "centerY": 301.0,
+      "defaultHidden": false,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\slime-2d\\png\\slime_specular.png"
+    },
+    {
+      "name": "crest_antenna",
+      "bone": "crest_drop",
+      "zIndex": 16,
+      "left": 357,
+      "top": 180,
+      "width": 101,
+      "height": 82,
+      "centerX": 407.5,
+      "centerY": 221.0,
+      "defaultHidden": false,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\slime-2d\\png\\crest_antenna.png"
+    },
+    {
+      "name": "splash_droplets_fx",
+      "bone": "fx_splash",
+      "zIndex": 17,
+      "left": 181,
+      "top": 201,
+      "width": 438,
+      "height": 198,
+      "centerX": 400.0,
+      "centerY": 300.0,
+      "defaultHidden": true,
+      "file": "C:\\Users\\Administrator\\.gemini\\antigravity\\scratch\\slime-2d\\png\\splash_droplets_fx.png"
+    }
+  ]
+}

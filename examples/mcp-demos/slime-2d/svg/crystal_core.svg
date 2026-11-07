@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="137" height="131" viewBox="332 268 137 131">
+        <g>
+          <!-- Outer octahedron crystal silhouette -->
+          <polygon points="400,298 424,326 416,356 400,368 384,356 376,326"
+                   fill="#f43f5e" stroke="#881337" stroke-width="2.2" stroke-linejoin="round"/>
+          <!-- Left lit crystal facet -->
+          <polygon points="400,298 400,334 376,326" fill="#fda4af"/>
+          <!-- Right bright crystal facet -->
+          <polygon points="400,298 424,326 400,334" fill="#fb7185"/>
+          <!-- Lower-left mid facet -->
+          <polygon points="376,326 400,334 384,356" fill="#e11d48"/>
+          <!-- Lower-right shadow facet -->
+          <polygon points="424,326 416,356 400,334" fill="#be123c"/>
+          <!-- Bottom tip facet -->
+          <polygon points="384,356 400,334 416,356 400,368" fill="#9f1239"/>
+          <!-- Central diamond starlight core -->
+          <polygon points="400,312 411,332 400,350 389,332" fill="#fef08a"/>
+          <polygon points="400,318 406,332 400,344 394,332" fill="#ffffff"/>
+          <!-- Floating mini crystal shards -->
+          <polygon points="366,318 372,323 367,330 362,324" fill="#fde047" stroke="#854d0e" stroke-width="1.2"/>
+          <polygon points="433,336 439,341 434,348 429,342" fill="#fde047" stroke="#854d0e" stroke-width="1.2"/>
+        </g>
+        </svg>

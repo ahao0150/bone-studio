@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="46" viewBox="235 302 34 46">
+
+        <g>
+          <!-- Sculpted bow riser handle -->
+          <path d="M 246.5,309.0 C 254.0,309.0 258.5,316.0 258.5,325.0 C 258.5,334.0 254.0,341.0 246.5,341.0 L 244.0,336.0 L 247.0,325.0 L 244.0,314.0 Z"
+                fill="#065F46" stroke="#FBBF24" stroke-width="2.2" stroke-linejoin="round"/>
+          <!-- Right-facing gloved hand & fingers gripping the riser -->
+          <rect x="244.5" y="317.5" width="9.5" height="15.0" rx="4.0" fill="#78350F" stroke="#451A03" stroke-width="1.6"/>
+          <rect x="250.5" y="318.5" width="8.0" height="3.8" rx="1.8" fill="#FDE68A" stroke="#CA8A04" stroke-width="1.2"/>
+          <rect x="251.0" y="322.8" width="8.2" height="3.8" rx="1.8" fill="#FDE68A" stroke="#CA8A04" stroke-width="1.2"/>
+          <rect x="250.5" y="327.1" width="7.8" height="3.8" rx="1.8" fill="#FDE68A" stroke="#CA8A04" stroke-width="1.2"/>
+        </g>
+        
+</svg>

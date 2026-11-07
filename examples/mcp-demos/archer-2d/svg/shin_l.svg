@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="41" height="96" viewBox="214 365 41 96">
+
+        <g>
+          <path d="M 223.5,384 A 10.5,9 0 0 1 244.5,384 L 241.5,449 A 7.5,6 0 0 1 226.5,449 Z"
+                fill="#78350F" stroke="#92400E" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M 237.5,388 L 243.5,388 L 240.5,449 L 235.5,449 Z" fill="#B45309"/>
+          <line x1="224" y1="406" x2="243" y2="412" stroke="#FBBF24" stroke-width="3" stroke-linecap="round"/>
+          <line x1="225.5" y1="424" x2="241.5" y2="430" stroke="#FBBF24" stroke-width="3" stroke-linecap="round"/>
+          <!-- Rounded knee guard centered over the knee pivot (234, 382) -->
+          <path d="M 225.0,378 C 225.0,372 246.5,372 246.5,381 L 243.5,393 L 226.5,390 Z"
+                fill="#059669" stroke="#FBBF24" stroke-width="1.8" stroke-linejoin="round"/>
+        </g>
+        
+</svg>

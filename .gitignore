@@ -8,7 +8,13 @@ vite.config.ts.timestamp-*
 
 # 分析期临时脚本（目标模式下的取证/调试片段）
 tmp-*.mts
-projects/
+projects/*
+!projects/manifest.json
+!projects/pelican-bicycle/
+!projects/archer-2d/
+!projects/samurai-2d/
+!projects/slime-2d/
+projects/**/.lock*
 .mcp.json
 .cursor/
 

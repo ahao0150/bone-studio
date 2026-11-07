@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="316" viewBox="694 138 96 316">
+
+        <g>
+          <!-- Support post (from y=228 to y=445) -->
+          <rect x="731" y="228" width="18" height="216" rx="4" fill="#78350F" stroke="#451A03" stroke-width="3"/>
+          <!-- Straw target cylinder side thickness -->
+          <ellipse cx="746" cy="242" rx="33" ry="93" fill="#D97706" stroke="#78350F" stroke-width="4.5"/>
+          <!-- Bullseye concentric rings -->
+          <ellipse cx="734" cy="242" rx="30" ry="90" fill="#F8FAFC" stroke="#475569" stroke-width="3"/>
+          <ellipse cx="731" cy="242" rx="22.5" ry="67.5" fill="#0284C7"/>
+          <ellipse cx="728" cy="242" rx="15" ry="45" fill="#EF4444"/>
+          <ellipse cx="725" cy="242" rx="7.5" ry="22.5" fill="#FACC15"/>
+        </g>
+        
+</svg>

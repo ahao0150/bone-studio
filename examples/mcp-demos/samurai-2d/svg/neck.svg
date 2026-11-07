@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="50" viewBox="229 185 36 50">
+        <g>
+          <!-- Cylindrical shaded neck extending from y=192 down to y=228 -->
+          <path d="M 240,192 L 256,192 L 258,228 L 236,228 Z"
+                fill="#f3c3a2" stroke="#5c2814" stroke-width="1.8" stroke-linejoin="round"/>
+          <!-- Lit front-right throat plane -->
+          <path d="M 247,192 L 256,192 L 257,226 L 246,226 Z" fill="#fde4cf"/>
+          <!-- Sub-mental cast shadow under the chin -->
+          <path d="M 240,194 Q 249,205 256,197 L 256,205 Q 248,211 239,203 Z"
+                fill="#c27856" fill-opacity="0.65"/>
+        </g>
+        </svg>

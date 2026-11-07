@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="122" height="50" viewBox="339 308 122 50">
+        <g>
+          <!-- Left 'X' eye -->
+          <line x1="352" y1="321" x2="376" y2="345" stroke="#0f172a" stroke-width="4.5" stroke-linecap="round"/>
+          <line x1="376" y1="321" x2="352" y2="345" stroke="#0f172a" stroke-width="4.5" stroke-linecap="round"/>
+          <!-- Right 'X' eye -->
+          <line x1="424" y1="321" x2="448" y2="345" stroke="#0f172a" stroke-width="4.5" stroke-linecap="round"/>
+          <line x1="448" y1="321" x2="424" y2="345" stroke="#0f172a" stroke-width="4.5" stroke-linecap="round"/>
+        </g>
+        </svg>

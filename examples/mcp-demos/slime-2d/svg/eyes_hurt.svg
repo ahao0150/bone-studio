@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="56" viewBox="330 309 140 56">
+        <g>
+          <!-- Left '>' eye -->
+          <path d="M 350,322 L 376,333 L 350,344" fill="none" stroke="#0f172a" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Tear droplet on left corner -->
+          <path d="M 346,342 C 340,346 340,353 345,354 C 350,354 350,347 346,342 Z" fill="#7dd3fc" stroke="#0284c7" stroke-width="1.4"/>
+
+          <!-- Right '<' eye -->
+          <path d="M 450,322 L 424,333 L 450,344" fill="none" stroke="#0f172a" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Tear droplet on right corner -->
+          <path d="M 454,342 C 460,346 460,353 455,354 C 450,354 450,347 454,342 Z" fill="#7dd3fc" stroke="#0284c7" stroke-width="1.4"/>
+        </g>
+        </svg>

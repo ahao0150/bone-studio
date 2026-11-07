@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="214" height="214" viewBox="448 413 214 214">
+
+    <g>
+      <circle cx="555.0" cy="520.0" r="92" fill="none" stroke="#22272E" stroke-width="13"/>
+      <circle cx="555.0" cy="520.0" r="84.5" fill="none" stroke="#F4E8C1" stroke-width="4.5"/>
+      <circle cx="555.0" cy="520.0" r="80" fill="none" stroke="#8FA1B3" stroke-width="4"/>
+      <line x1="567.00" y1="520.00" x2="633.00" y2="520.00" stroke="#B8C4D0" stroke-width="2.5" stroke-linecap="round"/><line x1="565.39" y1="526.00" x2="622.55" y2="559.00" stroke="#B8C4D0" stroke-width="2.5" stroke-linecap="round"/><line x1="561.00" y1="530.39" x2="594.00" y2="587.55" stroke="#B8C4D0" stroke-width="2.5" stroke-linecap="round"/><line x1="555.00" y1="532.00" x2="555.00" y2="598.00" stroke="#B8C4D0" stroke-width="2.5" stroke-linecap="round"/><line x1="549.00" y1="530.39" x2="516.00" y2="587.55" stroke="#B8C4D0" stroke-width="2.5" stroke-linecap="round"/><line x1="544.61" y1="526.00" x2="487.45" y2="559.00" stroke="#B8C4D0" stroke-width="2.5" stroke-linecap="round"/><line x1="543.00" y1="520.00" x2="477.00" y2="520.00" stroke="#B8C4D0" stroke-width="2.5" stroke-linecap="round"/><line x1="544.61" y1="514.00" x2="487.45" y2="481.00" stroke="#B8C4D0" stroke-width="2.5" stroke-linecap="round"/><line x1="549.00" y1="509.61" x2="516.00" y2="452.45" stroke="#B8C4D0" stroke-width="2.5" stroke-linecap="round"/><line x1="555.00" y1="508.00" x2="555.00" y2="442.00" stroke="#B8C4D0" stroke-width="2.5" stroke-linecap="round"/><line x1="561.00" y1="509.61" x2="594.00" y2="452.45" stroke="#B8C4D0" stroke-width="2.5" stroke-linecap="round"/><line x1="565.39" y1="514.00" x2="622.55" y2="481.00" stroke="#B8C4D0" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="600.25" cy="565.25" r="6.5" fill="#FF9F1C" stroke="#FFF" stroke-width="1.5"/>
+      <circle cx="509.75" cy="474.75" r="6.5" fill="#2EC4B6" stroke="#FFF" stroke-width="1.5"/>
+      <circle cx="555.0" cy="520.0" r="14" fill="#4A5568" stroke="#1A202C" stroke-width="3"/>
+      <circle cx="555.0" cy="520.0" r="6" fill="#E2E8F0"/>
+    </g>
+    
+</svg>

@@ -1,0 +1,397 @@
+{
+  "canvasWidth": 800,
+  "canvasHeight": 700,
+  "origin": [
+    400.0,
+    700.0
+  ],
+  "joints": {
+    "root": [
+      400.0,
+      700.0
+    ],
+    "bike_frame": [
+      385.0,
+      520.0
+    ],
+    "wheel_back": [
+      245.0,
+      520.0
+    ],
+    "wheel_front": [
+      555.0,
+      520.0
+    ],
+    "crank_gear": [
+      385.0,
+      520.0
+    ],
+    "pedal_l": [
+      348.6269330410536,
+      499.0
+    ],
+    "pedal_r": [
+      421.3730669589464,
+      541.0
+    ],
+    "handlebar": [
+      500.0,
+      365.0
+    ],
+    "basket_fish": [
+      544.0,
+      345.0
+    ],
+    "hip": [
+      330.0,
+      365.0
+    ],
+    "tail": [
+      288.0,
+      362.0
+    ],
+    "thigh_l": [
+      336.0,
+      372.0
+    ],
+    "shin_l": [
+      422.6675987547727,
+      425.78408060087776
+    ],
+    "foot_l": [
+      348.6269330410536,
+      493.0
+    ],
+    "thigh_r": [
+      336.0,
+      372.0
+    ],
+    "shin_r": [
+      416.10938572296504,
+      435.13862778908964
+    ],
+    "foot_r": [
+      421.3730669589464,
+      535.0
+    ],
+    "torso": [
+      330.0,
+      365.0
+    ],
+    "scarf": [
+      368.0,
+      268.0
+    ],
+    "neck": [
+      376.0,
+      265.0
+    ],
+    "head": [
+      392.0,
+      185.0
+    ],
+    "beak_pouch": [
+      412.0,
+      192.0
+    ],
+    "wing_l": [
+      374.0,
+      276.0
+    ],
+    "forewing_l": [
+      412.2468044705232,
+      329.7883067942612
+    ],
+    "wing_r": [
+      362.0,
+      282.0
+    ],
+    "forewing_r": [
+      404.0060451660656,
+      332.90670063465575
+    ],
+    "grip_l": [
+      480.0,
+      324.0
+    ],
+    "grip_r": [
+      472.0,
+      332.0
+    ]
+  },
+  "lengths": {
+    "L_THIGH": 102.0,
+    "L_SHIN": 100.0,
+    "L_WING_UPPER": 66.0,
+    "L_WING_FORE": 68.0,
+    "CRANK_R": 42.0,
+    "THETA0_DEG": 30.0,
+    "ANKLE_OFFSET_Y": -6.0
+  },
+  "layers": [
+    {
+      "name": "wing_l",
+      "bone": "wing_l",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/svg/wing_l.svg",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/png/wing_l.png",
+      "left": 343,
+      "top": 245,
+      "width": 94,
+      "height": 110,
+      "zIndex": 0
+    },
+    {
+      "name": "forewing_l",
+      "bone": "forewing_l",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/svg/forewing_l.svg",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/png/forewing_l.png",
+      "left": 388,
+      "top": 304,
+      "width": 112,
+      "height": 50,
+      "zIndex": 1
+    },
+    {
+      "name": "thigh_l",
+      "bone": "thigh_l",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/svg/thigh_l.svg",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/png/thigh_l.png",
+      "left": 305,
+      "top": 341,
+      "width": 135,
+      "height": 102,
+      "zIndex": 2
+    },
+    {
+      "name": "shin_l",
+      "bone": "shin_l",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/svg/shin_l.svg",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/png/shin_l.png",
+      "left": 332,
+      "top": 408,
+      "width": 108,
+      "height": 102,
+      "zIndex": 3
+    },
+    {
+      "name": "foot_l",
+      "bone": "foot_l",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/svg/foot_l.svg",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/png/foot_l.png",
+      "left": 325,
+      "top": 478,
+      "width": 64,
+      "height": 35,
+      "zIndex": 4
+    },
+    {
+      "name": "pedal_l",
+      "bone": "pedal_l",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/svg/pedal_l.svg",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/png/pedal_l.png",
+      "left": 319,
+      "top": 483,
+      "width": 59,
+      "height": 32,
+      "zIndex": 5
+    },
+    {
+      "name": "wheel_back",
+      "bone": "wheel_back",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/svg/wheel_back.svg",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/png/wheel_back.png",
+      "left": 138,
+      "top": 413,
+      "width": 214,
+      "height": 214,
+      "zIndex": 6
+    },
+    {
+      "name": "wheel_front",
+      "bone": "wheel_front",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/svg/wheel_front.svg",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/png/wheel_front.png",
+      "left": 448,
+      "top": 413,
+      "width": 214,
+      "height": 214,
+      "zIndex": 7
+    },
+    {
+      "name": "basket_fish",
+      "bone": "basket_fish",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/svg/basket_fish.svg",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/png/basket_fish.png",
+      "left": 510,
+      "top": 294,
+      "width": 55,
+      "height": 75,
+      "zIndex": 8
+    },
+    {
+      "name": "bike_frame",
+      "bone": "bike_frame",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/svg/bike_frame.svg",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/png/bike_frame.png",
+      "left": 135,
+      "top": 346,
+      "width": 516,
+      "height": 209,
+      "zIndex": 9
+    },
+    {
+      "name": "handlebar",
+      "bone": "handlebar",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/svg/handlebar.svg",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/png/handlebar.png",
+      "left": 448,
+      "top": 300,
+      "width": 133,
+      "height": 98,
+      "zIndex": 10
+    },
+    {
+      "name": "crank_gear",
+      "bone": "crank_gear",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/svg/crank_gear.svg",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/png/crank_gear.png",
+      "left": 337,
+      "top": 484,
+      "width": 97,
+      "height": 72,
+      "zIndex": 11
+    },
+    {
+      "name": "tail",
+      "bone": "tail",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/svg/tail.svg",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/png/tail.png",
+      "left": 226,
+      "top": 324,
+      "width": 82,
+      "height": 56,
+      "zIndex": 12
+    },
+    {
+      "name": "torso",
+      "bone": "torso",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/svg/torso.svg",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/png/torso.png",
+      "left": 278,
+      "top": 241,
+      "width": 141,
+      "height": 148,
+      "zIndex": 13
+    },
+    {
+      "name": "thigh_r",
+      "bone": "thigh_r",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/svg/thigh_r.svg",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/png/thigh_r.png",
+      "left": 305,
+      "top": 341,
+      "width": 129,
+      "height": 112,
+      "zIndex": 14
+    },
+    {
+      "name": "shin_r",
+      "bone": "shin_r",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/svg/shin_r.svg",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/png/shin_r.png",
+      "left": 398,
+      "top": 417,
+      "width": 40,
+      "height": 135,
+      "zIndex": 15
+    },
+    {
+      "name": "pedal_r",
+      "bone": "pedal_r",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/svg/pedal_r.svg",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/png/pedal_r.png",
+      "left": 391,
+      "top": 525,
+      "width": 61,
+      "height": 32,
+      "zIndex": 16
+    },
+    {
+      "name": "foot_r",
+      "bone": "foot_r",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/svg/foot_r.svg",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/png/foot_r.png",
+      "left": 397,
+      "top": 520,
+      "width": 67,
+      "height": 36,
+      "zIndex": 17
+    },
+    {
+      "name": "neck",
+      "bone": "neck",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/svg/neck.svg",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/png/neck.png",
+      "left": 350,
+      "top": 172,
+      "width": 64,
+      "height": 106,
+      "zIndex": 18
+    },
+    {
+      "name": "scarf",
+      "bone": "scarf",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/svg/scarf.svg",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/png/scarf.png",
+      "left": 262,
+      "top": 245,
+      "width": 134,
+      "height": 53,
+      "zIndex": 19
+    },
+    {
+      "name": "beak_pouch",
+      "bone": "beak_pouch",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/svg/beak_pouch.svg",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/png/beak_pouch.png",
+      "left": 400,
+      "top": 182,
+      "width": 138,
+      "height": 70,
+      "zIndex": 20
+    },
+    {
+      "name": "head",
+      "bone": "head",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/svg/head.svg",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/png/head.png",
+      "left": 348,
+      "top": 120,
+      "width": 195,
+      "height": 88,
+      "zIndex": 21
+    },
+    {
+      "name": "wing_r",
+      "bone": "wing_r",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/svg/wing_r.svg",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/png/wing_r.png",
+      "left": 328,
+      "top": 248,
+      "width": 103,
+      "height": 112,
+      "zIndex": 22
+    },
+    {
+      "name": "forewing_r",
+      "bone": "forewing_r",
+      "svg": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/svg/forewing_r.svg",
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/pelican-bicycle/png/forewing_r.png",
+      "left": 378,
+      "top": 306,
+      "width": 116,
+      "height": 53,
+      "zIndex": 23
+    }
+  ]
+}

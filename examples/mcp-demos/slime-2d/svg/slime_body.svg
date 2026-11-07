@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="274" height="190" viewBox="263 232 274 190">
+        <g>
+          <!-- Outer plump water-droplet jelly silhouette with soft flat-bottom contact curve -->
+          <path d="M 400,244
+                   C 468,244 518,292 524,354
+                   C 528,394 502,410 400,410
+                   C 298,410 272,394 276,354
+                   C 282,292 332,244 400,244 Z"
+                fill="#06b6d4" fill-opacity="0.72" stroke="#083344" stroke-width="3.8" stroke-linejoin="round"/>
+          <!-- Mid-layer turquoise-mint subsurface scattering dome -->
+          <path d="M 400,254
+                   C 460,254 506,296 510,352
+                   C 513,386 488,401 400,401
+                   C 312,401 287,386 290,352
+                   C 294,296 340,254 400,254 Z"
+                fill="#2dd4bf" fill-opacity="0.52"/>
+          <!-- Upper luminous aquamarine crown glow -->
+          <path d="M 400,256
+                   C 448,256 486,286 492,326
+                   C 464,308 336,308 308,326
+                   C 314,286 352,256 400,256 Z"
+                fill="#99f6e4" fill-opacity="0.48"/>
+          <!-- Bottom crescent shadow & thick gel rim -->
+          <path d="M 278,362
+                   C 286,396 322,408 400,408
+                   C 478,408 514,396 522,362
+                   C 508,390 468,398 400,398
+                   C 332,398 292,390 278,362 Z"
+                fill="#0369a1" fill-opacity="0.68"/>
+        </g>
+        </svg>

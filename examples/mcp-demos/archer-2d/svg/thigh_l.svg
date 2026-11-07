@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="95" viewBox="209 300 48 95">
+
+        <g>
+          <path d="M 220,315 A 13.5,6 0 0 1 247.0,315 L 244.5,378 A 10.5,6 0 0 1 223.5,378 Z"
+                fill="#292524" stroke="#44403C" stroke-width="2.2" stroke-linejoin="round"/>
+          <!-- Right-facing front thigh contour highlight -->
+          <path d="M 236,313 C 245,333 245,358 242,378 L 245.5,378 C 247.5,358 247.5,333 245.5,313 Z"
+                fill="#44403C"/>
+        </g>
+        
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="133" height="98" viewBox="448 300 133 98">
+
+        <g>
+          <!-- Mounting straps connecting front basket to stem -->
+          <line x1="496" y1="342" x2="514" y2="345" stroke="#64748B" stroke-width="5" stroke-linecap="round"/>
+          <line x1="499" y1="365" x2="516" y2="372" stroke="#64748B" stroke-width="5" stroke-linecap="round"/>
+          <!-- Chrome stem from head tube (500,365) up to (495,325) -->
+          <path d="M 500,365 L 495,325 L 472,332" fill="none" stroke="#CBD5E1" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M 500,365 L 495,325 L 472,332" fill="none" stroke="#334155" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Brass bicycle bell -->
+          <circle cx="488" cy="318" r="8" fill="#FBBF24" stroke="#78350F" stroke-width="2.5"/>
+          <!-- Red handlebar grip -->
+          <rect x="458" y="325" width="24" height="12" rx="6" transform="rotate(-12 470 331)" fill="#DC2626" stroke="#450A0A" stroke-width="2.5"/>
+          <!-- Front wicker basket -->
+          <path d="M 512,338 L 568,338 L 558,388 L 516,388 Z" fill="#D97706" stroke="#78350F" stroke-width="3.5" stroke-linejoin="round"/>
+          <line x1="514" y1="354" x2="564" y2="354" stroke="#78350F" stroke-width="2.5"/>
+          <line x1="515" y1="370" x2="561" y2="370" stroke="#78350F" stroke-width="2.5"/>
+          <line x1="532" y1="338" x2="528" y2="388" stroke="#78350F" stroke-width="2.5"/>
+          <line x1="548" y1="338" x2="544" y2="388" stroke="#78350F" stroke-width="2.5"/>
+          <rect x="509" y="333" width="62" height="8" rx="4" fill="#F59E0B" stroke="#78350F" stroke-width="2.5"/>
+        </g>
+        
+</svg>

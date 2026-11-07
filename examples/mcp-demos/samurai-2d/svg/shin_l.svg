@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44" height="98" viewBox="210 364 44 98">
+        <g>
+          <path d="M 220,384 A 12,9 0 0 1 244,384 L 238,448 A 9,6 0 0 1 220,448 Z"
+                fill="#1e293b" stroke="#020617" stroke-width="2.2" stroke-linejoin="round"/>
+          <!-- Front crimson & gold lacquered shin plate -->
+          <path d="M 229,386 L 243,386 L 237,447 L 226,447 Z"
+                fill="#dc2626" stroke="#eab308" stroke-width="1.8" stroke-linejoin="round"/>
+          <!-- Sculpted golden knee guard (suneate poleyn) centered right over knee pivot (232, 384) -->
+          <path d="M 218,380 C 218,369 246,369 246,381 L 242,394 L 221,391 Z"
+                fill="#1e293b" stroke="#eab308" stroke-width="2.2" stroke-linejoin="round"/>
+          <circle cx="234" cy="381" r="4.2" fill="#eab308" stroke="#451a03" stroke-width="1.2"/>
+          <!-- Gold horizontal armor bindings -->
+          <path d="M 220,406 Q 232,410 241,406" fill="none" stroke="#eab308" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M 220,426 Q 231,430 239,426" fill="none" stroke="#eab308" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+        </svg>

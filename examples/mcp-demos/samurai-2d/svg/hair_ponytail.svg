@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="119" height="90" viewBox="119 147 119 90">
+        <g>
+          <!-- Flowing crimson headband tails (hachimaki) with dynamic wave -->
+          <path d="M 226,182 C 195,184 168,196 138,214 C 168,208 196,198 224,190 Z"
+                fill="#ef4444" stroke="#450a0a" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M 224,186 C 196,196 172,212 150,230 C 178,220 202,206 224,193 Z"
+                fill="#b91c1c" stroke="#450a0a" stroke-width="1.6" stroke-linejoin="round"/>
+          <!-- Upper spiky ponytail plume -->
+          <path d="M 228,170 C 202,146 162,150 132,176 C 160,170 184,172 214,178 Z"
+                fill="#0f172a" stroke="#020617" stroke-width="2.0" stroke-linejoin="round"/>
+          <!-- Main wild samurai high ponytail mass -->
+          <path d="M 228,173 C 196,156 152,168 126,198 C 156,192 186,188 218,186 Z"
+                fill="#1e293b" stroke="#020617" stroke-width="2.2" stroke-linejoin="round"/>
+          <!-- Lower layered hair strand -->
+          <path d="M 226,177 C 194,170 160,186 142,212 C 172,204 198,196 224,186 Z"
+                fill="#0f172a" stroke="#020617" stroke-width="2.0" stroke-linejoin="round"/>
+          <!-- Crisp anime hair sheen highlights -->
+          <path d="M 216,166 Q 180,160 152,174 Q 182,168 214,173 Z" fill="#475569"/>
+          <path d="M 212,175 Q 178,174 150,190 Q 180,184 210,181 Z" fill="#334155"/>
+          <!-- Gold hair tie cuff (motoyui) -->
+          <rect x="220" y="166" width="9" height="15" rx="3" transform="rotate(-18 224 173)"
+                fill="#eab308" stroke="#451a03" stroke-width="1.6"/>
+          <line x1="222" y1="170" x2="228" y2="168" stroke="#fef08a" stroke-width="1.4"/>
+        </g>
+        </svg>

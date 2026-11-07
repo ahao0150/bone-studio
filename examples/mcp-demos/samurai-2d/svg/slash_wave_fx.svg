@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="235" height="382" viewBox="253 107 235 382">
+        <g>
+          <!-- Outer shockwave aura glow -->
+          <path d="M 282,128 C 422,160 464,275 402,402 C 370,442 322,462 270,466 C 334,428 368,366 372,295 C 376,220 340,164 282,128 Z"
+                fill="#0284c7" fill-opacity="0.45"/>
+          <!-- Clean crescent-shaped crimson-gold inner fire wake (no self-intersecting triangles!) -->
+          <path d="M 290,148 C 398,180 432,276 382,385 C 358,420 322,440 285,448 C 336,412 362,355 365,292 C 368,226 336,178 290,148 Z"
+                fill="#f43f5e" fill-opacity="0.72"/>
+          <!-- Sweeping wind/energy tail streaks behind the crescent -->
+          <path d="M 315,195 Q 355,205 378,235 Q 345,222 315,195 Z" fill="#38bdf8" fill-opacity="0.75"/>
+          <path d="M 310,285 Q 352,288 386,295 Q 348,305 310,285 Z" fill="#fef08a" fill-opacity="0.85"/>
+          <path d="M 315,375 Q 352,368 376,345 Q 342,382 315,375 Z" fill="#38bdf8" fill-opacity="0.75"/>
+          <!-- Mid-layer electric cyan crescent blade wave -->
+          <path d="M 298,136 C 416,168 454,276 396,394 C 368,432 325,452 280,458 C 344,420 378,360 382,294 C 386,222 350,168 298,136 Z"
+                fill="#38bdf8" fill-opacity="0.90"/>
+          <!-- White-hot crescent blade wave core -->
+          <path d="M 310,145 C 414,175 446,278 392,388 C 368,425 332,445 292,452 C 352,414 388,356 392,290 C 396,222 360,172 310,145 Z"
+                fill="#f0f9ff" fill-opacity="0.98"/>
+          <path d="M 322,155 C 418,192 436,285 390,382"
+                fill="none" stroke="#ffffff" stroke-width="5.0" stroke-linecap="round"/>
+          <!-- Energy shards -->
+          <polygon points="415,235 454,226 422,254" fill="#ffffff"/>
+          <polygon points="425,295 468,290 430,314" fill="#fef08a"/>
+          <polygon points="402,355 442,364 398,374" fill="#7dd3fc"/>
+        </g>
+        </svg>

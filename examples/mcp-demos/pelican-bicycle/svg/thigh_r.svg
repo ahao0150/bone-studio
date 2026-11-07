@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="129" height="112" viewBox="305 341 129 112">
+
+    <g transform="translate(336.00,372.00) rotate(38.24)">
+      <!-- Lower orange leg stem out to knee -->
+      <path d="M 48.96,-8.5 L 102.00,-7.5 A 7.5,7.5 0 0 1 102.00,7.5 L 48.96,8.5 Z"
+            fill="#F97316" stroke="#7C2D12" stroke-width="3.2" stroke-linejoin="round"/>
+      <!-- Fluffy feathered drumstick overlapping upper half -->
+      <path d="M 0,-21 C 28.56,-22 53.04,-17 65.28,-12
+               Q 71.40,-6 65.28,0
+               Q 71.40,6 65.28,12
+               C 53.04,17 28.56,22 0,21
+               A 21,21 0 0 1 0,-21 Z"
+            fill="#FFFFFF" stroke="#334155" stroke-width="3.6" stroke-linejoin="round"/>
+    </g>
+    
+</svg>

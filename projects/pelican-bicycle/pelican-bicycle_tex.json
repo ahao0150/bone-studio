@@ -1,0 +1,272 @@
+{
+ "imagePath": "pelican-bicycle_tex.png",
+ "SubTexture": [
+  {
+   "frameWidth": 94,
+   "y": 0,
+   "frameHeight": 110,
+   "frameX": 0,
+   "height": 110,
+   "frameY": 0,
+   "width": 94,
+   "name": "wing_l",
+   "x": 1371
+  },
+  {
+   "frameWidth": 112,
+   "y": 216,
+   "frameHeight": 50,
+   "frameX": 0,
+   "height": 50,
+   "frameY": 0,
+   "width": 112,
+   "name": "forewing_l",
+   "x": 831
+  },
+  {
+   "frameWidth": 135,
+   "y": 0,
+   "frameHeight": 102,
+   "frameX": 0,
+   "height": 102,
+   "frameY": 0,
+   "width": 135,
+   "name": "thigh_l",
+   "x": 1643
+  },
+  {
+   "frameWidth": 108,
+   "y": 0,
+   "frameHeight": 102,
+   "frameX": 0,
+   "height": 102,
+   "frameY": 0,
+   "width": 108,
+   "name": "shin_l",
+   "x": 1533
+  },
+  {
+   "frameWidth": 64,
+   "y": 216,
+   "frameHeight": 35,
+   "frameX": 0,
+   "height": 35,
+   "frameY": 0,
+   "width": 64,
+   "name": "foot_l",
+   "x": 1014
+  },
+  {
+   "frameWidth": 59,
+   "y": 216,
+   "frameHeight": 32,
+   "frameX": 0,
+   "height": 32,
+   "frameY": 0,
+   "width": 59,
+   "name": "pedal_l",
+   "x": 1080
+  },
+  {
+   "frameWidth": 214,
+   "y": 0,
+   "frameHeight": 214,
+   "frameX": 0,
+   "height": 214,
+   "frameY": 0,
+   "width": 214,
+   "name": "wheel_back",
+   "x": 0
+  },
+  {
+   "frameWidth": 214,
+   "y": 0,
+   "frameHeight": 214,
+   "frameX": 0,
+   "height": 214,
+   "frameY": 0,
+   "width": 214,
+   "name": "wheel_front",
+   "x": 216
+  },
+  {
+   "frameWidth": 55,
+   "y": 216,
+   "frameHeight": 75,
+   "frameX": 0,
+   "height": 75,
+   "frameY": 0,
+   "width": 55,
+   "name": "basket_fish",
+   "x": 197
+  },
+  {
+   "frameWidth": 516,
+   "y": 0,
+   "frameHeight": 209,
+   "frameX": 0,
+   "height": 209,
+   "frameY": 0,
+   "width": 516,
+   "name": "bike_frame",
+   "x": 432
+  },
+  {
+   "frameWidth": 133,
+   "y": 0,
+   "frameHeight": 98,
+   "frameX": 0,
+   "height": 98,
+   "frameY": 0,
+   "width": 133,
+   "name": "handlebar",
+   "x": 1780
+  },
+  {
+   "frameWidth": 97,
+   "y": 216,
+   "frameHeight": 72,
+   "frameX": 0,
+   "height": 72,
+   "frameY": 0,
+   "width": 97,
+   "name": "crank_gear",
+   "x": 254
+  },
+  {
+   "frameWidth": 82,
+   "y": 216,
+   "frameHeight": 56,
+   "frameX": 0,
+   "height": 56,
+   "frameY": 0,
+   "width": 82,
+   "name": "tail",
+   "x": 493
+  },
+  {
+   "frameWidth": 141,
+   "y": 0,
+   "frameHeight": 148,
+   "frameX": 0,
+   "height": 148,
+   "frameY": 0,
+   "width": 141,
+   "name": "torso",
+   "x": 950
+  },
+  {
+   "frameWidth": 129,
+   "y": 0,
+   "frameHeight": 112,
+   "frameX": 0,
+   "height": 112,
+   "frameY": 0,
+   "width": 129,
+   "name": "thigh_r",
+   "x": 1135
+  },
+  {
+   "frameWidth": 40,
+   "y": 0,
+   "frameHeight": 135,
+   "frameX": 0,
+   "height": 135,
+   "frameY": 0,
+   "width": 40,
+   "name": "shin_r",
+   "x": 1093
+  },
+  {
+   "frameWidth": 61,
+   "y": 216,
+   "frameHeight": 32,
+   "frameX": 0,
+   "height": 32,
+   "frameY": 0,
+   "width": 61,
+   "name": "pedal_r",
+   "x": 1141
+  },
+  {
+   "frameWidth": 67,
+   "y": 216,
+   "frameHeight": 36,
+   "frameX": 0,
+   "height": 36,
+   "frameY": 0,
+   "width": 67,
+   "name": "foot_r",
+   "x": 945
+  },
+  {
+   "frameWidth": 64,
+   "y": 0,
+   "frameHeight": 106,
+   "frameX": 0,
+   "height": 106,
+   "frameY": 0,
+   "width": 64,
+   "name": "neck",
+   "x": 1467
+  },
+  {
+   "frameWidth": 134,
+   "y": 216,
+   "frameHeight": 53,
+   "frameX": 0,
+   "height": 53,
+   "frameY": 0,
+   "width": 134,
+   "name": "scarf",
+   "x": 695
+  },
+  {
+   "frameWidth": 138,
+   "y": 216,
+   "frameHeight": 70,
+   "frameX": 0,
+   "height": 70,
+   "frameY": 0,
+   "width": 138,
+   "name": "beak_pouch",
+   "x": 353
+  },
+  {
+   "frameWidth": 195,
+   "y": 216,
+   "frameHeight": 88,
+   "frameX": 0,
+   "height": 88,
+   "frameY": 0,
+   "width": 195,
+   "name": "head",
+   "x": 0
+  },
+  {
+   "frameWidth": 103,
+   "y": 0,
+   "frameHeight": 112,
+   "frameX": 0,
+   "height": 112,
+   "frameY": 0,
+   "width": 103,
+   "name": "wing_r",
+   "x": 1266
+  },
+  {
+   "frameWidth": 116,
+   "y": 216,
+   "frameHeight": 53,
+   "frameX": 0,
+   "height": 53,
+   "frameY": 0,
+   "width": 116,
+   "name": "forewing_r",
+   "x": 577
+  }
+ ],
+ "width": 1916,
+ "name": "pelican-bicycle",
+ "height": 304
+}

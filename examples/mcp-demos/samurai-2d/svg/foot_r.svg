@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="57" height="37" viewBox="248 431 57 37">
+        <g>
+          <path d="M 258,444 A 8,6 0 0 1 274,445 L 294,453 C 300,455 299,461 290,461 L 256,461 L 257,448 Z"
+                fill="#1e293b" stroke="#020617" stroke-width="2" stroke-linejoin="round"/>
+          <!-- White tabi toe & crimson strap -->
+          <path d="M 278,448 L 294,453 C 298,455 297,459 290,459 L 276,459 Z" fill="#e2e8f0" stroke="#0f172a" stroke-width="1.5"/>
+          <path d="M 268,447 L 280,458" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="256" y1="460" x2="296" y2="460" stroke="#a16207" stroke-width="2.5" stroke-linecap="round"/>
+        </g>
+        </svg>

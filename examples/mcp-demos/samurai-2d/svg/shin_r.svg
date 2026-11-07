@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38" height="95" viewBox="245 365 38 95">
+        <g>
+          <path d="M 253,382 A 10,8 0 0 1 273,382 L 274,446 A 7,6 0 0 1 260,446 Z"
+                fill="#1e293b" stroke="#020617" stroke-width="2.2"/>
+          <!-- Gold-trimmed crimson suneate shin plate -->
+          <path d="M 262,384 L 273,384 L 273,444 L 264,444 Z"
+                fill="#991b1b" stroke="#eab308" stroke-width="1.6"/>
+          <!-- Knee guard (kikko) -->
+          <path d="M 254,378 C 254,370 276,370 276,380 L 274,390 L 256,388 Z"
+                fill="#1e293b" stroke="#eab308" stroke-width="1.8"/>
+          <line x1="254" y1="404" x2="273" y2="407" stroke="#eab308" stroke-width="2"/>
+          <line x1="256" y1="424" x2="273" y2="427" stroke="#eab308" stroke-width="2"/>
+        </g>
+        </svg>

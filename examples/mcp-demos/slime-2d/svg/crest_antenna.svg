@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="101" height="82" viewBox="357 180 101 82">
+        <g>
+          <!-- Translucent jelly stalk & droplet bulb rising from the dome apex -->
+          <path d="M 390,250
+                   C 392,232 384,212 396,198
+                   C 404,188 418,192 418,204
+                   C 418,216 406,222 408,250 Z"
+                fill="#2dd4bf" fill-opacity="0.88" stroke="#083344" stroke-width="3.0" stroke-linejoin="round"/>
+          <circle cx="404" cy="202" r="4.0" fill="#ffffff" fill-opacity="0.90"/>
+
+          <!-- Miniature Royal Golden Crown tilted jauntily around the jelly antenna base -->
+          <g transform="rotate(8 404 240)">
+            <path d="M 374,244 L 368,216 L 388,228 L 404,208 L 420,228 L 440,216 L 434,244 Z"
+                  fill="#facc15" stroke="#451a03" stroke-width="2.6" stroke-linejoin="round"/>
+            <!-- Crown inner shadow & gold base band -->
+            <path d="M 374,238 L 434,238 L 432,246 C 414,250 394,250 376,246 Z"
+                  fill="#eab308" stroke="#451a03" stroke-width="2.2"/>
+            <!-- Center ruby & side sapphire jewels -->
+            <polygon points="404,224 410,231 404,238 398,231" fill="#f43f5e" stroke="#881337" stroke-width="1.2"/>
+            <circle cx="384" cy="233" r="3.2" fill="#38bdf8" stroke="#0c4a6e" stroke-width="1.0"/>
+            <circle cx="424" cy="233" r="3.2" fill="#38bdf8" stroke="#0c4a6e" stroke-width="1.0"/>
+            <!-- Pearl tips on crown spikes -->
+            <circle cx="368" cy="215" r="3.5" fill="#fef08a" stroke="#451a03" stroke-width="1.4"/>
+            <circle cx="404" cy="207" r="4.2" fill="#ffffff" stroke="#451a03" stroke-width="1.4"/>
+            <circle cx="440" cy="215" r="3.5" fill="#fef08a" stroke="#451a03" stroke-width="1.4"/>
+          </g>
+        </g>
+        </svg>

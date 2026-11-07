@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="137" height="76" viewBox="125 291 137 76">
+        <g>
+          <!-- Curved black-and-crimson lacquered scabbard extending back from hip (235, 306) to (135, 355) -->
+          <path d="M 252,298 Q 192,318 132,352 L 136,360 Q 196,327 255,306 Z"
+                fill="#1e293b" stroke="#020617" stroke-width="2.0" stroke-linejoin="round"/>
+          <!-- Gold kojiri (scabbard tip) & crimson sageo cord wrap -->
+          <path d="M 132,352 L 146,345 L 150,353 L 136,360 Z" fill="#eab308" stroke="#451a03" stroke-width="1.4"/>
+          <path d="M 218,310 L 238,303 L 241,311 L 221,318 Z" fill="#dc2626" stroke="#eab308" stroke-width="1.5"/>
+        </g>
+        </svg>

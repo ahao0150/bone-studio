@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="78" height="115" viewBox="417 274 78 115">
+        <g>
+          <circle cx="464" cy="322" r="11.5" fill="#bae6fd" fill-opacity="0.62" stroke="#ffffff" stroke-width="1.8"/>
+          <circle cx="460" cy="318" r="3.8" fill="#ffffff" fill-opacity="0.95"/>
+          <circle cx="446" cy="292" r="7.0" fill="#bae6fd" fill-opacity="0.58" stroke="#ffffff" stroke-width="1.4"/>
+          <circle cx="444" cy="290" r="2.4" fill="#ffffff" fill-opacity="0.90"/>
+          <circle cx="478" cy="356" r="6.0" fill="#7dd3fc" fill-opacity="0.65" stroke="#e0f2fe" stroke-width="1.2"/>
+          <circle cx="432" cy="374" r="4.5" fill="#e0f2fe" fill-opacity="0.75"/>
+          <!-- Sparkle star -->
+          <path d="M 454,344 L 456,350 L 462,352 L 456,354 L 454,360 L 452,354 L 446,352 L 452,350 Z"
+                fill="#ffffff" fill-opacity="0.92"/>
+        </g>
+        </svg>

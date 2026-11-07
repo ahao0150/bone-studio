@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="138" viewBox="204 205 80 138">
+        <g>
+          <!-- 1. Kusazuri (layered crimson-and-gold lacquered tasset skirt plates covering y=286..336 over the thighs!) -->
+          <!-- Far-right front tasset plate -->
+          <path d="M 246,288 L 270,288 L 277,332 L 250,332 Z"
+                fill="#1e293b" stroke="#eab308" stroke-width="2.0" stroke-linejoin="round"/>
+          <line x1="248" y1="302" x2="272" y2="302" stroke="#dc2626" stroke-width="2.4"/>
+          <line x1="249" y1="316" x2="275" y2="316" stroke="#eab308" stroke-width="2.2"/>
+          <!-- Near-left side-front tasset plate (directly covers thigh_l hip joint (236, 316)!) -->
+          <path d="M 218,288 L 252,288 L 246,335 L 212,332 Z"
+                fill="#991b1b" stroke="#eab308" stroke-width="2.2" stroke-linejoin="round"/>
+          <line x1="216" y1="301" x2="250" y2="301" stroke="#eab308" stroke-width="2.2"/>
+          <line x1="215" y1="313" x2="248" y2="313" stroke="#090d16" stroke-width="2.4"/>
+          <line x1="214" y1="324" x2="247" y2="324" stroke="#eab308" stroke-width="2.2"/>
+
+          <!-- 2. Main Do Cuirass (3/4 right-facing tapered samurai chest armor, smooth closed side—NO black armhole!) -->
+          <path d="M 222,288 L 266,288 C 271,268 275,248 272,226 C 270,218 263,214 256,214 L 228,214 C 220,218 218,236 220,258 Z"
+                fill="#1e293b" stroke="#090d16" stroke-width="2.4" stroke-linejoin="round"/>
+          <!-- Crimson lacquered chest plate (sendan-no-ita / mune-ita) on right-front chest -->
+          <path d="M 234,224 L 270,224 C 273,244 270,266 265,286 L 236,286 C 232,266 231,244 234,224 Z"
+                fill="#dc2626" stroke="#eab308" stroke-width="2.0" stroke-linejoin="round"/>
+          <!-- Horizontal lamellar armor lacing lines -->
+          <path d="M 234,240 Q 254,244 271,239" fill="none" stroke="#eab308" stroke-width="2.0"/>
+          <path d="M 234,256 Q 254,260 270,255" fill="none" stroke="#090d16" stroke-width="2.4"/>
+          <path d="M 235,271 Q 253,275 267,270" fill="none" stroke="#eab308" stroke-width="2.0"/>
+          <!-- Layered white & crimson kimono V-collar (eri) wrapping the base of the neck at y=212..234 -->
+          <path d="M 232,212 L 256,232 L 264,212 L 258,212 L 254,224 L 238,212 Z"
+                fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M 227,214 L 255,236 L 267,214"
+                fill="none" stroke="#eab308" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Golden demon/crest medallion on chest -->
+          <circle cx="256" cy="248" r="5.5" fill="#eab308" stroke="#451a03" stroke-width="1.6"/>
+          <!-- Obi silk waist sash & golden buckle -->
+          <rect x="219" y="282" width="50" height="10" rx="3" fill="#0f172a" stroke="#eab308" stroke-width="2.0"/>
+          <rect x="252" y="280" width="12" height="14" rx="2.5" fill="#eab308" stroke="#451a03" stroke-width="1.8"/>
+        </g>
+        </svg>

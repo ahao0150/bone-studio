@@ -1,0 +1,32 @@
+{
+ "samples": [
+  {
+   "name": "pelican-bicycle",
+   "skeleton": "pelican-bicycle/pelican-bicycle_ske.json",
+   "texture": "pelican-bicycle/pelican-bicycle_tex.json",
+   "image": "pelican-bicycle/pelican-bicycle_tex.png",
+   "rev": 1794000926626
+  },
+  {
+   "name": "archer-2d",
+   "skeleton": "archer-2d/archer-2d_ske.json",
+   "texture": "archer-2d/archer-2d_tex.json",
+   "image": "archer-2d/archer-2d_tex.png",
+   "rev": 1794029468000
+  },
+  {
+   "name": "samurai-2d",
+   "skeleton": "samurai-2d/samurai-2d_ske.json",
+   "texture": "samurai-2d/samurai-2d_tex.json",
+   "image": "samurai-2d/samurai-2d_tex.png",
+   "rev": 1794024841119
+  },
+  {
+   "name": "slime-2d",
+   "skeleton": "slime-2d/slime-2d_ske.json",
+   "texture": "slime-2d/slime-2d_tex.json",
+   "image": "slime-2d/slime-2d_tex.png",
+   "rev": 1794028169685
+  }
+ ]
+}

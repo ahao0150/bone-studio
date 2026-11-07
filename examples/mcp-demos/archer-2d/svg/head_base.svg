@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="84" height="94" viewBox="342 222 84 94">
+
+        <g>
+          <!-- Neck -->
+          <rect x="376" y="282" width="20" height="24" rx="7" fill="#E8B48E" stroke="#1E1B18" stroke-width="2.8"/>
+          <!-- Head oval -->
+          <ellipse cx="390" cy="260" rx="26" ry="28" fill="#FAD1B2" stroke="#1E1B18" stroke-width="3.2"/>
+          <!-- Cheek blush -->
+          <ellipse cx="395" cy="266" rx="5.5" ry="3.2" fill="#F48C72" fill-opacity="0.65"/>
+          <!-- Sideburn hair -->
+          <path d="M 368,250 C 374,244 384,246 382,262 L 372,266 Z" fill="#8B4513" stroke="#1E1B18" stroke-width="2.0" stroke-linejoin="round"/>
+          <!-- Pointed ranger ear -->
+          <path d="M 372,258 L 352,250 L 368,270 Z" fill="#FAD1B2" stroke="#1E1B18" stroke-width="2.8" stroke-linejoin="round"/>
+          <!-- Focused eyes & brow (facing +X right) -->
+          <path d="M 392,248 L 411,252" stroke="#4A2508" stroke-width="3.2" stroke-linecap="round"/>
+          <ellipse cx="403" cy="257" rx="4.2" ry="5.0" fill="#0F172A"/>
+          <circle cx="404.5" cy="255.2" r="1.8" fill="#FFFFFF"/>
+          <!-- Confident smirk -->
+          <path d="M 396,274 Q 403,277 408,273" fill="none" stroke="#1E1B18" stroke-width="2.4" stroke-linecap="round"/>
+        </g>
+        
+</svg>

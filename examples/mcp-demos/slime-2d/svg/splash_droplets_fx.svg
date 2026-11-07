@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="438" height="198" viewBox="181 201 438 198">
+        <g>
+          <!-- Left-top flying droplet -->
+          <path d="M 258,282 C 236,268 222,276 228,292 C 234,304 250,296 258,282 Z"
+                fill="#2dd4bf" stroke="#083344" stroke-width="2.2"/>
+          <circle cx="234" cy="282" r="2.8" fill="#ffffff"/>
+
+          <!-- Left-mid flying droplet -->
+          <path d="M 242,344 C 216,340 208,352 218,364 C 228,372 238,358 242,344 Z"
+                fill="#38bdf8" stroke="#083344" stroke-width="2.2"/>
+          <circle cx="222" cy="352" r="2.4" fill="#ffffff"/>
+
+          <!-- Right-top flying droplet -->
+          <path d="M 542,278 C 564,264 578,272 572,288 C 566,300 550,292 542,278 Z"
+                fill="#2dd4bf" stroke="#083344" stroke-width="2.2"/>
+          <circle cx="566" cy="278" r="2.8" fill="#ffffff"/>
+
+          <!-- Right-mid flying droplet -->
+          <path d="M 558,342 C 584,338 592,350 582,362 C 572,370 562,356 558,342 Z"
+                fill="#38bdf8" stroke="#083344" stroke-width="2.2"/>
+          <circle cx="578" cy="350" r="2.4" fill="#ffffff"/>
+
+          <!-- Upper-left & upper-right mini beads -->
+          <circle cx="276" cy="242" r="7.5" fill="#5eead4" stroke="#083344" stroke-width="2.0"/>
+          <circle cx="274" cy="240" r="2.4" fill="#ffffff"/>
+          <circle cx="524" cy="240" r="7.5" fill="#5eead4" stroke="#083344" stroke-width="2.0"/>
+          <circle cx="522" cy="238" r="2.4" fill="#ffffff"/>
+
+          <!-- Starburst impact sparkles -->
+          <path d="M 255,314 L 259,322 L 267,326 L 259,330 L 255,338 L 251,330 L 243,326 L 251,322 Z" fill="#fef08a"/>
+          <path d="M 545,312 L 549,320 L 557,324 L 549,328 L 545,336 L 541,328 L 533,324 L 541,320 Z" fill="#fef08a"/>
+        </g>
+        </svg>

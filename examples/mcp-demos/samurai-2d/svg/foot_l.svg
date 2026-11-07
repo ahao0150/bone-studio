@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="63" height="39" viewBox="208 433 63 39">
+        <g>
+          <path d="M 218,446 A 9,6 0 0 1 237,447 L 259,455 C 266,458 265,464 255,464 L 216,464 L 217,450 Z"
+                fill="#0f172a" stroke="#020617" stroke-width="2.2" stroke-linejoin="round"/>
+          <!-- White tabi front & crimson sandal thongs -->
+          <path d="M 240,450 L 259,455 C 263,457 262,462 254,462 L 238,462 Z"
+                fill="#f8fafc" stroke="#1e293b" stroke-width="1.6"/>
+          <!-- Gold-plated foot guard (kogake) -->
+          <path d="M 222,448 L 242,450 L 238,458 L 220,456 Z"
+                fill="#991b1b" stroke="#eab308" stroke-width="1.6"/>
+          <line x1="216" y1="463" x2="262" y2="463" stroke="#eab308" stroke-width="2.6" stroke-linecap="round"/>
+        </g>
+        </svg>

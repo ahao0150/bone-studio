@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="163" height="40" viewBox="125 305 163 40">
+
+    <g>
+      <!-- Outer glow aura around fletching & tip -->
+      <path d="M 151.5,325.0 L 133.5,313.0 L 161.5,313.0 L 171.5,325.0 L 161.5,337.0 L 133.5,337.0 Z"
+            fill="#6EE7B7" fill-opacity="0.32"/>
+      <!-- Emerald glowing fletching -->
+      <path d="M 151.5,325.0 L 136.5,316.0 L 159.0,316.0 L 168.0,325.0 L 159.0,334.0 L 136.5,334.0 Z"
+            fill="#10B981" stroke="#022C22" stroke-width="2.0" stroke-linejoin="round"/>
+      <!-- Golden arrow shaft -->
+      <rect x="151.5" y="322.8" width="109.5" height="4.4" rx="2.0"
+            fill="#FDE047" stroke="#713F12" stroke-width="1.6"/>
+      <!-- Diamond armor-piercing glowing arrowhead -->
+      <polygon points="280.0,325.0 252.0,315.0 257.0,325.0 252.0,335.0"
+               fill="#6EE7B7" fill-opacity="0.35"/>
+      <polygon points="276.0,325.0 255.0,317.5 259.5,325.0 255.0,332.5"
+               fill="#6EE7B7" stroke="#064E3B" stroke-width="2.0" stroke-linejoin="round"/>
+    </g>
+    
+</svg>

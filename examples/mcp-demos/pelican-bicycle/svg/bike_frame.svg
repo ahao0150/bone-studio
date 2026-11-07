@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="516" height="209" viewBox="135 346 516 209">
+
+        <g>
+          <!-- Rear fender / mudguard -->
+          <path d="M 148,505 A 98,98 0 0 1 332,475" fill="none" stroke="#E63946" stroke-width="9" stroke-linecap="round"/>
+          <path d="M 148,505 A 98,98 0 0 1 332,475" fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round"/>
+          <!-- Front fender / mudguard -->
+          <path d="M 472,468 A 98,98 0 0 1 638,472" fill="none" stroke="#E63946" stroke-width="9" stroke-linecap="round"/>
+          <!-- Drive chain between rear hub (245,520) and crank (385,520) -->
+          <path d="M 245,508 L 385,496 L 385,544 L 245,532 A 12,12 0 0 1 245,508 Z"
+                fill="none" stroke="#475569" stroke-width="4" stroke-dasharray="6,4"/>
+          <!-- Chainstay & Seatstay -->
+          <line x1="245" y1="520" x2="385" y2="520" stroke="#E63946" stroke-width="9" stroke-linecap="round"/>
+          <line x1="245" y1="520" x2="342" y2="395" stroke="#E63946" stroke-width="8" stroke-linecap="round"/>
+          <!-- Seat tube -->
+          <line x1="385" y1="520" x2="335" y2="380" stroke="#CBD5E1" stroke-width="8" stroke-linecap="round"/>
+          <line x1="385" y1="520" x2="342" y2="395" stroke="#E63946" stroke-width="11" stroke-linecap="round"/>
+          <!-- Down tube & Curved cruiser top tube -->
+          <path d="M 385,520 C 430,475 470,425 498,382" fill="none" stroke="#E63946" stroke-width="11" stroke-linecap="round"/>
+          <path d="M 342,395 C 395,395 445,382 496,370" fill="none" stroke="#E63946" stroke-width="10" stroke-linecap="round"/>
+          <!-- Front fork & Head tube -->
+          <line x1="494" y1="362" x2="504" y2="395" stroke="#E63946" stroke-width="13" stroke-linecap="round"/>
+          <path d="M 500,388 Q 528,455 555,520" fill="none" stroke="#E63946" stroke-width="10" stroke-linecap="round"/>
+          <circle cx="245" cy="520" r="8" fill="#E2E8F0" stroke="#1E293B" stroke-width="2.5"/>
+          <circle cx="555" cy="520" r="8" fill="#E2E8F0" stroke="#1E293B" stroke-width="2.5"/>
+          <!-- Vintage leather saddle -->
+          <path d="M 295,368 C 295,352 325,354 365,362 C 372,364 370,374 356,376 C 335,378 300,380 295,368 Z"
+                fill="#7C2D12" stroke="#271206" stroke-width="3.5" stroke-linejoin="round"/>
+          <circle cx="310" cy="370" r="2.5" fill="#FBBF24"/>
+          <circle cx="322" cy="371" r="2.5" fill="#FBBF24"/>
+        </g>
+        
+</svg>
