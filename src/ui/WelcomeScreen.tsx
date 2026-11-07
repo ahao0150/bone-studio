@@ -136,7 +136,7 @@ export function WelcomeScreen({
           </button>
           {recents.map((entry) => (
             <Card key={coverKey(entry.kind, entry.name)} kind={entry.kind} name={entry.name} data="recent"
-              cover={covers[coverKey(entry.kind, entry.name)]}
+              cover={covers[coverKey(entry.kind, entry.name)] ?? (entry.kind === 'workspace' ? `/api/thumb/${encodeURIComponent(entry.name)}.png` : undefined)}
               tag={`${entry.kind === 'sample' ? '示例' : entry.kind === 'workspace' ? '项目' : '本地'} · ${ago(entry.at)}`}
               onOpen={() => onLoadRecent(entry)} onRemove={() => onRemoveRecent(entry)} onPreview={onPreviewAnimation} />
           ))}

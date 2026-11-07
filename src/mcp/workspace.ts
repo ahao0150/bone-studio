@@ -56,7 +56,7 @@ export function saveToWorkspace(name: string, ske: DbSkeletonData | string, tex:
   const manifest = readManifest();
   const entry: ManifestEntry = { name: n, skeleton: `${n}/${n}_ske.json`, texture: `${n}/${n}_tex.json`, image: `${n}/${n}_tex.png`, rev: Date.now(), ...(source ? { source } : {}) };
   const i = manifest.samples.findIndex((s) => s.name === n);
-  if (i >= 0) manifest.samples[i] = { ...manifest.samples[i], ...entry }; else manifest.samples.push(entry);
+  if (i >= 0) { const prevSource = manifest.samples[i].source; manifest.samples[i] = { ...manifest.samples[i], ...entry, ...(prevSource ? { source: prevSource } : {}) }; if (!prevSource && source === 'ui') delete manifest.samples[i].source; } else manifest.samples.push(entry);
   writeFileSync(join(projectsDir(), 'manifest.json'), JSON.stringify(manifest, null, 1));
   return { ...entry, dir };
 }

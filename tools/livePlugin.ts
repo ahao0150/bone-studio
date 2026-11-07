@@ -15,7 +15,7 @@ import { Player } from '../src/core/player';
 import { animationBounds, renderPlayer } from '../src/core/render/softRaster';
 import { decodePng, encodePng } from '../src/tools/png';
 
-interface ManifestEntry { name: string; skeleton: string; texture: string; image: string; rev?: number }
+interface ManifestEntry { name: string; skeleton: string; texture: string; image: string; rev?: number; source?: string }
 
 function manifest(dir: string): ManifestEntry[] {
   try { return (JSON.parse(readFileSync(join(dir, 'manifest.json'), 'utf8')) as { samples?: ManifestEntry[] }).samples ?? []; } catch { return []; }
@@ -23,7 +23,7 @@ function manifest(dir: string): ManifestEntry[] {
 
 export function aggregate(dir: string, now = Date.now()) {
   const sessions = listSessions(dir, now);
-  const projects = manifest(dir).map((m) => {
+  const projects = manifest(dir).filter((m) => m.source !== 'ui').map((m) => {
     const lock = readLock(dir, m.name);
     const holder = lock ? lockHolder(dir, m.name, '', now) : null;
     const skePath = join(dir, m.skeleton);

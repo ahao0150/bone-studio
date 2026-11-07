@@ -189,6 +189,8 @@ interface SampleDef {
   image: string;
   /** 文件所在路由：内置示例 `/dbsamples`（缺省），AI 工程 `/aiprojects` */
   root?: string;
+  /** 来源：`'ui'` 表示用户通过编辑器「新建项目」或「基于它新建」保存的用户项目，只归入「项目」分类，不进「AI 工程」 */
+  source?: string;
 }
 const AI_ROOT = '/aiprojects';
 const rootOf = (sample: { root?: string }) => sample.root ?? '/dbsamples';
@@ -1512,8 +1514,9 @@ export function App() {
     const cached = previewCache.current.get(key);
     if (cached) return cached;
     const job = (async (): Promise<CoverAnimation | null> => {
-      if (kind === 'sample') {
-        const sample = samples.find((item) => item.name === name);
+      if (kind === 'sample' || kind === 'workspace') {
+        const list = kind === 'sample' ? samples : (aiProjects ?? []);
+        const sample = list.find((item) => item.name === name);
         if (!sample) return null;
         const source = await fetchSamplePreview(sample);
         try {
@@ -1532,7 +1535,7 @@ export function App() {
     // 本地项目没开着时结果是 null —— 不缓存，下次打开页签后再悬停还能出动画
     if (kind === 'file') void job.then((result) => { if (!result) previewCache.current.delete(key); });
     return job;
-  }, [documents, samples]);
+  }, [documents, samples, aiProjects]);
 
   /** Deep link helpers: ?frame=<n>&select=<bone|first-with-keys> (demos, screenshots). */
   useEffect(() => {
@@ -5681,7 +5684,9 @@ export function App() {
           samples={samples}
           recents={recents}
           onNewProject={openNewProject}
-          aiProjects={(aiProjects ?? []).map((entry) => ({ name: entry.name, thumb: aiState[entry.name]?.thumb ?? `/api/thumb/${encodeURIComponent(entry.name)}.png`, lockedBy: aiState[entry.name]?.lockedBy?.displayName ?? null }))}
+          aiProjects={(aiProjects ?? [])
+            .filter((entry) => entry.source !== 'ui')
+            .map((entry) => ({ name: entry.name, thumb: aiState[entry.name]?.thumb ?? `/api/thumb/${encodeURIComponent(entry.name)}.png`, lockedBy: aiState[entry.name]?.lockedBy?.displayName ?? null }))}
           onOpenAiProject={(name) => { void openAiProject(name); }}
           onNewFromAiProject={newFromAiProject}
           onDeleteAiProject={deleteAiProject}
