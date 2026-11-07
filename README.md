@@ -14,19 +14,25 @@
 
 ### MCP 骨骼动画制作实录预览
 
-#### 1. 2D 近战武士全流程制作与烈斩剑气特效（`samurai-2d`）
+#### 1. 2D 非人形半透明软体史莱姆 5 套动作与融化特效（`slime-2d`）
+
+[![通过 BoneStudio MCP 制作 2D 非人形软体史莱姆（待机/跳跃行走/跳跃奔跑/受击/死亡融化）编辑器实录（点击查看高清 MP4 录像）](docs/demo-mcp-slime.gif)](docs/demo-mcp-slime.mp4)
+
+> 上方动图展示了 AI Agent 通过程序化半透明果冻折射 SVG 分层部件（Fresnel 半透明外壁 + 次表面散射 + 悬浮玫瑰金魔力晶核 + 前后景气泡 + 多表情插槽切换）、接地锚点（Bottom-Contact Pivot）体积守恒挤压拉伸与 `6×6` 多骨骼软体权重网格，从零构建 `slime-2d` 五套动作（含死亡临界膨胀化为一滩果冻液体、小皇冠与晶核掉落弹跳）并在编辑器中实时播放的完整过程。高清录像原片见 [`docs/demo-mcp-slime.mp4`](docs/demo-mcp-slime.mp4)。
+
+#### 2. 2D 近战武士全流程制作与烈斩剑气特效（`samurai-2d`）
 
 [![通过 BoneStudio MCP 制作 2D 近战武士（待机/行走/奔跑/烈斩剑气）编辑器实录（点击查看高清 MP4 录像）](docs/demo-mcp-samurai-editor.gif)](docs/demo-mcp-samurai.mp4)
 
 > 上方动图展示了 AI Agent 结合 [`docs/SKILL-bone-studio-mcp.md`](docs/SKILL-bone-studio-mcp.md) 中的「精美 2D 角色 SVG 程序化绘制与关节防穿帮 5 大法则」（独立脖颈骨骼与插槽、同心圆大袖肩甲、草摺护胯甲裙遮挡大腿根部、阵羽织 `5×4` 自动权重蒙皮网格、纯 Alpha 辉光双阶段月牙剑气与可斩断试斩青竹靶），从零构建 `samurai-2d` 四套动作并在编辑器中实时播放的完整过程。高清录像原片见 [`docs/demo-mcp-samurai.mp4`](docs/demo-mcp-samurai.mp4)。
 
-#### 2. 2D 精灵游侠弓箭手 6 套动作与多皮肤换装（`archer-2d`）
+#### 3. 2D 精灵游侠弓箭手 6 套动作与多皮肤换装（`archer-2d`）
 
 [![通过 BoneStudio MCP 制作 2D 精灵弓箭手（待机/行走/奔跑/蓄力平射/跃起散射/受击）编辑器实录（点击查看高清 MP4 录像）](docs/demo-mcp-archer.gif)](docs/demo-mcp-archer.mp4)
 
 > 上方动图展示了 `archer-2d` 精灵弓箭手的弓臂动态弯曲、弓弦拉满回弹震颤、抛物线箭矢飞行插靶摇晃以及多皮肤一键切换效果。高清录像原片见 [`docs/demo-mcp-archer.mp4`](docs/demo-mcp-archer.mp4)。
 
-#### 3. 复杂机械联动与分析式 IK（「鹈鹕骑自行车」`pelican-bicycle`）
+#### 4. 复杂机械联动与分析式 IK（「鹈鹕骑自行车」`pelican-bicycle`）
 
 [![通过 BoneStudio MCP 从零制作「鹈鹕骑自行车」骨骼动画（点击查看高清 MP4 录像）](docs/demo-mcp-pelican.gif)](docs/demo-mcp-pelican.mp4)
 
