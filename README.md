@@ -14,9 +14,17 @@
 
 ### MCP 骨骼动画制作实录预览
 
+#### 1. 2D 角色全流程制作与剑气特效（近战武士 `samurai-2d` & 精灵弓箭手 `archer-2d`）
+
+[![通过 BoneStudio MCP 制作 2D 近战武士（待机/行走/奔跑/烈斩剑气）与角色换皮演示（点击查看高清 MP4 录像）](docs/demo-mcp-samurai.gif)](docs/demo-mcp-samurai.mp4)
+
+> 上方演示了 AI Agent 结合 [`docs/SKILL-bone-studio-mcp.md`](docs/SKILL-bone-studio-mcp.md) 中的「精美 2D 角色 SVG 程序化绘制与关节防穿帮 5 大法则」（独立脖颈骨骼与插槽、同心圆大袖肩甲、草摺护胯甲裙遮挡大腿根部、阵羽织 `5×4` 自动权重蒙皮网格、纯 Alpha 辉光双阶段月牙剑气与可斩断青竹靶），从零构建 `samurai-2d` 与 `archer-2d` 多套动作及多皮肤换装的完整过程。高清录像原片见 [`docs/demo-mcp-samurai.mp4`](docs/demo-mcp-samurai.mp4)。
+
+#### 2. 复杂机械联动与分析式 IK（「鹈鹕骑自行车」`pelican-bicycle`）
+
 [![通过 BoneStudio MCP 从零制作「鹈鹕骑自行车」骨骼动画（点击查看高清 MP4 录像）](docs/demo-mcp-pelican.gif)](docs/demo-mcp-pelican.mp4)
 
-> 上方动图展示了 AI Agent 通过 `bone-studio` MCP 工具（配合 [`docs/SKILL-bone-studio-mcp.md`](docs/SKILL-bone-studio-mcp.md) 技能）从零生成 SVG/PNG 分层部件、绑定 26 根骨骼与网格权重、编写分析式 IK 骑行/冲刺/待机三套动作并在编辑器中实时播放的效果。高清原片见 [`docs/demo-mcp-pelican.mp4`](docs/demo-mcp-pelican.mp4)。
+> 上方动图展示了 AI Agent 通过 `bone-studio` MCP 工具从零生成 SVG/PNG 分层部件、绑定 26 根骨骼与网格权重、编写分析式 IK 骑行/冲刺/待机三套动作并在编辑器中实时播放的效果。高清原片见 [`docs/demo-mcp-pelican.mp4`](docs/demo-mcp-pelican.mp4)。
 
 ## 特性
 

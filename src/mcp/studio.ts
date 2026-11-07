@@ -91,7 +91,9 @@ function rebuildPlayer(s: StudioState): void {
   const anim = p.animation?.name;
   const pos = p.position;
   const setup = p.setupPose;
+  const skin = p.skeleton.skinName;
   const next = new Player(JSON.parse(serializeSkeletonData(p.doc)), s.tex ?? null);
+  if (skin !== undefined) next.skeleton.setSkin(skin);
   if (anim) next.setAnimation(anim);
   next.setupPose = setup;
   next.seek(pos);
@@ -1096,5 +1098,104 @@ export function regionErase(s: StudioState, args: { slot: string; ellipse: [numb
     addRegion(s, region, img);
     rebuildPlayer(s);
     return { slot: args.slot, region, erased };
+  });
+}
+
+
+/* ---------------- 皮肤 / 换皮（不动骨架、权重、网格与动画） ---------------- */
+
+/** 双线性插值缩放到指定宽高（换皮 keepSize 时保持边缘平滑与预乘 alpha 质量） */
+function resizeRaster(src: RasterImage, w: number, h: number): RasterImage {
+  if (src.width === w && src.height === h) return src;
+  const out: RasterImage = { width: w, height: h, rgba: new Uint8Array(w * h * 4) };
+  for (let y = 0; y < h; y++) {
+    const sy = Math.max(0, Math.min(src.height - 1, (y + 0.5) * src.height / h - 0.5));
+    const y0 = Math.floor(sy), y1 = Math.min(src.height - 1, y0 + 1), fy = sy - y0;
+    for (let x = 0; x < w; x++) {
+      const sx = Math.max(0, Math.min(src.width - 1, (x + 0.5) * src.width / w - 0.5));
+      const x0 = Math.floor(sx), x1 = Math.min(src.width - 1, x0 + 1), fx = sx - x0;
+      const i00 = (y0 * src.width + x0) * 4, i10 = (y0 * src.width + x1) * 4;
+      const i01 = (y1 * src.width + x0) * 4, i11 = (y1 * src.width + x1) * 4;
+      const w00 = (1 - fx) * (1 - fy), w10 = fx * (1 - fy), w01 = (1 - fx) * fy, w11 = fx * fy;
+      const dst = (y * w + x) * 4;
+      const a00 = src.rgba[i00 + 3], a10 = src.rgba[i10 + 3], a01 = src.rgba[i01 + 3], a11 = src.rgba[i11 + 3];
+      const a = a00 * w00 + a10 * w10 + a01 * w01 + a11 * w11;
+      out.rgba[dst + 3] = Math.round(a);
+      if (a > 0.5) {
+        const aw00 = a00 * w00, aw10 = a10 * w10, aw01 = a01 * w01, aw11 = a11 * w11;
+        for (let c = 0; c < 3; c++) {
+          out.rgba[dst + c] = Math.round((src.rgba[i00 + c] * aw00 + src.rgba[i10 + c] * aw10 + src.rgba[i01 + c] * aw01 + src.rgba[i11 + c] * aw11) / a);
+        }
+      }
+    }
+  }
+  return out;
+}
+
+export function skinList(s: StudioState): unknown {
+  const sk = need(s).skeleton;
+  return { current: sk.skinName ?? '', skins: sk.skins() };
+}
+
+export function skinSet(s: StudioState, args: { name: string }): unknown {
+  const sk = need(s).skeleton;
+  if (!sk.setSkin(args.name)) throw new Error(`unknown skin: ${args.name} (have: ${sk.skins().map((x) => x.name || '(default)').join(', ')})`);
+  if (s.autoSync) sync(s);
+  return { current: sk.skinName ?? '', skins: sk.skins() };
+}
+
+export function skinClone(s: StudioState, args: { name: string; from?: string }): unknown {
+  const arm = armatureOf(s);
+  return write(s, () => {
+    const skins = arm.skin ?? (arm.skin = []);
+    if (skins.some((x) => (x.name ?? '') === args.name)) throw new Error(`skin already exists: ${args.name}`);
+    const src = (args.from !== undefined ? skins.find((x) => (x.name ?? '') === args.from) : need(s).skeleton.currentSkin()) ?? skins[0];
+    if (!src) throw new Error('no source skin to clone');
+    const copy = JSON.parse(JSON.stringify(src)) as typeof src;
+    copy.name = args.name;
+    skins.push(copy);
+    need(s).skeleton.setSkin(args.name);
+    return { cloned: args.name, from: src.name ?? '', slots: copy.slot?.length ?? 0, skins: need(s).skeleton.skins() };
+  });
+}
+
+export function regionSwap(s: StudioState, args: { slot: string; file: string; display?: number | string; skin?: string; keepSize?: boolean }): unknown {
+  const arm = armatureOf(s);
+  const raw = decodePng(readFileSync(args.file));
+  return write(s, () => {
+    const skins = arm.skin ?? [];
+    const targetSkinName = args.skin ?? need(s).skeleton.skinName ?? skins[0]?.name ?? '';
+    const skinIdx = skins.findIndex((x) => (x.name ?? '') === targetSkinName);
+    const skin = skinIdx >= 0 ? skins[skinIdx] : skins[0];
+    if (!skin) throw new Error(`unknown skin: ${targetSkinName}`);
+    const ss = skin.slot.find((x) => x.name === args.slot);
+    const slot = arm.slot.find((x) => x.name === args.slot);
+    if (!ss || !slot) throw new Error(`unknown slot: ${args.slot}`);
+    const idx = typeof args.display === 'number' ? args.display
+      : typeof args.display === 'string' ? ss.display.findIndex((x) => (x.name ?? x.path) === args.display)
+      : (slot.displayIndex ?? 0);
+    const d = ss.display[idx];
+    const baseName = d?.name ?? args.slot;
+    const prevRegion = d?.path ?? d?.name;
+    const sub = s.tex?.SubTexture.find((t) => t.name === prevRegion) ?? s.tex?.SubTexture.find((t) => t.name === baseName);
+    if (!d || !prevRegion || !sub) throw new Error(`slot ${args.slot} display ${idx} has no region in atlas`);
+    const keep = args.keepSize !== false;
+    const img = keep ? resizeRaster(raw, sub.width, sub.height) : raw;
+    const targetRegion = skinIdx > 0 && skin.name ? `${skin.name}__${baseName}` : prevRegion;
+    d.path = targetRegion !== d.name ? targetRegion : undefined;
+    addRegion(s, targetRegion, img);
+    if (!keep && (d.width !== undefined || d.height !== undefined)) { d.width = img.width; d.height = img.height; }
+    rebuildPlayer(s);
+    if (args.skin !== undefined) need(s).skeleton.setSkin(args.skin);
+    return {
+      slot: args.slot,
+      skin: skin.name ?? '',
+      region: targetRegion,
+      oldSize: [sub.width, sub.height],
+      inputSize: [raw.width, raw.height],
+      newSize: [img.width, img.height],
+      resized: keep && (raw.width !== sub.width || raw.height !== sub.height),
+      meshPreserved: d.type === 'mesh' || d.type === 2,
+    };
   });
 }

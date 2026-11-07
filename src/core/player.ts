@@ -164,8 +164,20 @@ export class Player {
     this.events.onAnimationChange?.(this);
     return true;
   }
+  private rewindIfAtEnd(): void {
+    const duration = this.duration;
+    if (duration <= 0) return;
+    const lo = this.playRange ? Math.max(0, Math.min(this.playRange.start, this.playRange.end)) : 0;
+    const hi = this.playRange ? Math.min(duration, Math.max(this.playRange.start, this.playRange.end)) : duration;
+    if (!this.reverse && this.position >= hi) {
+      this.position = lo;
+    } else if (this.reverse && this.position <= lo) {
+      this.position = hi;
+    }
+  }
   play(): void {
     if (this.setupPose) { this.playing = false; return; }
+    this.rewindIfAtEnd();
     this.playing = true;
   }
   /**
@@ -179,6 +191,7 @@ export class Player {
   }
   toggle(): void {
     if (this.setupPose) { this.playing = false; return; }
+    if (!this.playing) this.rewindIfAtEnd();
     this.playing = !this.playing;
     if (!this.playing) {
       this.position = Math.round(this.position);
@@ -260,7 +273,10 @@ export class Player {
       for (const action of actions) {
         this.events.onAction?.(action, this);
         const item = action as { type?: number; name?: string; gotoAndPlay?: string };
-        const target = item.gotoAndPlay ?? (item.type === 0 ? item.name : undefined);
+        const hasAnim = (n: string) =>
+          this.skeleton.animationNames().includes(n) ||
+          (this.multiArmature && this.doc.armatures.some((a) => a.name === n));
+        const target = item.gotoAndPlay ?? (item.type === 0 && item.name && hasAnim(item.name) ? item.name : undefined);
         if (target) this.setAnimation(target);
       }
     }

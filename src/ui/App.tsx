@@ -1540,6 +1540,7 @@ export function App() {
     const params = new URLSearchParams(window.location.search);
     const frame = Number(params.get('frame'));
     // MCP 预览深链：?anim=<名字>&frame=<n>&play=1 → 切到动画制作模式并停在该帧 / 播放
+    const wantedSkin = params.get('skin'); if (wantedSkin !== null) player.setSkin(wantedSkin);
     const wantedAnim = params.get('anim');
     if (wantedAnim && player.animationNames().includes(wantedAnim)) {
       player.setAnimation(wantedAnim);
@@ -3302,6 +3303,11 @@ export function App() {
     current.speed = speed;
   }, [speed]);
 
+  /* ---------------- derived ---------------- */
+
+  const animations = useMemo(() => player?.animationNames() ?? [], [player, modelVersion]);
+  const currentAnimation = player?.currentAnimationName() ?? '';
+
   useEffect(() => {
     const current = playerRef.current;
     if (!current?.animation) return;
@@ -3309,12 +3315,7 @@ export function App() {
     const playTimes = animation.playTimes ?? 0;
     if (loop && playTimes !== 0) animation.playTimes = 0;
     if (!loop && playTimes === 0) animation.playTimes = 1;
-  }, [loop, player, tlTab, showTimeline]);
-
-  /* ---------------- derived ---------------- */
-
-  const animations = useMemo(() => player?.animationNames() ?? [], [player, modelVersion]);
-  const currentAnimation = player?.currentAnimationName() ?? '';
+  }, [loop, player, tlTab, showTimeline, currentAnimation, modelVersion]);
 
   /** the keyframe selection belongs to one animation; drop it when the animation changes */
   useEffect(() => {
