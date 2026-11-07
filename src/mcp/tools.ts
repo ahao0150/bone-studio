@@ -314,17 +314,41 @@ export function meshDetail(state: EditorState, args: { slot: string }): unknown 
 export interface BoneCreateArgs {
   name?: string;
   parent?: string | null;
-  transform?: Partial<{ x: number; y: number; skX: number; skY: number; scX: number; scY: number }>;
+  transform?: Partial<{ x: number; y: number; rotation: number; skX: number; skY: number; scX: number; scY: number; scaleX: number; scaleY: number }>;
+  x?: number;
+  y?: number;
+  rotation?: number;
+  skX?: number;
+  skY?: number;
+  scX?: number;
+  scY?: number;
+  scaleX?: number;
+  scaleY?: number;
   length?: number;
 }
 
 export function boneCreate(state: EditorState, args: BoneCreateArgs): unknown {
   const player = requirePlayer(state);
   const snapshot = checkpoint(state);
+  const rawT = args.transform ?? {};
+  const rot = rawT.rotation ?? args.rotation;
+  const x = rawT.x ?? args.x;
+  const y = rawT.y ?? args.y;
+  const skX = rawT.skX ?? args.skX ?? rot;
+  const skY = rawT.skY ?? args.skY ?? rot;
+  const scX = rawT.scX ?? rawT.scaleX ?? args.scX ?? args.scaleX;
+  const scY = rawT.scY ?? rawT.scaleY ?? args.scY ?? args.scaleY;
+  const mergedTransform: Record<string, number> = {};
+  if (typeof x === 'number') mergedTransform.x = x;
+  if (typeof y === 'number') mergedTransform.y = y;
+  if (typeof skX === 'number') mergedTransform.skX = skX;
+  if (typeof skY === 'number') mergedTransform.skY = skY;
+  if (typeof scX === 'number') mergedTransform.scX = scX;
+  if (typeof scY === 'number') mergedTransform.scY = scY;
   const created = addBone(player, {
     name: args.name,
     parent: args.parent ?? null,
-    transform: args.transform as never,
+    transform: (Object.keys(mergedTransform).length ? mergedTransform : undefined) as never,
     length: args.length,
   });
   if (!created) {
@@ -334,21 +358,33 @@ export function boneCreate(state: EditorState, args: BoneCreateArgs): unknown {
   return withHistory(state, { created, bones: player.skeleton.bones.length });
 }
 
-export function boneDelete(state: EditorState, args: { bone: string }): unknown {
+export function boneDelete(state: EditorState, args: { bone?: string; name?: string }): unknown {
   const player = requirePlayer(state);
   const snapshot = checkpoint(state);
-  if (!removeBone(player, args.bone)) {
+  const boneName = args.bone ?? args.name ?? '';
+  if (!removeBone(player, boneName)) {
     rollback(state, snapshot);
-    throw new Error(`删除失败：${args.bone} 不存在，或它是最后一根骨骼`);
+    throw new Error(删除失败： 不存在，或它是最后一根骨骼);
   }
-  return withHistory(state, { removed: args.bone, bones: player.skeleton.bones.length });
+  return withHistory(state, { removed: boneName, bones: player.skeleton.bones.length });
 }
 
 export function boneUpdate(state: EditorState, args: {
-  bone: string;
+  bone?: string;
+  name?: string;
   rename?: string;
+  newName?: string;
   parent?: string | null;
   length?: number;
+  x?: number;
+  y?: number;
+  rotation?: number;
+  skX?: number;
+  skY?: number;
+  scX?: number;
+  scY?: number;
+  scaleX?: number;
+  scaleY?: number;
   /** 绑定变换（相对父级）：x/y/rotation(度)/skX/skY/scX/scY，只改给出的分量 */
   transform?: BindPatch;
   /** true = 子骨骼与挂在本骨骼上的槽位保持世界位置不变（默认 false：子级跟着动） */
@@ -358,36 +394,46 @@ export function boneUpdate(state: EditorState, args: {
 }): unknown {
   const player = requirePlayer(state);
   const armature = player.skeleton.armature;
-  if (!armature.bone.some((entry) => entry.name === args.bone)) throw new Error(`unknown bone: ${args.bone}`);
+  const boneName = args.bone ?? args.name ?? '';
+  const renameTarget = args.rename ?? args.newName;
+  if (!armature.bone.some((entry) => entry.name === boneName)) throw new Error(unknown bone: );
   const snapshot = checkpoint(state);
-  const target = args.rename?.trim() || args.bone;
+  const target = renameTarget?.trim() || boneName;
   const changed: Record<string, unknown> = {};
 
-  if (args.rename && args.rename !== args.bone) {
-    if (!renameBone(player, args.bone, args.rename)) {
+  if (renameTarget && renameTarget !== boneName) {
+    if (!renameBone(player, boneName, renameTarget)) {
       rollback(state, snapshot);
-      throw new Error(`重命名失败：${args.bone} → ${args.rename}`);
+      throw new Error(重命名失败： → );
     }
-    changed.name = args.rename;
+    changed.name = renameTarget;
   }
   if (args.parent !== undefined) {
     if (!setBoneParent(player, target, args.parent)) {
       rollback(state, snapshot);
-      throw new Error(`改父级失败：${target} → ${args.parent ?? '（根）'}`);
+      throw new Error(改父级失败： → );
     }
     changed.parent = args.parent;
   }
   if (typeof args.length === 'number') {
     if (!setBoneLength(armature, target, args.length)) {
       rollback(state, snapshot);
-      throw new Error(`改骨骼长度失败：${target}`);
+      throw new Error(改骨骼长度失败：);
     }
     player.rebuildSkeleton();
     changed.length = args.length;
   }
-  if (args.transform && Object.keys(args.transform).length) {
+  const mergedTransform: BindPatch = { ...(args.transform ?? {}) };
+  if (mergedTransform.x === undefined && typeof args.x === 'number') mergedTransform.x = args.x;
+  if (mergedTransform.y === undefined && typeof args.y === 'number') mergedTransform.y = args.y;
+  if (mergedTransform.rotation === undefined && typeof args.rotation === 'number') mergedTransform.rotation = args.rotation;
+  if (mergedTransform.skX === undefined && typeof args.skX === 'number') mergedTransform.skX = args.skX;
+  if (mergedTransform.skY === undefined && typeof args.skY === 'number') mergedTransform.skY = args.skY;
+  if (mergedTransform.scX === undefined && typeof (args.scX ?? args.scaleX) === 'number') mergedTransform.scX = args.scX ?? args.scaleX;
+  if (mergedTransform.scY === undefined && typeof (args.scY ?? args.scaleY) === 'number') mergedTransform.scY = args.scY ?? args.scaleY;
+  if (Object.keys(mergedTransform).length) {
     try {
-      changed.transform = setBoneBind(armature, target, args.transform, args.keepChildren === true);
+      changed.transform = setBoneBind(armature, target, mergedTransform, args.keepChildren === true);
       changed.keepChildren = args.keepChildren === true;
     } catch (error) {
       rollback(state, snapshot);

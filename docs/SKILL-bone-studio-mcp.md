@@ -194,9 +194,9 @@ function solve2BoneIK(rootX, rootY, targetX, targetY, L1, L2, bendSign = 1) {
 |---|---|---|
 | `layers_add` | `{ layers: Array<{ file: string, name?: string, bone?: string, left: number, top: number }>, canvasWidth?: number, canvasHeight?: number }` | 批量导入分层 PNG（推荐先挂 `bone: "root"`，再用 `slot_update` 挂目标骨骼） |
 | `image_add` | `{ file: string, name?: string, bone?: string, slot?: string, x?: number, y?: number, rotation?: number }` | 单张导图 |
-| `bone_create` | `{ name: string, parent?: string, x?: number, y?: number, rotation?: number, length?: number }` | 新建骨骼（父骨骼必须已存在） |
-| `bone_update` | `{ name: string, parent?: string, x?: number, y?: number, rotation?: number, scaleX?: number, scaleY?: number, length?: number, inheritRotation?: boolean, inheritScale?: boolean }` | 修改骨骼绑定属性 |
-| `bone_delete` | `{ name: string }` | 删除骨骼（子骨骼与插槽自动归回父骨骼） |
+| `bone_create` | `{ name: string, parent?: string, length?: number, transform?: { x?: number, y?: number, skX?: number, skY?: number, rotation?: number, scX?: number, scY?: number }, x?: number, y?: number, rotation?: number }` | 新建骨骼（**父骨骼必须已存在**；推荐传 `transform: { x, y, skX: localDeg, skY: localDeg }` 或顶层 `x, y, rotation`） |
+| `bone_update` | `{ bone: string, rename?: string, parent?: string, length?: number, transform?: { x?, y?, rotation?, skX?, skY?, scX?, scY? }, keepChildren?: boolean }` | 修改骨骼绑定属性（`bone` 兼容 `name`） |
+| `bone_delete` | `{ bone: string }` | 删除骨骼（子骨骼与插槽自动归回父骨骼，`bone` 兼容 `name`） |
 | `slot_create` | `{ name: string, bone: string, attachment?: string, width?: number, height?: number, zIndex?: number }` | 新建插槽 |
 | `slot_update` | `{ slot: string, bone?: string, zIndex?: number, displayIndex?: number, blendMode?: "normal" \| "add" \| "multiply" \| "screen", color?: { rM?, gM?, bM?, aM? } }` | 改绑父骨骼（**自动反算贴图局部坐标保持世界位置不变**）、调层级 `zIndex` |
 | `mesh_create` | `{ slot: string, display?: string, cols?: number, rows?: number }` | 将普通贴图转为 `cols × rows` 网格（默认 4×4） |
@@ -208,10 +208,10 @@ function solve2BoneIK(rootX, rootY, targetX, targetY, L1, L2, bendSign = 1) {
 | 工具 | 参数签名 | 说明 |
 |---|---|---|
 | `animation_create` | `{ name: string, duration?: number, playTimes?: number, from?: string }` | 新建或复制动画（`duration` 为帧数，24fps；`playTimes: 0` 循环，`1` 单次） |
-| `animation_update` | `{ name: string, newName?: string, duration?: number, playTimes?: number, scaleFrames?: boolean }` | 改动画时长/重命名 |
-| `bone_key` | `{ animation?: string, bone: string, frame: number, x?: number, y?: number, rotate?: number, scaleX?: number, scaleY?: number, easing?: number \| "linear" \| "stepped" \| "easeIn" \| "easeOut" \| "easeInOut" \| [number,number,number,number] }` | 单帧写入骨骼**相对绑定姿态的增量** |
-| `bone_keys` | `{ animation?: string, keys: Array<{ bone: string, frame: number, x?: number, y?: number, rotate?: number, scaleX?: number, scaleY?: number, easing?: ... }> }` | **批量写入骨骼关键帧**（强烈推荐） |
-| `slot_key` | `{ animation?: string, slot: string, frame: number, attachment?: string \| null, rM?: number, gM?: number, bM?: number, aM?: number, easing?: ... }` | 插槽换图（`null` 隐藏）或颜色/透明度关键帧（0–100） |
+| `animation_update` | `{ animation: string, rename?: string, duration?: number, playTimes?: number, remove?: boolean }` | 改动画时长/循环次数/重命名（`animation` 兼容 `name`） |
+| `bone_key` | `{ animation?: string, bone: string, frame: number, x?: number, y?: number, rotate?: number, rotation?: number, scaleX?: number, scaleY?: number, easing?: number \| "linear" \| "stepped" \| "easeIn" \| "easeOut" \| "easeInOut" \| [number,number,number,number] }` | 单帧写入骨骼**相对绑定姿态的增量**（`rotate` 与 `rotation`、`easing` 与 `curve` 均兼容） |
+| `bone_keys` | `{ animation?: string, keys: Array<{ bone: string, frame: number, x?: number, y?: number, rotate?: number, scaleX?: number, scaleY?: number, easing?: ... }> }` | **批量写入骨骼关键帧**（强烈推荐；也兼容 `{ animation, bone, keyframes: [...] }`） |
+| `slot_key` | `{ animation?: string, slot: string, frame: number, attachment?: string, color?: { rM?: number, gM?: number, bM?: number, aM?: number }, displayIndex?: number, easing?: ... }` | 插槽换图（`attachment: ""` 空串隐藏）或颜色/透明度关键帧（`color: { rM, gM, bM, aM }` 范围 0–100） |
 | `event_key` | `{ animation?: string, frame: number, name: string, clear?: boolean }` | 写入/删除帧事件（导出到 Spine `events`） |
 
 ### 预览渲染与导出
@@ -325,6 +325,178 @@ try {
 4. **`6×6` 多骨骼软体权重网格 + 死亡融化时刚性子部件的反向缩放补偿**：
    - 将 `slime_body` 与 `slime_back_rim` 转为 `6×6` 网格（`mesh_create`），并绑定至 `['body_base', 'body_mid', 'body_top', 'cheek_l', 'cheek_r']` 五根软体控制骨骼（`weights_auto`），受击或落地时通过推拉左右脸颊骨骼 `cheek_l` / `cheek_r` 实现非对称果冻波纹。
    - 当死亡动画（`die`）将父骨骼 `body_base` 垂直压扁为液滩（`scaleY: 0.28, scaleX: 1.64`）时，挂在其子层级下的刚性物体（如 `core` 晶核、`crest_drop` 皇冠、`face` 眩晕 `X X` 眼）若不补偿也会被压扁成细线；只需在关键帧中对这些刚性子骨骼施加**反向缩放补偿**（如 `scaleX: 0.62, scaleY: 3.15`）并配合向下位移 `y` 与弹跳曲线，即可表现果冻融化塌陷的同时皇冠与晶核保持立体比例掉落弹跳的戏剧效果。
+
+---
+
+## 深度技术方案一：骨骼绑定、关节圆心与零偏移重挂（Bone Rigging & Joint Pivot）
+
+许多 AI 模型（如失败的 `mage-2d` 案例）做出的角色之所以「四肢断裂、旋转脱节、骨骼全堆在脚底原点」，根本原因是**没有把美术部件的旋转圆心与骨骼关节起点对齐**，或者**未传局部绑定变换 `transform`**。请严格执行以下技术方案：
+
+### 1. 关节同心圆重叠设计（Joint Overlap Circle）
+在绘制 SVG 分层部件时，凡是存在旋转关系的父子部件（如 `arm_upper` 与 `arm_lower`、`thigh` 与 `shin`、`neck` 与 `head`），必须在它们的公共关节像素坐标 `(jx, jy)` 处**各自画出半径为 `R` 的圆弧端头**：
+- **肩关节 / 髋关节**：`R = 13..16px`（两个部件在 `(jx, jy)` 处重叠直径 `26..32px` 的圆形区域）；
+- **肘关节 / 膝关节**：`R = 10..13px`；
+- **手腕 / 脚踝 / 脖颈两端**：`R = 8..11px`。
+> **为什么必须有重叠圆？** 如果上臂底部画成平直横线、前臂顶部也画成平直横线，前臂只要旋转 `30°` 就会立刻露出三角形透明缺口和生硬的直角折痕！只有两端都以 `(jx, jy)` 为圆心画圆弧端头，绕 `(jx, jy)` 旋转任意角度轮廓才永远连续平滑。
+
+### 2. 标准骨骼树拓扑与局部矩阵自动换算模板（直接复制使用）
+不要手算局部坐标！在脚本中只定义画布像素空间下的关节坐标字典 `J` 和父子线段表 `BONE_SPECS`，然后用下面的矩阵模板一键算出每根骨骼相对父骨骼的 `transform: { x, y, skX, skY }` 与 `length`：
+
+```js
+// 1. 定义画布尺寸与关节像素坐标（必须与 generate_*_svg.py 中的关节完全一致！）
+const CANVAS_W = 880, CANVAS_H = 560;
+const OX = CANVAS_W / 2; // 440
+const OY = CANVAS_H;     // 560 (layers_add 世界原点固定在画布底边中点)
+
+const J = {
+  root:        [240, 495],
+  hip:         [235, 312],
+  torso:       [235, 298],
+  neck:        [238, 206],
+  head:        [240, 190],
+  cape_root:   [212, 218],
+  cape_mid:    [150, 290],
+  cape_tip:    [90,  375],
+  arm_upper_l: [252, 224],
+  arm_lower_l: [284, 272],
+  arm_upper_r: [222, 228],
+  arm_lower_r: [256, 282],
+  weapon:      [292, 298],
+  thigh_r:     [246, 316],
+  shin_r:      [258, 398],
+  foot_r:      [266, 476],
+  thigh_l:     [224, 316],
+  shin_l:      [212, 398],
+  foot_l:      [204, 476],
+};
+
+// 2. 父骨骼在前、子骨骼在后！注意 hip/shadow 等需要直接做水平/垂直位移的骨骼保持 0° 水平绑定（to = [from[0]+len, from[1]]）
+const BONE_SPECS = [
+  { name: 'shadow',      parent: 'root',        from: J.root,        to: [J.root[0] + 45, J.root[1]] },
+  { name: 'hip',         parent: 'root',        from: J.hip,         to: [J.hip[0] + 28, J.hip[1]] },
+  { name: 'thigh_r',     parent: 'hip',         from: J.thigh_r,     to: J.shin_r },
+  { name: 'shin_r',      parent: 'thigh_r',     from: J.shin_r,      to: J.foot_r },
+  { name: 'foot_r',      parent: 'shin_r',      from: J.foot_r,      to: [J.foot_r[0] + 28, J.foot_r[1] + 6] },
+  { name: 'thigh_l',     parent: 'hip',         from: J.thigh_l,     to: J.shin_l },
+  { name: 'shin_l',      parent: 'thigh_l',     from: J.shin_l,      to: J.foot_l },
+  { name: 'foot_l',      parent: 'shin_l',      from: J.foot_l,      to: [J.foot_l[0] + 28, J.foot_l[1] + 6] },
+  { name: 'torso',       parent: 'hip',         from: J.torso,       to: J.neck },
+  { name: 'neck',        parent: 'torso',       from: J.neck,        to: J.head },
+  { name: 'head',        parent: 'neck',        from: J.head,        to: [J.head[0], J.head[1] - 42] },
+  { name: 'cape_root',   parent: 'torso',       from: J.cape_root,   to: J.cape_mid },
+  { name: 'cape_mid',    parent: 'cape_root',   from: J.cape_mid,    to: J.cape_tip },
+  { name: 'cape_tip',    parent: 'cape_mid',    from: J.cape_tip,    to: [J.cape_tip[0] - 32, J.cape_tip[1] + 24] },
+  { name: 'arm_upper_l', parent: 'torso',       from: J.arm_upper_l, to: J.arm_lower_l },
+  { name: 'arm_lower_l', parent: 'arm_upper_l', from: J.arm_lower_l, to: [J.arm_lower_l[0] + 24, J.arm_lower_l[1] + 40] },
+  { name: 'arm_upper_r', parent: 'torso',       from: J.arm_upper_r, to: J.arm_lower_r },
+  { name: 'arm_lower_r', parent: 'arm_upper_r', from: J.arm_lower_r, to: J.weapon },
+  { name: 'weapon',      parent: 'arm_lower_r', from: J.weapon,      to: [J.weapon[0] + 120, J.weapon[1] - 80] },
+];
+
+// 3. 自动换算每根骨骼相对父级的局部 transform (x, y, skX, skY) 与 length
+const worldMats = { root: matFrom(0, 0, 0) };
+for (const b of BONE_SPECS) {
+  const wx = b.from[0] - OX, wy = b.from[1] - OY;
+  const tx = b.to[0] - OX,   ty = b.to[1] - OY;
+  const wDeg = Math.atan2(ty - wy, tx - wx) * DEG;
+  const len = Math.round(Math.hypot(tx - wx, ty - wy));
+  const W = matFrom(wx, wy, wDeg);
+  const localM = mulMat(invMat(worldMats[b.parent]), W);
+  const localDeg = Math.atan2(localM[1], localM[0]) * DEG;
+  worldMats[b.name] = W;
+  await mcp.call('bone_create', {
+    name: b.name,
+    parent: b.parent,
+    length: len,
+    transform: {
+      x: Number(localM[4].toFixed(2)),
+      y: Number(localM[5].toFixed(2)),
+      skX: Number(localDeg.toFixed(2)),
+      skY: Number(localDeg.toFixed(2)),
+    },
+  });
+}
+```
+
+---
+
+## 深度技术方案二：插槽层级覆盖选择规范（Z-Index Draw Order & 夹心遮挡矩阵）
+
+在 2D 骨骼动画中，90% 的「关节穿帮、脖子割裂衣领、武器穿帽子、大腿漏切口」都是因为 `zIndex`（绘制顺序，`0` 在最底层，越大越靠前）排错导致的。
+
+### 1. 四大核心遮挡夹心不变量（必须死守）
+1. **脖颈三明治夹心（`back_hair < neck < torso < head`）**：
+   - **错误做法（如失败的 `mage-2d`）**：把 `neck` 的 `zIndex` 设得比 `torso` 和 `hair` 还高，导致脖子像一块创可贴贴在胸口和头发表面！
+   - **正确做法**：`neck` 必须低于 `torso`（让衣领/胸甲上缘盖住脖子下端切口），且 `head` 必须高于 `torso` 和 `neck`（让下巴盖住脖子上端切口），而脑后长发/马尾 `hair_back` 则放在 `neck` 后面。
+2. **近端肩甲盖躯干（`torso < arm_upper_r`）**：
+   - 远端左臂全套放在躯干后面（`arm_upper_l < arm_lower_l < torso`）；近端右大臂 `arm_upper_r` 必须高于 `torso`，并用顶部圆形肩甲/袖口盖住胸腔右上侧肩窝。
+3. **护胯甲裙/衣摆盖大腿根（`thigh_r < shin_r < foot_r < thigh_l < torso`）**：
+   - 把护胯甲裙/长袍前摆直接画在 `torso`（或高于 `thigh_l` 的 `pelvis_skirt`）下部，使其 `zIndex` 高于近端大腿 `thigh_l`，抬腿冲刺时髋部圆头被衣摆完美遮挡。
+4. **手掌与武器/法杖握持夹心（`weapon < hand_r` 或一体式握柄）**：
+   - 若手与武器拆开：`arm_upper_r < arm_lower_r < weapon < hand_r`（手掌贴图在最外层包住剑柄/杖杆，绝不能让手掌藏在袖子底下而法杖悬浮在空中）；
+   - 且法杖/长柄武器的绑定点必须在手心 `J.hand_r`，旋转轴沿手腕展开，绝不能垂直竖在角色正前方穿过帽檐。
+
+### 2. 标准 3/4 侧面人形角色 Z-Index 全层级速查表（直接照抄）
+
+| `zIndex` 序号 | 插槽名 (`slot`) | 绑定骨骼 (`bone`) | 遮挡逻辑说明 |
+| :---: | :--- | :--- | :--- |
+| `0` | `ground_shadow` | `shadow` | 最底层地面投影 |
+| `1` | `cape_back` / `haori_cape` | `torso` (加权网格) | 角色背后的披风/斗篷，位于全身最背部 |
+| `2` | `quiver_back` / `saya_sheath` | `torso` / `hip` | 背部箭袋或腰后刀鞘 |
+| `3` | `thigh_r` | `thigh_r` | 远端（右）大腿 |
+| `4` | `shin_r` | `shin_r` | 远端（右）小腿（盖住远端膝盖） |
+| `5` | `foot_r` | `foot_r` | 远端（右）战靴 |
+| `6` | `arm_upper_l` | `arm_upper_l` | 远端（左）大臂（在躯干后方） |
+| `7` | `arm_lower_l` | `arm_lower_l` | 远端（左）前臂与远端手 |
+| `8` | `thigh_l` | `thigh_l` | 近端（左）大腿（高于远端腿，但**低于躯干护胯下摆**！） |
+| `9` | `shin_l` | `shin_l` | 近端（左）小腿 |
+| `10` | `foot_l` | `foot_l` | 近端（左）战靴 |
+| `11` | `neck` | `neck` | **独立脖颈（必须低于 `torso_armor` 与 `head`！）** |
+| `12` | `torso_armor` | `torso` | **躯干胸甲 + 交领（盖住 `neck` 下端）+ 护胯下摆（盖住 `thigh_l` 上端）** |
+| `13` | `hair_back` / `hair_ponytail` | `head` / `hair_ponytail` | 脑后马尾/长发（在头部后方，随头部滞后摆动） |
+| `14` | `head` | `head` | 头部与五官（下巴盖住 `neck` 上端） |
+| `15` | `beard` / `hat_headwear` | `head` / `hat` | 胡须、兜帽、头盔或法师帽（高于头部） |
+| `16` | `arm_upper_r` | `arm_upper_r` | **近端（右）大臂（顶部同心圆肩甲盖住 `torso_armor` 肩口！）** |
+| `17` | `weapon` (`katana` / `staff`) | `weapon` | 武器/法杖（夹在近端小臂/手心之间） |
+| `18` | `arm_lower_r` (含握持手掌) | `arm_lower_r` | **近端（右）前臂与手掌（盖住 `arm_upper_r` 肘部与 `weapon` 握柄！）** |
+| `19..21` | `slash_arc_fx` / `magic_fx` | `slash_arc` / `fx` | 最顶层剑气、箭矢、法球发光特效（默认 `attachment: ""` 隐藏） |
+
+---
+
+## 深度技术方案三：网格划分与蒙皮权重工程规范（Mesh & Skinning Weights）
+
+### 1. 刚体插槽（Rigid Slot）vs 加权网格（Weighted Mesh）决策表
+切忌不加区分地对所有部件做网格蒙皮，也切忌对柔性部件不做网格：
+
+| 部件类别 | 绑定方式 | 网格密度 (`cols × rows`) | 参与权重骨骼 (`weights_auto.bones`) | 衰减指数 (`falloff`) | 核心禁忌 |
+| :--- | :--- | :---: | :--- | :---: | :--- |
+| **头部、五官、头盔、帽子** | **刚体插槽（Rigid）** | 不转网格 | 仅挂 `head` / `hat` | — | **严禁**与脖子/躯干混绑权重，否则转头时脸部会被拉长扭曲 |
+| **刀剑、法杖、弓把、箭矢** | **刚体插槽（Rigid）** | 不转网格 | 仅挂 `weapon` / `bow_riser` | — | **严禁**多骨软蒙皮，否则挥砍时刀剑会像橡胶一样弯曲 |
+| **大臂、小臂、大腿、小腿** | **刚体分段（Rigid）** | 不转网格 | 各自挂对应单骨 | — | 依靠关节同心圆重叠旋转，保持铠甲/护腕硬朗结构 |
+| **披风 / 斗篷 (`cape_back`)** | **加权网格（Mesh）** | `5 × 4` 或 `4 × 3` | `['torso', 'cape_root', 'cape_mid', 'cape_tip']` | `2.0` | **严禁把 `root`、`hip` 或手臂骨骼放进 `bones`！**（放 `root` 会把披风底角钉死在地面原点） |
+| **长袍下摆 (`robe_skirt`)** | **加权网格（Mesh）** | `4 × 4` | `['hip', 'thigh_l', 'thigh_r']` | `1.8` | 仅绑骨盆与左右大腿，迈步时袍摆自然随双腿前后分开 |
+| **非人形软体腔体 (`slime_body`)** | **加权网格（Mesh）** | `6 × 6` | `['body_base', 'body_mid', 'body_top', 'cheek_l', 'cheek_r']` | `1.65` | 配合接地锚点 `body_base` 与左右脸颊骨骼实现果冻Q弹形变 |
+
+### 2. 调用 `weights_auto` 的两条铁律
+1. **必须在所有骨骼都已通过 `bone_create` 放置在正确世界位置之后再调 `weights_auto`**：
+   - `weights_auto` 是根据网格顶点在绑定姿态（Setup Pose）下的世界坐标到每根骨骼线段 `(from -> to)` 的最短距离计算权重的。如果像失败的 `mage-2d` 那样骨骼都在 `(0, 0)` 原点，算出的权重会完全失效！
+2. **多节骨骼链（如披风 `cape_root -> cape_mid -> cape_tip`）的旋转角累加控制**：
+   - 子骨骼会继承父骨骼的旋转。给披风打关键帧时，三节骨骼在单帧的 `rotate` 增量应同向递减且总和控制在 `25°–35°` 以内（例如冲刺时 `cape_root: +14°, cape_mid: +10°, cape_tip: +8°`，累计 `+32°`），这样网格会呈现优美的 S 型流线飘动，绝不会折成锐角或翻卷到头顶前方。
+
+---
+
+## 深度技术方案四：AI 常见翻车反模式对照表（Anti-Patterns vs Best Practices）
+
+在编写 SVG 生成与 MCP 绑定脚本时，请逐条对照以下反模式自检：
+
+| 常见翻车现象（以失败的 `mage-2d` 为戒） | 根本原因（Anti-Pattern ❌） | 正确工程方案（Best Practice ✅） |
+| :--- | :--- | :--- |
+| **1. 所有骨骼堆在脚底 `(0,0)`，一播放动画全身乱飞** | 调 `bone_create` 时漏写了 `transform` 或算错了原点（未用 `OX = canvasW/2, OY = canvasH`） | 使用上方「标准骨骼树矩阵模板」，严格以 `(canvasW/2, canvasH)` 为世界原点，传入 `transform: { x, y, skX, skY }`（现已同时兼容顶层 `x, y, rotation`） |
+| **2. 角色像积木拼的火柴人，长方形袖子、没有脖子、胡子像白布条** | SVG 只用了简单的 `<rect>` / `<polygon>` 和单色填充，没有解剖曲线与多层光影 | 使用三次贝塞尔曲线 `<path d="M ... C ...">` 绘制解剖轮廓；每个部件至少包含 **3 层赛璐璐路径（暗部底色 + 主体中调 + 受光亮面 + 描边高光）**，并在脚本中做 `apply_cel_shading` 定向光着色 |
+| **3. 脖子压在衣服和头发上面，或者转头时下巴脱节** | `neck` 的 `zIndex` 设得太高（如 `z=16 > torso z=9`），且脖子长度太短没有预留插入余量 | 遵守三明治法则：`hair_back < neck < torso < head`，且 `neck` 上下两端各向头底和衣领内延伸 `10px` |
+| **4. 挥砍/施法结束后退出循环播放，或多出 `idle_1` 空动画** | `project_new` 已默认自带 `idle` 动画，又调了 `animation_create({ name: "idle" })` 导致重名生成 `idle_1`；且攻击动画设了 `playTimes: 1` | 对默认 `idle` 调 `animation_update({ animation: "idle", duration: 32, playTimes: 0 })`；其它动作调 `animation_create` 且统一设 `playTimes: 0` 以便在编辑器内无缝循环预览 |
+| **5. 发光法球/剑气周围有一圈黑灰色脏边** | 直接对透明底 RGBA 图片做 `ImageFilter.GaussianBlur`，把透明像素 `(0,0,0,0)` 的黑色 RGB 混入了边缘 | **只对 Alpha 通道做高斯模糊**：提取 `a = im.split()[3]` 模糊后再贴回纯色发光层（如 `(56, 189, 248, 0)`）做 `Image.alpha_composite` |
+| **6. 披风下半截被钉在原地拉成三角形长丝** | 调 `weights_auto` 时把静止的 `root` 或腿部骨骼也传进了披风的 `bones` 数组 | 披风的 `weights_auto` **只传** `['torso', 'cape_root', 'cape_mid', 'cape_tip']` 四根骨骼 |
 
 ---
 

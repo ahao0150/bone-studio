@@ -434,15 +434,17 @@ export function animationCreate(s: StudioState, args: { name: string; duration?:
   });
 }
 
-export function animationUpdate(s: StudioState, args: { animation: string; duration?: number; playTimes?: number; rename?: string; remove?: boolean }): unknown {
+export function animationUpdate(s: StudioState, args: { animation?: string; name?: string; duration?: number; playTimes?: number; rename?: string; newName?: string; remove?: boolean }): unknown {
   const p = need(s);
+  const animName = args.animation ?? args.name ?? '';
+  const renameTarget = args.rename ?? args.newName;
   return write(s, () => {
-    if (args.remove) { if (!removeAnimation(p, args.animation)) throw new Error('remove failed'); return { removed: args.animation }; }
-    const anim = p.skeleton.armature.animation?.find((a) => a.name === args.animation);
-    if (!anim) throw new Error(`unknown animation: ${args.animation}`);
+    if (args.remove) { if (!removeAnimation(p, animName)) throw new Error('remove failed'); return { removed: animName }; }
+    const anim = p.skeleton.armature.animation?.find((a) => a.name === animName);
+    if (!anim) throw new Error(unknown animation: );
     if (args.duration) setAnimationDuration(p, anim.name, args.duration);
     if (args.playTimes !== undefined) anim.playTimes = args.playTimes;
-    if (args.rename) anim.name = args.rename;
+    if (renameTarget) anim.name = renameTarget;
     return { animation: anim.name, duration: anim.duration, playTimes: anim.playTimes ?? 0 };
   });
 }
@@ -489,22 +491,27 @@ function putKey(list: CF[], at: number, total: number, values: Partial<CF>, twee
  * rotate=角度（顺时针为正，y 向下）、x/y=位移、scaleX/scaleY=缩放倍率。
  * easing: 'linear' | 'stepped' | 数字（DB tweenEasing）| [x1,y1,x2,y2] bezier。
  */
-export function boneKey(s: StudioState, args: { bone: string; frame: number; animation?: string; rotate?: number; shear?: number; x?: number; y?: number; scaleX?: number; scaleY?: number; easing?: unknown; remove?: boolean }): unknown {
+export function boneKey(s: StudioState, args: { bone: string; frame: number; animation?: string; rotate?: number; rotation?: number; shear?: number; x?: number; y?: number; scaleX?: number; scaleY?: number; easing?: unknown; curve?: unknown; remove?: boolean }): unknown {
   const p = need(s);
   return write(s, () => {
     const anim = useAnimation(p, args.animation);
-    if (!p.skeleton.armature.bone.some((b) => b.name === args.bone)) throw new Error(`unknown bone: ${args.bone}`);
+    if (!p.skeleton.armature.bone.some((b) => b.name === args.bone)) throw new Error(unknown bone: );
     anim.bone ??= [];
     let tl = anim.bone.find((t) => t.name === args.bone) as DbBoneTimeline | undefined;
     if (!tl) { tl = { name: args.bone } as DbBoneTimeline; anim.bone.push(tl); }
-    if ((tl.frame?.length ?? 0) > 0) throw new Error(`${args.bone} uses the merged 4.x frame[] form; use bone_keyframe_set (absolute) instead`);
+    if ((tl.frame?.length ?? 0) > 0) throw new Error(${args.bone} uses the merged 4.x frame[] form; use bone_keyframe_set (absolute) instead);
     const at = Math.max(0, Math.min(anim.duration, Math.round(args.frame)));
     const tween: { tweenEasing?: number | null; curve?: number[] } = {};
-    if (args.easing === 'stepped') tween.tweenEasing = NaN;
-    else if (args.easing === 'linear') tween.tweenEasing = 0;
-    else if (typeof args.easing === 'number') tween.tweenEasing = args.easing;
-    else if (Array.isArray(args.easing)) { tween.curve = args.easing as number[]; tween.tweenEasing = 0; }
+    const easingVal = args.easing ?? args.curve;
+    if (easingVal === 'stepped') tween.tweenEasing = NaN;
+    else if (easingVal === 'linear') tween.tweenEasing = 0;
+    else if (easingVal === 'easeIn') { tween.curve = [0.42, 0, 1, 1]; tween.tweenEasing = 0; }
+    else if (easingVal === 'easeOut') { tween.curve = [0, 0, 0.58, 1]; tween.tweenEasing = 0; }
+    else if (easingVal === 'easeInOut') { tween.curve = [0.42, 0, 0.58, 1]; tween.tweenEasing = 0; }
+    else if (typeof easingVal === 'number') tween.tweenEasing = easingVal;
+    else if (Array.isArray(easingVal)) { tween.curve = easingVal as number[]; tween.tweenEasing = 0; }
     const t = tl as DbBoneTimeline & { translateFrame?: CF[]; rotateFrame?: CF[]; scaleFrame?: CF[] };
+    const rotVal = args.rotate ?? args.rotation;
     if (args.remove) {
       for (const key of ['translateFrame', 'rotateFrame', 'scaleFrame'] as const) {
         const list = t[key] ? t[key]!.map((f) => ({ ...f })) : null; if (!list?.length) continue;
@@ -514,7 +521,7 @@ export function boneKey(s: StudioState, args: { bone: string; frame: number; ani
       }
     } else {
       if (args.x !== undefined || args.y !== undefined) t.translateFrame = putKey(t.translateFrame ?? [], at, anim.duration, { ...(args.x !== undefined ? { x: args.x } : {}), ...(args.y !== undefined ? { y: args.y } : {}) }, tween, { x: 0, y: 0 });
-      if (args.rotate !== undefined || args.shear !== undefined) t.rotateFrame = putKey(t.rotateFrame ?? [], at, anim.duration, { ...(args.rotate !== undefined ? { rotate: args.rotate } : {}), ...(args.shear !== undefined ? { skew: args.shear } : {}) }, tween, { rotate: 0, ...(args.shear !== undefined || (t.rotateFrame ?? []).some((f) => f.skew !== undefined) ? { skew: 0 } : {}) });
+      if (rotVal !== undefined || args.shear !== undefined) t.rotateFrame = putKey(t.rotateFrame ?? [], at, anim.duration, { ...(rotVal !== undefined ? { rotate: rotVal } : {}), ...(args.shear !== undefined ? { skew: args.shear } : {}) }, tween, { rotate: 0, ...(args.shear !== undefined || (t.rotateFrame ?? []).some((f) => f.skew !== undefined) ? { skew: 0 } : {}) });
       if (args.scaleX !== undefined || args.scaleY !== undefined) t.scaleFrame = putKey(t.scaleFrame ?? [], at, anim.duration, { ...(args.scaleX !== undefined ? { x: args.scaleX } : {}), ...(args.scaleY !== undefined ? { y: args.scaleY } : {}) }, tween, { x: 1, y: 1 });
     }
     const keysOf = (l?: CF[]) => { let q = 0; return (l ?? []).map((f) => { const at0 = q; q += f.duration; return at0; }); };
@@ -522,11 +529,12 @@ export function boneKey(s: StudioState, args: { bone: string; frame: number; ani
   });
 }
 
-/** 一次写多帧：keys=[{bone, frame, rotate?, x?, y?, scaleX?, scaleY?, easing?}] */
-export function boneKeys(s: StudioState, args: { animation?: string; keys: Array<Parameters<typeof boneKey>[1]> }): unknown {
+/** 一次写多帧：keys=[{bone, frame, rotate?, x?, y?, scaleX?, scaleY?, easing?}]（也兼容 {bone, keyframes:[...]}） */
+export function boneKeys(s: StudioState, args: { animation?: string; bone?: string; keys?: Array<Parameters<typeof boneKey>[1]>; keyframes?: Array<Omit<Parameters<typeof boneKey>[1], 'bone'> & { bone?: string }> }): unknown {
   const auto = s.autoSync; s.autoSync = false;
   let n = 0;
-  try { for (const k of args.keys) { boneKey(s, { animation: args.animation, ...k }); n++; } } finally { s.autoSync = auto; }
+  const list = args.keys ?? (args.keyframes ?? []).map((k) => ({ ...k, bone: k.bone ?? args.bone ?? '' }));
+  try { for (const k of list) { boneKey(s, { animation: args.animation, ...k }); n++; } } finally { s.autoSync = auto; }
   const synced = s.autoSync ? sync(s).dir : null;
   return { written: n, synced };
 }
