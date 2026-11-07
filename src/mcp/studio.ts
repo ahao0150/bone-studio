@@ -441,7 +441,7 @@ export function animationUpdate(s: StudioState, args: { animation?: string; name
   return write(s, () => {
     if (args.remove) { if (!removeAnimation(p, animName)) throw new Error('remove failed'); return { removed: animName }; }
     const anim = p.skeleton.armature.animation?.find((a) => a.name === animName);
-    if (!anim) throw new Error(unknown animation: );
+    if (!anim) throw new Error(`unknown animation: ${animName}`);
     if (args.duration) setAnimationDuration(p, anim.name, args.duration);
     if (args.playTimes !== undefined) anim.playTimes = args.playTimes;
     if (renameTarget) anim.name = renameTarget;
@@ -495,11 +495,11 @@ export function boneKey(s: StudioState, args: { bone: string; frame: number; ani
   const p = need(s);
   return write(s, () => {
     const anim = useAnimation(p, args.animation);
-    if (!p.skeleton.armature.bone.some((b) => b.name === args.bone)) throw new Error(unknown bone: );
+    if (!p.skeleton.armature.bone.some((b) => b.name === args.bone)) throw new Error(`unknown bone: ${args.bone}`);
     anim.bone ??= [];
     let tl = anim.bone.find((t) => t.name === args.bone) as DbBoneTimeline | undefined;
     if (!tl) { tl = { name: args.bone } as DbBoneTimeline; anim.bone.push(tl); }
-    if ((tl.frame?.length ?? 0) > 0) throw new Error(${args.bone} uses the merged 4.x frame[] form; use bone_keyframe_set (absolute) instead);
+    if ((tl.frame?.length ?? 0) > 0) throw new Error(`${args.bone} uses the merged 4.x frame[] form; use bone_keyframe_set (absolute) instead`);
     const at = Math.max(0, Math.min(anim.duration, Math.round(args.frame)));
     const tween: { tweenEasing?: number | null; curve?: number[] } = {};
     const easingVal = args.easing ?? args.curve;

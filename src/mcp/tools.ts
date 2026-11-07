@@ -364,7 +364,7 @@ export function boneDelete(state: EditorState, args: { bone?: string; name?: str
   const boneName = args.bone ?? args.name ?? '';
   if (!removeBone(player, boneName)) {
     rollback(state, snapshot);
-    throw new Error(删除失败： 不存在，或它是最后一根骨骼);
+    throw new Error(`删除失败：${boneName} 不存在，或它是最后一根骨骼`);
   }
   return withHistory(state, { removed: boneName, bones: player.skeleton.bones.length });
 }
@@ -396,7 +396,7 @@ export function boneUpdate(state: EditorState, args: {
   const armature = player.skeleton.armature;
   const boneName = args.bone ?? args.name ?? '';
   const renameTarget = args.rename ?? args.newName;
-  if (!armature.bone.some((entry) => entry.name === boneName)) throw new Error(unknown bone: );
+  if (!armature.bone.some((entry) => entry.name === boneName)) throw new Error(`unknown bone: ${boneName}`);
   const snapshot = checkpoint(state);
   const target = renameTarget?.trim() || boneName;
   const changed: Record<string, unknown> = {};
@@ -404,21 +404,21 @@ export function boneUpdate(state: EditorState, args: {
   if (renameTarget && renameTarget !== boneName) {
     if (!renameBone(player, boneName, renameTarget)) {
       rollback(state, snapshot);
-      throw new Error(重命名失败： → );
+      throw new Error(`重命名失败：${boneName} → ${renameTarget}`);
     }
     changed.name = renameTarget;
   }
   if (args.parent !== undefined) {
     if (!setBoneParent(player, target, args.parent)) {
       rollback(state, snapshot);
-      throw new Error(改父级失败： → );
+      throw new Error(`改父级失败：${target} → ${args.parent ?? '（根）'}`);
     }
     changed.parent = args.parent;
   }
   if (typeof args.length === 'number') {
     if (!setBoneLength(armature, target, args.length)) {
       rollback(state, snapshot);
-      throw new Error(改骨骼长度失败：);
+      throw new Error(`改骨骼长度失败：${target}`);
     }
     player.rebuildSkeleton();
     changed.length = args.length;
