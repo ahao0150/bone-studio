@@ -1,0 +1,346 @@
+{
+  "canvasWidth": 800,
+  "canvasHeight": 700,
+  "joints": {
+    "root": [
+      400,
+      640
+    ],
+    "shadow": [
+      400,
+      640
+    ],
+    "hip": [
+      400,
+      488
+    ],
+    "torso": [
+      400,
+      488
+    ],
+    "neck": [
+      404,
+      398
+    ],
+    "head": [
+      404,
+      370
+    ],
+    "head_tip": [
+      404,
+      250
+    ],
+    "eyes": [
+      472,
+      262
+    ],
+    "hair": [
+      404,
+      150
+    ],
+    "arm_b_up": [
+      360,
+      408
+    ],
+    "arm_b_lo": [
+      348,
+      456
+    ],
+    "hand_b": [
+      336,
+      500
+    ],
+    "arm_f_up": [
+      446,
+      408
+    ],
+    "arm_f_lo": [
+      450,
+      458
+    ],
+    "hand_f": [
+      466,
+      504
+    ],
+    "thigh_b": [
+      382,
+      496
+    ],
+    "shin_b": [
+      378,
+      560
+    ],
+    "foot_b": [
+      376,
+      626
+    ],
+    "toe_b": [
+      408,
+      632
+    ],
+    "thigh_f": [
+      420,
+      496
+    ],
+    "shin_f": [
+      424,
+      560
+    ],
+    "foot_f": [
+      426,
+      626
+    ],
+    "toe_f": [
+      458,
+      632
+    ],
+    "ball": [
+      306,
+      464
+    ],
+    "ball_shadow": [
+      306,
+      640
+    ],
+    "trail": [
+      306,
+      464
+    ],
+    "hit_fx": [
+      520,
+      400
+    ]
+  },
+  "layers": [
+    {
+      "name": "shadow",
+      "bone": "shadow",
+      "zIndex": 0,
+      "left": 288,
+      "top": 619,
+      "width": 224,
+      "height": 44,
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/kunge-basketball/png/shadow.png"
+    },
+    {
+      "name": "ball_shadow",
+      "bone": "ball_shadow",
+      "zIndex": 1,
+      "left": 266,
+      "top": 625,
+      "width": 80,
+      "height": 32,
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/kunge-basketball/png/ball_shadow.png"
+    },
+    {
+      "name": "ball_back",
+      "bone": "ball",
+      "zIndex": 2,
+      "left": 259,
+      "top": 417,
+      "width": 94,
+      "height": 95,
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/kunge-basketball/png/ball_back.png"
+    },
+    {
+      "name": "arm_b_up",
+      "bone": "arm_b_up",
+      "zIndex": 3,
+      "left": 319,
+      "top": 379,
+      "width": 70,
+      "height": 106,
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/kunge-basketball/png/arm_b_up.png"
+    },
+    {
+      "name": "arm_b_lo",
+      "bone": "arm_b_lo",
+      "zIndex": 4,
+      "left": 308,
+      "top": 428,
+      "width": 68,
+      "height": 98,
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/kunge-basketball/png/arm_b_lo.png"
+    },
+    {
+      "name": "thigh_b",
+      "bone": "thigh_b",
+      "zIndex": 5,
+      "left": 357,
+      "top": 475,
+      "width": 46,
+      "height": 106,
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/kunge-basketball/png/thigh_b.png"
+    },
+    {
+      "name": "shin_b",
+      "bone": "shin_b",
+      "zIndex": 6,
+      "left": 355,
+      "top": 539,
+      "width": 44,
+      "height": 108,
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/kunge-basketball/png/shin_b.png"
+    },
+    {
+      "name": "foot_b",
+      "bone": "foot_b",
+      "zIndex": 7,
+      "left": 344,
+      "top": 608,
+      "width": 84,
+      "height": 50,
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/kunge-basketball/png/foot_b.png"
+    },
+    {
+      "name": "thigh_f",
+      "bone": "thigh_f",
+      "zIndex": 8,
+      "left": 399,
+      "top": 475,
+      "width": 46,
+      "height": 106,
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/kunge-basketball/png/thigh_f.png"
+    },
+    {
+      "name": "shin_f",
+      "bone": "shin_f",
+      "zIndex": 9,
+      "left": 403,
+      "top": 539,
+      "width": 44,
+      "height": 108,
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/kunge-basketball/png/shin_f.png"
+    },
+    {
+      "name": "foot_f",
+      "bone": "foot_f",
+      "zIndex": 10,
+      "left": 394,
+      "top": 608,
+      "width": 84,
+      "height": 50,
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/kunge-basketball/png/foot_f.png"
+    },
+    {
+      "name": "neck",
+      "bone": "neck",
+      "zIndex": 11,
+      "left": 373,
+      "top": 341,
+      "width": 62,
+      "height": 80,
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/kunge-basketball/png/neck.png"
+    },
+    {
+      "name": "torso",
+      "bone": "torso",
+      "zIndex": 12,
+      "left": 307,
+      "top": 376,
+      "width": 194,
+      "height": 181,
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/kunge-basketball/png/torso.png"
+    },
+    {
+      "name": "head",
+      "bone": "head",
+      "zIndex": 13,
+      "left": 260,
+      "top": 134,
+      "width": 296,
+      "height": 256,
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/kunge-basketball/png/head.png"
+    },
+    {
+      "name": "eyes",
+      "bone": "eyes",
+      "zIndex": 14,
+      "left": 387,
+      "top": 215,
+      "width": 167,
+      "height": 98,
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/kunge-basketball/png/eyes.png"
+    },
+    {
+      "name": "eyes_hit",
+      "bone": "eyes",
+      "zIndex": 15,
+      "left": 401,
+      "top": 203,
+      "width": 171,
+      "height": 96,
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/kunge-basketball/png/eyes_hit.png"
+    },
+    {
+      "name": "hair",
+      "bone": "hair",
+      "zIndex": 16,
+      "left": 248,
+      "top": 112,
+      "width": 334,
+      "height": 230,
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/kunge-basketball/png/hair.png"
+    },
+    {
+      "name": "collar",
+      "bone": "torso",
+      "zIndex": 17,
+      "left": 305,
+      "top": 345,
+      "width": 207,
+      "height": 78,
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/kunge-basketball/png/collar.png"
+    },
+    {
+      "name": "arm_f_up",
+      "bone": "arm_f_up",
+      "zIndex": 18,
+      "left": 417,
+      "top": 379,
+      "width": 62,
+      "height": 108,
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/kunge-basketball/png/arm_f_up.png"
+    },
+    {
+      "name": "arm_f_lo",
+      "bone": "arm_f_lo",
+      "zIndex": 19,
+      "left": 422,
+      "top": 430,
+      "width": 72,
+      "height": 100,
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/kunge-basketball/png/arm_f_lo.png"
+    },
+    {
+      "name": "ball_trail",
+      "bone": "trail",
+      "zIndex": 20,
+      "left": 108,
+      "top": 432,
+      "width": 176,
+      "height": 66,
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/kunge-basketball/png/ball_trail.png"
+    },
+    {
+      "name": "ball_front",
+      "bone": "ball",
+      "zIndex": 21,
+      "left": 259,
+      "top": 417,
+      "width": 94,
+      "height": 95,
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/kunge-basketball/png/ball_front.png"
+    },
+    {
+      "name": "hit_fx",
+      "bone": "hit_fx",
+      "zIndex": 22,
+      "left": 453,
+      "top": 337,
+      "width": 138,
+      "height": 132,
+      "file": "C:/Users/Administrator/.gemini/antigravity/scratch/kunge-basketball/png/hit_fx.png"
+    }
+  ]
+}

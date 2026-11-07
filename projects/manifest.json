@@ -27,6 +27,13 @@
    "texture": "slime-2d/slime-2d_tex.json",
    "image": "slime-2d/slime-2d_tex.png",
    "rev": 1794031714000
+  },
+  {
+   "name": "kunge-basketball",
+   "skeleton": "kunge-basketball/kunge-basketball_ske.json",
+   "texture": "kunge-basketball/kunge-basketball_tex.json",
+   "image": "kunge-basketball/kunge-basketball_tex.png",
+   "rev": 1794057664603
   }
  ]
 }

@@ -38,6 +38,13 @@
 
 > 上方动图展示了 AI Agent 通过 `bone-studio` MCP 工具从零生成 SVG/PNG 分层部件、绑定 26 根骨骼与网格权重、编写分析式 IK 骑行/冲刺/待机三套动作并在编辑器中实时播放的效果。高清原片见 [`docs/demo-mcp-pelican.mp4`](docs/demo-mcp-pelican.mp4)。
 
+
+#### 5. 卡通「鸡哥 / 坤哥」篮球 5 套动作与远程丢球攻击（`kunge-basketball`）
+
+[![通过 BoneStudio MCP 制作卡通鸡哥/坤哥篮球角色（待机/慢运球行走/快运球行走/远程投球攻击/受击）编辑器实录（点击查看高清 MP4 录像）](docs/demo-mcp-kunge.gif)](docs/demo-mcp-kunge.mp4)
+
+> 上方动图展示了 AI Agent 通过程序化绘制卡通鸡哥/坤哥经典矢量分层素材（银灰中分发型、卡通腮红小鸡面部、黑色运动夹克与短裤、专属篮球与动态地面投影），装配 22 根骨骼与 23 个插槽，运用分析式 2-Bone IK 与关键帧时间轴编写 5 套动作（待机身后托球微呼吸、普通行走 16 帧慢速节奏运球与触地挤压形变、快速前倾 8 帧低空快速拍球运球、背后挑球过顶 $\rightarrow$ 前手引球蓄力 $\rightarrow$ 伴随高速残影拖尾的大力推射远程攻击、受击冲击星与 `><` 痛击表情后仰振荡），并在 BoneStudio 编辑器中实时流畅播放的效果。高清录像原片见 [`docs/demo-mcp-kunge.mp4`](docs/demo-mcp-kunge.mp4)。
+
 ## 特性
 
 **解析与播放**

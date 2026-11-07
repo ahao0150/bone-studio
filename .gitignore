@@ -14,6 +14,7 @@ projects/*
 !projects/archer-2d/
 !projects/samurai-2d/
 !projects/slime-2d/
+!projects/kunge-basketball/
 projects/**/.lock*
 .mcp.json
 .cursor/

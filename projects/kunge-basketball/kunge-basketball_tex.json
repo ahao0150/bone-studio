@@ -1,0 +1,261 @@
+{
+ "imagePath": "kunge-basketball_tex.png",
+ "SubTexture": [
+  {
+   "frameWidth": 224,
+   "y": 258,
+   "frameHeight": 44,
+   "frameX": 0,
+   "height": 44,
+   "frameY": 0,
+   "width": 224,
+   "name": "shadow",
+   "x": 559
+  },
+  {
+   "frameWidth": 80,
+   "y": 258,
+   "frameHeight": 32,
+   "frameX": 0,
+   "height": 32,
+   "frameY": 0,
+   "width": 80,
+   "name": "ball_shadow",
+   "x": 785
+  },
+  {
+   "frameWidth": 94,
+   "y": 0,
+   "frameHeight": 95,
+   "frameX": 0,
+   "height": 95,
+   "frameY": 0,
+   "width": 94,
+   "name": "ball_back",
+   "x": 1780
+  },
+  {
+   "frameWidth": 70,
+   "y": 0,
+   "frameHeight": 106,
+   "frameX": 0,
+   "height": 106,
+   "frameY": 0,
+   "width": 70,
+   "name": "arm_b_up",
+   "x": 1126
+  },
+  {
+   "frameWidth": 68,
+   "y": 0,
+   "frameHeight": 98,
+   "frameX": 0,
+   "height": 98,
+   "frameY": 0,
+   "width": 68,
+   "name": "arm_b_lo",
+   "x": 1368
+  },
+  {
+   "frameWidth": 46,
+   "y": 0,
+   "frameHeight": 106,
+   "frameX": 0,
+   "height": 106,
+   "frameY": 0,
+   "width": 46,
+   "name": "thigh_b",
+   "x": 1198
+  },
+  {
+   "frameWidth": 44,
+   "y": 0,
+   "frameHeight": 108,
+   "frameX": 0,
+   "height": 108,
+   "frameY": 0,
+   "width": 44,
+   "name": "shin_b",
+   "x": 1034
+  },
+  {
+   "frameWidth": 84,
+   "y": 258,
+   "frameHeight": 50,
+   "frameX": 0,
+   "height": 50,
+   "frameY": 0,
+   "width": 84,
+   "name": "foot_b",
+   "x": 387
+  },
+  {
+   "frameWidth": 46,
+   "y": 0,
+   "frameHeight": 106,
+   "frameX": 0,
+   "height": 106,
+   "frameY": 0,
+   "width": 46,
+   "name": "thigh_f",
+   "x": 1246
+  },
+  {
+   "frameWidth": 44,
+   "y": 0,
+   "frameHeight": 108,
+   "frameX": 0,
+   "height": 108,
+   "frameY": 0,
+   "width": 44,
+   "name": "shin_f",
+   "x": 1080
+  },
+  {
+   "frameWidth": 84,
+   "y": 258,
+   "frameHeight": 50,
+   "frameX": 0,
+   "height": 50,
+   "frameY": 0,
+   "width": 84,
+   "name": "foot_f",
+   "x": 473
+  },
+  {
+   "frameWidth": 62,
+   "y": 0,
+   "frameHeight": 80,
+   "frameX": 0,
+   "height": 80,
+   "frameY": 0,
+   "width": 62,
+   "name": "neck",
+   "x": 1972
+  },
+  {
+   "frameWidth": 194,
+   "y": 0,
+   "frameHeight": 181,
+   "frameX": 0,
+   "height": 181,
+   "frameY": 0,
+   "width": 194,
+   "name": "torso",
+   "x": 634
+  },
+  {
+   "frameWidth": 296,
+   "y": 0,
+   "frameHeight": 256,
+   "frameX": 0,
+   "height": 256,
+   "frameY": 0,
+   "width": 296,
+   "name": "head",
+   "x": 0
+  },
+  {
+   "frameWidth": 167,
+   "y": 0,
+   "frameHeight": 98,
+   "frameX": 0,
+   "height": 98,
+   "frameY": 0,
+   "width": 167,
+   "name": "eyes",
+   "x": 1438
+  },
+  {
+   "frameWidth": 171,
+   "y": 0,
+   "frameHeight": 96,
+   "frameX": 0,
+   "height": 96,
+   "frameY": 0,
+   "width": 171,
+   "name": "eyes_hit",
+   "x": 1607
+  },
+  {
+   "frameWidth": 334,
+   "y": 0,
+   "frameHeight": 230,
+   "frameX": 0,
+   "height": 230,
+   "frameY": 0,
+   "width": 334,
+   "name": "hair",
+   "x": 298
+  },
+  {
+   "frameWidth": 207,
+   "y": 258,
+   "frameHeight": 78,
+   "frameX": 0,
+   "height": 78,
+   "frameY": 0,
+   "width": 207,
+   "name": "collar",
+   "x": 0
+  },
+  {
+   "frameWidth": 62,
+   "y": 0,
+   "frameHeight": 108,
+   "frameX": 0,
+   "height": 108,
+   "frameY": 0,
+   "width": 62,
+   "name": "arm_f_up",
+   "x": 970
+  },
+  {
+   "frameWidth": 72,
+   "y": 0,
+   "frameHeight": 100,
+   "frameX": 0,
+   "height": 100,
+   "frameY": 0,
+   "width": 72,
+   "name": "arm_f_lo",
+   "x": 1294
+  },
+  {
+   "frameWidth": 176,
+   "y": 258,
+   "frameHeight": 66,
+   "frameX": 0,
+   "height": 66,
+   "frameY": 0,
+   "width": 176,
+   "name": "ball_trail",
+   "x": 209
+  },
+  {
+   "frameWidth": 94,
+   "y": 0,
+   "frameHeight": 95,
+   "frameX": 0,
+   "height": 95,
+   "frameY": 0,
+   "width": 94,
+   "name": "ball_front",
+   "x": 1876
+  },
+  {
+   "frameWidth": 138,
+   "y": 0,
+   "frameHeight": 132,
+   "frameX": 0,
+   "height": 132,
+   "frameY": 0,
+   "width": 138,
+   "name": "hit_fx",
+   "x": 830
+  }
+ ],
+ "width": 2036,
+ "name": "kunge-basketball",
+ "height": 336
+}
