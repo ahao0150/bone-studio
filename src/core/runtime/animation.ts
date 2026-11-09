@@ -369,12 +369,62 @@ export function sampleFfd(
   const result = new Float32Array(vertexFloatCount);
   const from = loc.frame.vertices ?? [];
   const to = loc.next?.vertices ?? from;
-  for (let i = 0; i < vertexFloatCount; i++) {
-    const delta = offset + i;
-    const a = from[delta] ?? 0;
-    const b = to[delta] ?? a;
-    result[i] = lerp(a, b, loc.progress);
+
+  // Detect windowed format: dbbin-decoded timelines have axisHead/axisTail and
+  // per-frame offset; JSON editor format uses full-length arrays with offset=0.
+  const hasAxisData = (timeline.axisHead?.length ?? 0) > 0 || (timeline.axisTail?.length ?? 0) > 0
+    || (loc.frame.offset ?? 0) > 0;
+
+  if (hasAxisData) {
+    // Windowed format (dbbin-decoded): frame.vertices is a compact window starting
+    // at frame.offset; values outside the window come from axisHead/axisTail or default to 0.
+    const head = timeline.axisHead ?? [];
+    const tail = timeline.axisTail ?? [];
+    const fromOffset = loc.frame.offset ?? 0;
+    const toOffset = loc.next?.offset ?? fromOffset;
+
+    for (let i = 0; i < vertexFloatCount; i++) {
+      let a: number;
+      let b: number;
+
+      // Read 'from' frame value
+      if (i < fromOffset) {
+        a = head[i] ?? 0;
+      } else {
+        const at = i - fromOffset;
+        if (at >= from.length) {
+          a = tail[at - from.length] ?? 0;
+        } else {
+          a = from[at] ?? 0;
+        }
+      }
+
+      // Read 'to' frame value (or use 'a' if no next frame)
+      if (!loc.next) {
+        b = a;
+      } else if (i < toOffset) {
+        b = head[i] ?? 0;
+      } else {
+        const at = i - toOffset;
+        if (at >= to.length) {
+          b = tail[at - to.length] ?? 0;
+        } else {
+          b = to[at] ?? 0;
+        }
+      }
+
+      result[i] = lerp(a, b, loc.progress);
+    }
+  } else {
+    // Full-array format (JSON editor style): vertices use absolute indices
+    for (let i = 0; i < vertexFloatCount; i++) {
+      const delta = offset + i;
+      const a = from[delta] ?? 0;
+      const b = to[delta] ?? a;
+      result[i] = lerp(a, b, loc.progress);
+    }
   }
+
   return result;
 }
 
