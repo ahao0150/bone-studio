@@ -3,6 +3,7 @@
  * 以及载入参考垫图、透明度、吸附强度、搜索半径、垫图原点，和「全部吸附」「焊接关节」两个一次性操作。
  */
 import { useRef } from 'react';
+import { ACCEPT_REFERENCE_IMAGE } from './fileTypes';
 
 export interface SnapSettings {
   /** 参考垫图吸附（拖动部件松手后自动对齐垫图） */
@@ -60,7 +61,7 @@ export function SnapBar({ settings, onChange, referenceName, onLoadReference, on
       <button type="button" className="snap-btn" title="载入参考垫图（PNG / JPG，白底或透明底）" onClick={() => fileRef.current?.click()}>
         {referenceName ? `垫图：${referenceName}` : '载入垫图…'}
       </button>
-      <input ref={fileRef} type="file" accept="image/*" style={{ display: 'none' }}
+      <input ref={fileRef} type="file" accept={ACCEPT_REFERENCE_IMAGE} style={{ display: 'none' }}
         onChange={(e) => { const f = e.target.files?.[0]; if (f) onLoadReference(f); e.target.value = ''; }} />
       {referenceName && (
         <>

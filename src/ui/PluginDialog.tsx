@@ -8,6 +8,7 @@
  */
 import { useRef, useState } from 'react';
 import { Icon } from './icons';
+import { ACCEPT_PLUGIN } from './fileTypes';
 import type { PluginManifest } from '../plugins/registry';
 
 export interface PluginDialogProps {
@@ -54,7 +55,7 @@ export function PluginDialog({
             <input
               ref={fileRef}
               type="file"
-              accept=".json,.js,.mjs,application/json,text/javascript"
+              accept={ACCEPT_PLUGIN}
               data-plugin-file=""
               style={{ display: 'none' }}
               onChange={(event) => {

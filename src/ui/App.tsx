@@ -14,6 +14,7 @@ import type { ExportRequest } from './exportFormats';
 import { importImageIntoAtlas } from '../core/assetImport';
 import type { RasterImage } from '../core/raster';
 import { classifyJsonFile } from '../core/import/spineDetect';
+import { ACCEPT_OPEN_PROJECT, ACCEPT_IMPORT_DATA, ACCEPT_IMPORT_ASSET } from './fileTypes';
 import { decodePngInBrowser, encodePngInBrowser } from './pngBrowser';
 import { decodeDbbin } from '../core/parse/dbbinDecode';
 import {
@@ -5216,14 +5217,14 @@ export function App() {
         ref={fileInputRef}
         type="file"
         multiple
-        accept=".json,.dbbin,.png,.jpg,.jpeg,.webp,.atlas"
+        accept={ACCEPT_OPEN_PROJECT}
         style={{ display: 'none' }}
         onChange={(event) => { void onOpenFiles(event.target.files); event.target.value = ''; }}
       />
       <input
         ref={assetInputRef}
         type="file"
-        accept="image/png"
+        accept={ACCEPT_IMPORT_ASSET}
         data-asset-input=""
         style={{ display: 'none' }}
         onChange={(event) => { void importAssetFiles(event.target.files); event.target.value = ''; }}
@@ -5231,7 +5232,7 @@ export function App() {
       <input
         ref={projectImportRef}
         type="file"
-        accept=".json,.dbbin"
+        accept={ACCEPT_IMPORT_DATA}
         data-project-import-input=""
         style={{ display: 'none' }}
         onChange={(event) => { void importDataIntoProject(event.target.files); event.target.value = ''; }}
